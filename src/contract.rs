@@ -317,6 +317,28 @@ mod tests {
     }
 
     #[test]
+    fn complete_claim_and_conversion_caps_conserve_full_funding() {
+        let fixture = Fixture::create(CLAIM_CAP);
+        let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
+
+        assert_eq!(
+            fixture
+                .client()
+                .claim(&fixture.claimant, &fixture.recipient),
+            CLAIM_CAP
+        );
+        assert_eq!(
+            fixture
+                .client()
+                .swap_blnd_for_blnt(&fixture.user, &fixture.user, &SWAP_CAP),
+            SWAP_CAP
+        );
+        assert_eq!(fixture.client().get_total_claimed(), CLAIM_CAP);
+        assert_eq!(fixture.client().get_total_swapped(), SWAP_CAP);
+        assert_eq!(blnt.balance(&fixture.contract), 0);
+    }
+
+    #[test]
     fn claim_and_swap_require_source_authorization() {
         let e = Env::default();
         let legacy = e
