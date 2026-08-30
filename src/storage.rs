@@ -107,11 +107,7 @@ pub fn set_claims(e: &Env, claims: &Map<Address, i128>) {
 
 pub fn get_claims(e: &Env) -> Map<Address, i128> {
     let key = PersistentKey::Claims;
-    let claims = e
-        .storage()
-        .persistent()
-        .get(&key)
-        .unwrap_or_else(|| Map::new(e));
+    let claims = e.storage().persistent().get(&key).unwrap_optimized();
     e.storage()
         .persistent()
         .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
