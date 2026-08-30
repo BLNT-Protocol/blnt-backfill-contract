@@ -40,10 +40,6 @@ The call MUST reject an absent or fully consumed allocation, a zero currently
 claimable amount, and the contract itself as recipient. Failed transfers or
 balance mismatches MUST roll back both claimant and aggregate progress.
 
-`claim(claimant, to)` is an equivalent compatibility alias. Both entry points
-read and update the same cumulative claim progress, so alternating between
-them cannot exceed the vested amount.
-
 The production snapshot allocation MUST assign exactly 20 million BLNT in
 proportion to each of the 423 account and 11 contract addresses with a positive
 `flattened_total_cpal_raw` value from
@@ -102,12 +98,14 @@ TTLs.
 
 ## Public API
 
+See [PUBLIC_API.md](PUBLIC_API.md) for authorization, return-value, event, and
+error details.
+
 - `__constructor(legacy_blnd_token, blnt_token, claim_list, grant_list)`
-- `claim(claimant, to) -> i128`
 - `claim_backfill(claimant, to) -> i128`
 - `claim_grant(grantee, to) -> i128`
 - `swap_blnd_for_blnt(from, to, amount) -> i128`
-- `get_claimable(claimant) -> i128`
+- `get_backfill_claimable(claimant) -> i128`
 - `get_grant_claimable(grantee) -> i128`
 - `get_legacy_blnd_token() -> Address`
 - `get_blnt_token() -> Address`

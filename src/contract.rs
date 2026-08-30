@@ -238,10 +238,6 @@ impl BlntBackfillContract {
 
 #[contractimpl]
 impl BlntBackfillContract {
-    pub fn claim(e: Env, claimant: Address, to: Address) -> i128 {
-        execute_claim(&e, &claimant, &to, ClaimLane::Backfill)
-    }
-
     pub fn claim_backfill(e: Env, claimant: Address, to: Address) -> i128 {
         execute_claim(&e, &claimant, &to, ClaimLane::Backfill)
     }
@@ -288,7 +284,7 @@ impl BlntBackfillContract {
         total
     }
 
-    pub fn get_claimable(e: Env, claimant: Address) -> i128 {
+    pub fn get_backfill_claimable(e: Env, claimant: Address) -> i128 {
         storage::extend_instance(&e);
         let allocation = storage::get_backfill_claims(&e).get(claimant.clone());
         match allocation {
@@ -499,25 +495,28 @@ mod tests {
         let third = VESTING_DURATION_SECONDS / 3;
 
         assert_eq!(client.get_vesting_end(), start + VESTING_DURATION_SECONDS);
-        assert_eq!(client.get_claimable(&fixture.claimant), 0);
+        assert_eq!(client.get_backfill_claimable(&fixture.claimant), 0);
         assert!(client
             .try_claim_backfill(&fixture.claimant, &fixture.recipient)
             .is_err());
 
         fixture.e.ledger().set_timestamp(start + third);
-        assert_eq!(client.get_claimable(&fixture.claimant), i128::from(third));
+        assert_eq!(
+            client.get_backfill_claimable(&fixture.claimant),
+            i128::from(third)
+        );
         assert_eq!(
             client.claim_backfill(&fixture.claimant, &fixture.recipient),
             i128::from(third)
         );
-        assert_eq!(client.get_claimable(&fixture.claimant), 0);
+        assert_eq!(client.get_backfill_claimable(&fixture.claimant), 0);
         assert!(client
-            .try_claim(&fixture.claimant, &fixture.recipient)
+            .try_claim_backfill(&fixture.claimant, &fixture.recipient)
             .is_err());
 
         fixture.e.ledger().set_timestamp(start + 2 * third);
         assert_eq!(
-            client.claim(&fixture.claimant, &fixture.recipient),
+            client.claim_backfill(&fixture.claimant, &fixture.recipient),
             i128::from(third)
         );
 
@@ -526,12 +525,9 @@ mod tests {
             client.claim_backfill(&fixture.claimant, &fixture.recipient),
             allocation - 2 * i128::from(third)
         );
-        assert_eq!(client.get_claimable(&fixture.claimant), 0);
+        assert_eq!(client.get_backfill_claimable(&fixture.claimant), 0);
         assert_eq!(client.get_total_claimed(), allocation);
         assert_eq!(blnt.balance(&fixture.recipient), allocation);
-        assert!(client
-            .try_claim(&fixture.claimant, &fixture.recipient)
-            .is_err());
         assert!(client
             .try_claim_backfill(&fixture.claimant, &fixture.recipient)
             .is_err());
@@ -634,7 +630,7 @@ mod tests {
         assert_eq!(
             fixture
                 .client()
-                .claim(&fixture.claimant, &fixture.recipient),
+                .claim_backfill(&fixture.claimant, &fixture.recipient),
             BACKFILL_CAP
         );
         assert_eq!(
@@ -679,13 +675,12 @@ mod tests {
         let client = BlntBackfillContractClient::new(&e, &contract);
         e.ledger().set_timestamp(client.get_grant_vesting_end());
 
-        assert!(client.try_claim(&claimant, &recipient).is_err());
         assert!(client.try_claim_backfill(&claimant, &recipient).is_err());
         assert!(client.try_claim_grant(&grantee, &recipient).is_err());
         assert!(client
             .try_swap_blnd_for_blnt(&user, &recipient, &SCALAR_7)
             .is_err());
-        assert_eq!(client.get_claimable(&claimant), SCALAR_7);
+        assert_eq!(client.get_backfill_claimable(&claimant), SCALAR_7);
         assert_eq!(client.get_total_swapped(), 0);
     }
 
@@ -699,9 +694,12 @@ mod tests {
 
         assert!(fixture
             .client()
-            .try_claim(&fixture.claimant, &fixture.recipient)
+            .try_claim_backfill(&fixture.claimant, &fixture.recipient)
             .is_err());
-        assert_eq!(fixture.client().get_claimable(&fixture.claimant), SCALAR_7);
+        assert_eq!(
+            fixture.client().get_backfill_claimable(&fixture.claimant),
+            SCALAR_7
+        );
         assert_eq!(fixture.client().get_total_claimed(), 0);
 
         assert!(fixture
@@ -840,7 +838,7 @@ mod tests {
         let first = claimants.first().unwrap();
         e.ledger().set_timestamp(client.get_vesting_end());
         assert_eq!(client.claim_backfill(&first, &first), 1);
-        assert_eq!(client.get_claimable(&first), 0);
+        assert_eq!(client.get_backfill_claimable(&first), 0);
     }
 
     #[test]
@@ -869,7 +867,7 @@ mod tests {
         fixture.finish_grant_vesting();
         fixture
             .client()
-            .claim(&fixture.claimant, &fixture.recipient);
+            .claim_backfill(&fixture.claimant, &fixture.recipient);
         fixture
             .client()
             .claim_grant(&fixture.grantee, &fixture.recipient);

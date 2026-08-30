@@ -23,11 +23,9 @@ The production snapshot manifest assigns exactly 20 million BLNT across the
 `flattened_total_cpal_raw` in
 `comet_cpal_flattened_ownership_before_41c898a1.csv`. The generated allocation
 uses proportional floor rounding followed by deterministic largest-remainder
-assignment. `claim_backfill(claimant, to)` is the descriptive claim entry point;
-each call transfers all vested-but-unclaimed BLNT. The original
-`claim(claimant, to)` remains an equivalent compatibility alias over the same
-vesting progress. Vesting starts at contract construction, accrues per second,
-and claims remain available indefinitely after vesting completes.
+assignment. `claim_backfill(claimant, to)` transfers all vested-but-unclaimed
+BLNT. Vesting starts at contract construction, accrues per second, and claims
+remain available indefinitely after vesting completes.
 
 An independent immutable grant list is supplied at construction.
 `claim_grant(grantee, to)` transfers its vested-but-unclaimed portion using the
@@ -44,5 +42,6 @@ make test
 make build
 ```
 
-See [SPECIFICATION.md](SPECIFICATION.md) for the normative behavior and public
-API.
+See [SPECIFICATION.md](SPECIFICATION.md) for normative behavior and
+[PUBLIC_API.md](PUBLIC_API.md) for the complete entrypoint, event, and error
+reference.
