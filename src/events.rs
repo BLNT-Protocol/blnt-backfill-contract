@@ -9,6 +9,15 @@ struct ClaimEvent {
     amount: i128,
 }
 
+#[contractevent(topics = ["claim_grant"], data_format = "single-value")]
+struct GrantClaimEvent {
+    #[topic]
+    grantee: Address,
+    #[topic]
+    to: Address,
+    amount: i128,
+}
+
 #[contractevent(topics = ["swap_blnd"], data_format = "vec")]
 struct SwapBlndEvent {
     #[topic]
@@ -22,6 +31,15 @@ struct SwapBlndEvent {
 pub fn claim(e: &Env, claimant: Address, to: Address, amount: i128) {
     ClaimEvent {
         claimant,
+        to,
+        amount,
+    }
+    .publish(e);
+}
+
+pub fn grant_claim(e: &Env, grantee: Address, to: Address, amount: i128) {
+    GrantClaimEvent {
+        grantee,
         to,
         amount,
     }

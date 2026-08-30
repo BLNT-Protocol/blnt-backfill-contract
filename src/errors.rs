@@ -16,4 +16,10 @@ pub enum BackfillError {
     BalanceMismatch = 1209,
     ReentrantCall = 1210,
     Overflow = 1211,
+    NothingClaimable = 1212,
+    TooManyGrantees = 1213,
+    DuplicateGrantee = 1214,
+    GrantCapExceeded = 1215,
+    NoGrant = 1216,
+    NothingGrantClaimable = 1217,
 }

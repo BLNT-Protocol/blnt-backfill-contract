@@ -10,15 +10,25 @@ enum InstanceKey {
     LegacyBlnd,
     Blnt,
     TotalAllocated,
+    BackfillAllocated,
+    GrantAllocated,
     TotalClaimed,
+    BackfillClaimed,
+    GrantClaimed,
     TotalSwapped,
+    VestingStart,
+    VestingEnd,
+    GrantVestingEnd,
     Lock,
 }
 
 #[derive(Clone)]
 #[contracttype]
 enum PersistentKey {
-    Claims,
+    BackfillClaims,
+    BackfillProgress,
+    GrantClaims,
+    GrantProgress,
 }
 
 pub fn extend_instance(e: &Env) {
@@ -60,6 +70,32 @@ pub fn set_total_allocated(e: &Env, amount: i128) {
         .set(&InstanceKey::TotalAllocated, &amount);
 }
 
+pub fn get_backfill_allocated(e: &Env) -> i128 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::BackfillAllocated)
+        .unwrap_or(0)
+}
+
+pub fn set_backfill_allocated(e: &Env, amount: i128) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::BackfillAllocated, &amount);
+}
+
+pub fn get_grant_allocated(e: &Env) -> i128 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::GrantAllocated)
+        .unwrap_or(0)
+}
+
+pub fn set_grant_allocated(e: &Env, amount: i128) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::GrantAllocated, &amount);
+}
+
 pub fn get_total_claimed(e: &Env) -> i128 {
     e.storage()
         .instance()
@@ -71,6 +107,32 @@ pub fn set_total_claimed(e: &Env, amount: i128) {
     e.storage()
         .instance()
         .set(&InstanceKey::TotalClaimed, &amount);
+}
+
+pub fn get_backfill_claimed(e: &Env) -> i128 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::BackfillClaimed)
+        .unwrap_or(0)
+}
+
+pub fn set_backfill_claimed(e: &Env, amount: i128) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::BackfillClaimed, &amount);
+}
+
+pub fn get_grant_claimed(e: &Env) -> i128 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::GrantClaimed)
+        .unwrap_or(0)
+}
+
+pub fn set_grant_claimed(e: &Env, amount: i128) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::GrantClaimed, &amount);
 }
 
 pub fn get_total_swapped(e: &Env) -> i128 {
@@ -86,6 +148,45 @@ pub fn set_total_swapped(e: &Env, amount: i128) {
         .set(&InstanceKey::TotalSwapped, &amount);
 }
 
+pub fn get_vesting_start(e: &Env) -> u64 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::VestingStart)
+        .unwrap_optimized()
+}
+
+pub fn set_vesting_start(e: &Env, timestamp: u64) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::VestingStart, &timestamp);
+}
+
+pub fn get_vesting_end(e: &Env) -> u64 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::VestingEnd)
+        .unwrap_optimized()
+}
+
+pub fn set_vesting_end(e: &Env, timestamp: u64) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::VestingEnd, &timestamp);
+}
+
+pub fn get_grant_vesting_end(e: &Env) -> u64 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::GrantVestingEnd)
+        .unwrap_optimized()
+}
+
+pub fn set_grant_vesting_end(e: &Env, timestamp: u64) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::GrantVestingEnd, &timestamp);
+}
+
 pub fn get_lock(e: &Env) -> bool {
     e.storage()
         .instance()
@@ -97,19 +198,70 @@ pub fn set_lock(e: &Env, locked: bool) {
     e.storage().instance().set(&InstanceKey::Lock, &locked);
 }
 
-pub fn set_claims(e: &Env, claims: &Map<Address, i128>) {
-    let key = PersistentKey::Claims;
+pub fn set_backfill_claims(e: &Env, claims: &Map<Address, i128>) {
+    let key = PersistentKey::BackfillClaims;
     e.storage().persistent().set(&key, claims);
     e.storage()
         .persistent()
         .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
 }
 
-pub fn get_claims(e: &Env) -> Map<Address, i128> {
-    let key = PersistentKey::Claims;
+pub fn get_backfill_claims(e: &Env) -> Map<Address, i128> {
+    let key = PersistentKey::BackfillClaims;
     let claims = e.storage().persistent().get(&key).unwrap_optimized();
     e.storage()
         .persistent()
         .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
     claims
+}
+
+pub fn set_backfill_progress(e: &Env, progress: &Map<Address, i128>) {
+    let key = PersistentKey::BackfillProgress;
+    e.storage().persistent().set(&key, progress);
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+}
+
+pub fn get_backfill_progress(e: &Env) -> Map<Address, i128> {
+    let key = PersistentKey::BackfillProgress;
+    let progress = e.storage().persistent().get(&key).unwrap_optimized();
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+    progress
+}
+
+pub fn set_grant_claims(e: &Env, claims: &Map<Address, i128>) {
+    let key = PersistentKey::GrantClaims;
+    e.storage().persistent().set(&key, claims);
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+}
+
+pub fn get_grant_claims(e: &Env) -> Map<Address, i128> {
+    let key = PersistentKey::GrantClaims;
+    let claims = e.storage().persistent().get(&key).unwrap_optimized();
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+    claims
+}
+
+pub fn set_grant_progress(e: &Env, progress: &Map<Address, i128>) {
+    let key = PersistentKey::GrantProgress;
+    e.storage().persistent().set(&key, progress);
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+}
+
+pub fn get_grant_progress(e: &Env) -> Map<Address, i128> {
+    let key = PersistentKey::GrantProgress;
+    let progress = e.storage().persistent().get(&key).unwrap_optimized();
+    e.storage()
+        .persistent()
+        .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
+    progress
 }
