@@ -10,28 +10,30 @@ and exposes three immutable distribution lanes:
 - 1:1 legacy BLND-to-BLNT conversion totaling at most 120 million BLNT and
   expiring 270 days after construction.
 
-The conversion transfers an authorized holder's legacy BLND into the contract,
-verifies the exact receipt, burns it, and transfers the same raw seven-decimal
-amount of pre-funded BLNT to the selected recipient. It never mints BLNT.
+The conversion transfers an authorized user's legacy BLND into escrow and
+transfers the same raw seven-decimal amount of pre-funded BLNT back to that
+user. Before expiry, the same user may return BLNT and recover up to their
+unrefunded BLND. It never mints BLNT.
 
-The contract has no administrator, upgrade, sweep, or BLNT-to-BLND entry
-point. After conversion expiry, anyone may call `burn_expired()` to destroy the
-unused swap reserve without affecting backfill or grant claims.
+The contract has no administrator, upgrade, or sweep entry point. After
+conversion expiry, anyone may call `burn_expired()` to destroy both escrowed
+BLND for unrefunded conversions and the unused BLNT swap reserve without
+affecting backfill or grant claims.
 
 The production snapshot manifest assigns exactly 20 million BLNT across the
 434 addresses (423 accounts and 11 contracts) with positive
 `flattened_total_cpal_raw` in
 `comet_cpal_flattened_ownership_before_41c898a1.csv`. The generated allocation
 uses proportional floor rounding followed by deterministic largest-remainder
-assignment. `claim_backfill(claimant, to)` transfers all vested-but-unclaimed
-BLNT. Vesting starts at contract construction, accrues per second, and claims
-remain available indefinitely after vesting completes.
+assignment. `claim_backfill(user)` transfers all vested-but-unclaimed BLNT to
+that same authorized user. Vesting starts at contract construction, accrues per
+second, and claims remain available indefinitely after vesting completes.
 
 An independent immutable grant list is supplied at construction.
-`claim_grant(grantee, to)` transfers its vested-but-unclaimed portion using the
-same construction timestamp but a two-year (720-day) schedule. Backfill and
-grant progress, caps, views, and events are separate, even when one address is
-present in both lists.
+`claim_grant(user)` transfers its vested-but-unclaimed portion to that same
+authorized user using the same construction timestamp but a two-year (720-day)
+schedule. Backfill and grant progress, caps, views, and events are separate,
+even when one address is present in both lists.
 
 ## Build and test
 

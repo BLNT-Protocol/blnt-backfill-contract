@@ -8,7 +8,7 @@ mod errors;
 mod events;
 mod storage;
 
-pub use contract::{BlntBackfillContract, BlntBackfillContractClient};
+pub use contract::{BlntBackfillContract, BlntBackfillContractClient, ExpiredBurn};
 pub use errors::BackfillError;
 
 pub const SCALAR_7: i128 = 10_000_000;
