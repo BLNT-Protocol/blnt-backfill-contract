@@ -1,22 +1,22 @@
 # BLNT Backfill Contract
 
-This Soroban contract custodies Blend v3's 50 million BLNT initial allocation
+This Soroban contract custodies BLNT v3's 150 million BLNT initial allocation
 and exposes three immutable distribution lanes:
 
 - backfill allocations for at most 434 recipients totaling at most 20 million
   BLNT and vesting linearly over 180 days;
 - grant allocations for at most 100 recipients totaling at most 10 million
   BLNT and vesting linearly over 720 days; and
-- perpetual 1:1 legacy BLND-to-BLNT conversion totaling at most 20 million
-  BLNT.
+- 1:1 legacy BLND-to-BLNT conversion totaling at most 120 million BLNT and
+  expiring 270 days after construction.
 
 The conversion transfers an authorized holder's legacy BLND into the contract,
 verifies the exact receipt, burns it, and transfers the same raw seven-decimal
 amount of pre-funded BLNT to the selected recipient. It never mints BLNT.
 
-The contract has no administrator, upgrade, sweep, expiry, or BLNT-to-BLND
-entry point. Any unallocated claim balance and unused conversion capacity stay
-in the contract.
+The contract has no administrator, upgrade, sweep, or BLNT-to-BLND entry
+point. After conversion expiry, anyone may call `burn_expired()` to destroy the
+unused swap reserve without affecting backfill or grant claims.
 
 The production snapshot manifest assigns exactly 20 million BLNT across the
 434 addresses (423 accounts and 11 contracts) with positive

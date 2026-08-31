@@ -16,12 +16,14 @@ criteria.
 - store both allocation maps and their separate and combined totals
   immutably;
 - bind a vesting start to the construction ledger timestamp and a vesting end
-  exactly 180 days later for backfill and 720 days later for grants.
+  exactly 180 days later for backfill and 720 days later for grants; and
+- bind the BLND-to-BLNT conversion deadline to exactly 270 days after the
+  construction ledger timestamp.
 
 The same address MAY occur once in each list because the two allocations,
 progress records, caps, and entry points are independent.
 
-The Blend v3 emitter drop MUST transfer exactly 50 million BLNT to the deployed
+The BLNT v3 emitter drop MUST transfer exactly 150 million BLNT to the deployed
 contract. The contract receives no token-administrator or mint authority.
 
 ## Address claims
@@ -73,24 +75,35 @@ The immutable grant list MUST NOT exceed 100 recipients or 10 million BLNT.
 `swap_blnd_for_blnt(from, to, amount)` MUST:
 
 1. require `from` authorization and a positive amount;
-2. reject any call whose cumulative successful amount would exceed 20 million
+2. reject at or after the immutable conversion deadline;
+3. reject any call whose cumulative successful amount would exceed 120 million
    tokens;
-3. transfer exactly `amount` legacy BLND from `from` to the contract;
-4. verify the exact receipt and burn it completely;
-5. transfer exactly the same raw seven-decimal amount of pre-funded BLNT from
+4. transfer exactly `amount` legacy BLND from `from` to the contract;
+5. verify the exact receipt and burn it completely;
+6. transfer exactly the same raw seven-decimal amount of pre-funded BLNT from
    the contract to `to`; and
-6. increment the cumulative successful conversion total.
+7. increment the cumulative successful conversion total.
 
-Conversion does not expire. Transfer, burn, balance, authorization,
+Conversion remains open before the deadline and expires exactly 270 days after
+construction. Transfer, burn, balance, authorization,
 reentrancy, cap, and overflow failures MUST roll back atomically. No
 BLNT-to-BLND path exists.
+
+After the conversion deadline, permissionless `burn_expired()` MUST burn
+exactly the unused conversion reserve, defined as 120 million BLNT less the
+cumulative successful conversion total and any amount already burned by that
+entry point. It MUST reject before the deadline, MUST preserve enough BLNT to
+cover every unclaimed backfill and grant allocation, and MUST verify the exact
+token debit. The first successful call MUST record and emit the burned amount.
+Calls after the reserve has been fully converted or burned MUST return zero so
+permissionless callers may race safely.
 
 ## Authority and lifecycle
 
 The contract MUST NOT expose an administrator, privileged upgrade, recovery,
-sweep, mint, allocation mutation, deadline, or reverse-conversion entry point.
-Unused conversion capacity and unallocated BLNT remain locked unless a future
-contract design explicitly replaces this deployment policy.
+sweep, mint, allocation mutation, or reverse-conversion entry point. Unused
+conversion capacity is destroyed only through `burn_expired`; backfill and
+grant claims do not expire and their outstanding reserves MUST remain intact.
 
 Contract and persistent allocation/progress-map entries rely on normal Soroban
 state archival and restoration. Successful calls and views renew relevant
@@ -105,6 +118,7 @@ error details.
 - `claim_backfill(claimant, to) -> i128`
 - `claim_grant(grantee, to) -> i128`
 - `swap_blnd_for_blnt(from, to, amount) -> i128`
+- `burn_expired() -> i128`
 - `get_backfill_claimable(claimant) -> i128`
 - `get_grant_claimable(grantee) -> i128`
 - `get_legacy_blnd_token() -> Address`
@@ -121,3 +135,5 @@ error details.
 - `get_grant_vesting_end() -> u64`
 - `get_total_swapped() -> i128`
 - `get_remaining_swap_capacity() -> i128`
+- `get_swap_deadline() -> u64`
+- `get_expired_swap_burned() -> i128`

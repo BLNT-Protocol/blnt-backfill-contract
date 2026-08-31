@@ -28,6 +28,12 @@ struct SwapBlndEvent {
     total_swapped: i128,
 }
 
+#[contractevent(topics = ["burn_expired"], data_format = "vec")]
+struct BurnExpiredEvent {
+    amount: i128,
+    total_swapped: i128,
+}
+
 pub fn claim(e: &Env, claimant: Address, to: Address, amount: i128) {
     ClaimEvent {
         claimant,
@@ -50,6 +56,14 @@ pub fn swap_blnd(e: &Env, from: Address, to: Address, amount: i128, total_swappe
     SwapBlndEvent {
         from,
         to,
+        amount,
+        total_swapped,
+    }
+    .publish(e);
+}
+
+pub fn burn_expired(e: &Env, amount: i128, total_swapped: i128) {
+    BurnExpiredEvent {
         amount,
         total_swapped,
     }

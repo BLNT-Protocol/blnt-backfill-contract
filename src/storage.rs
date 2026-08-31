@@ -16,6 +16,8 @@ enum InstanceKey {
     BackfillClaimed,
     GrantClaimed,
     TotalSwapped,
+    SwapDeadline,
+    ExpiredSwapBurned,
     VestingStart,
     VestingEnd,
     GrantVestingEnd,
@@ -146,6 +148,32 @@ pub fn set_total_swapped(e: &Env, amount: i128) {
     e.storage()
         .instance()
         .set(&InstanceKey::TotalSwapped, &amount);
+}
+
+pub fn get_swap_deadline(e: &Env) -> u64 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::SwapDeadline)
+        .unwrap_optimized()
+}
+
+pub fn set_swap_deadline(e: &Env, timestamp: u64) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::SwapDeadline, &timestamp);
+}
+
+pub fn get_expired_swap_burned(e: &Env) -> i128 {
+    e.storage()
+        .instance()
+        .get(&InstanceKey::ExpiredSwapBurned)
+        .unwrap_or(0)
+}
+
+pub fn set_expired_swap_burned(e: &Env, amount: i128) {
+    e.storage()
+        .instance()
+        .set(&InstanceKey::ExpiredSwapBurned, &amount);
 }
 
 pub fn get_vesting_start(e: &Env) -> u64 {

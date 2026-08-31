@@ -22,4 +22,6 @@ pub enum BackfillError {
     GrantCapExceeded = 1215,
     NoGrant = 1216,
     NothingGrantClaimable = 1217,
+    SwapExpired = 1218,
+    SwapNotExpired = 1219,
 }
