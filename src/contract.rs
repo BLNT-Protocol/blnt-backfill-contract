@@ -1,22 +1,15 @@
 use crate::{
-    errors::BackfillError, events, storage, BACKFILL_CAP, CLAIM_CAP, GRANT_CAP,
+    errors::BackfillError, events, storage, BACKFILL_CAP, BLND_PER_BLNT, CLAIM_CAP, GRANT_CAP,
     GRANT_VESTING_DURATION_SECONDS, MAX_CLAIMANTS, MAX_GRANTEES, SWAP_CAP, SWAP_DURATION_SECONDS,
     VESTING_DURATION_SECONDS,
 };
 use soroban_sdk::{
-    contract, contractimpl, contracttype, panic_with_error, token::TokenClient, Address, Env,
-    Executable, Map, Vec,
+    contract, contractimpl, panic_with_error, token::TokenClient, Address, Env, Executable, Map,
+    Vec,
 };
 
 #[contract]
 pub struct BlntBackfillContract;
-
-#[contracttype]
-#[derive(Clone, Copy, Debug, Eq, PartialEq)]
-pub struct ExpiredBurn {
-    pub blnd: i128,
-    pub blnt: i128,
-}
 
 #[derive(Clone, Copy)]
 enum ClaimLane {
@@ -66,6 +59,18 @@ fn transfer_to_contract(e: &Env, token: &Address, from: &Address, amount: i128) 
     }
 }
 
+fn burn_from_contract(e: &Env, token: &Address, amount: i128) {
+    let contract = e.current_contract_address();
+    let client = TokenClient::new(e, token);
+    let contract_before = client.balance(&contract);
+
+    client.burn(&contract, &amount);
+
+    if contract_before.checked_sub(client.balance(&contract)) != Some(amount) {
+        panic_with_error!(e, BackfillError::BalanceMismatch);
+    }
+}
+
 fn vested_amount(e: &Env, allocation: i128, vesting_end: u64) -> i128 {
     let now = e.ledger().timestamp();
     let start = storage::get_vesting_start(e);
@@ -93,16 +98,9 @@ fn claimable_amount(e: &Env, allocation: i128, claimed: i128, vesting_end: u64) 
         .unwrap_or_else(|| panic_with_error!(e, BackfillError::Overflow))
 }
 
-fn net_swapped(e: &Env) -> i128 {
-    storage::get_total_swapped(e)
-        .checked_sub(storage::get_total_refunded(e))
-        .filter(|net| *net >= 0)
-        .unwrap_or_else(|| panic_with_error!(e, BackfillError::Overflow))
-}
-
 fn remaining_swap_capacity(e: &Env) -> i128 {
     SWAP_CAP
-        .checked_sub(net_swapped(e))
+        .checked_sub(storage::get_total_swapped(e))
         .filter(|remaining| *remaining >= 0)
         .unwrap_or_else(|| panic_with_error!(e, BackfillError::Overflow))
 }
@@ -110,13 +108,6 @@ fn remaining_swap_capacity(e: &Env) -> i128 {
 fn remaining_expired_blnt(e: &Env) -> i128 {
     remaining_swap_capacity(e)
         .checked_sub(storage::get_expired_blnt_burned(e))
-        .filter(|remaining| *remaining >= 0)
-        .unwrap_or_else(|| panic_with_error!(e, BackfillError::Overflow))
-}
-
-fn remaining_expired_blnd(e: &Env) -> i128 {
-    net_swapped(e)
-        .checked_sub(storage::get_expired_blnd_burned(e))
         .filter(|remaining| *remaining >= 0)
         .unwrap_or_else(|| panic_with_error!(e, BackfillError::Overflow))
 }
@@ -300,11 +291,11 @@ impl BlntBackfillContract {
         execute_claim(&e, &user, ClaimLane::Grant)
     }
 
-    pub fn swap_blnd_for_blnt(e: Env, user: Address, amount: i128) -> i128 {
+    pub fn swap_blnd_for_blnt(e: Env, user: Address, blnt_amount: i128) -> i128 {
         storage::extend_instance(&e);
         require_unlocked(&e);
         require_external_recipient(&e, &user);
-        if amount <= 0 {
+        if blnt_amount <= 0 {
             panic_with_error!(&e, BackfillError::InvalidSwapAmount);
         }
         if e.ledger().timestamp() >= storage::get_swap_deadline(&e) {
@@ -313,67 +304,27 @@ impl BlntBackfillContract {
         user.require_auth();
 
         let total = storage::get_total_swapped(&e)
-            .checked_add(amount)
+            .checked_add(blnt_amount)
             .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-        let refundable = storage::get_refundable(&e, &user)
-            .checked_add(amount)
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-        let net = net_swapped(&e)
-            .checked_add(amount)
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-        if net > SWAP_CAP {
+        if total > SWAP_CAP {
             panic_with_error!(&e, BackfillError::SwapCapExceeded);
         }
+        let blnd_amount = blnt_amount
+            .checked_mul(BLND_PER_BLNT)
+            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
 
         storage::set_lock(&e, true);
         storage::set_total_swapped(&e, total);
-        storage::set_refundable(&e, &user, refundable);
-        transfer_to_contract(&e, &storage::get_legacy_blnd(&e), &user, amount);
-        transfer_from_contract(&e, &storage::get_blnt(&e), &user, amount);
+        transfer_to_contract(&e, &storage::get_legacy_blnd(&e), &user, blnd_amount);
+        burn_from_contract(&e, &storage::get_legacy_blnd(&e), blnd_amount);
+        transfer_from_contract(&e, &storage::get_blnt(&e), &user, blnt_amount);
         storage::set_lock(&e, false);
 
-        events::swap_blnd(&e, user, amount, total, refundable, net);
+        events::swap_blnd(&e, user, blnd_amount, blnt_amount, total);
         total
     }
 
-    pub fn refund_blnt_for_blnd(e: Env, user: Address, amount: i128) -> i128 {
-        storage::extend_instance(&e);
-        require_unlocked(&e);
-        require_external_recipient(&e, &user);
-        if amount <= 0 {
-            panic_with_error!(&e, BackfillError::InvalidRefundAmount);
-        }
-        if e.ledger().timestamp() >= storage::get_swap_deadline(&e) {
-            panic_with_error!(&e, BackfillError::SwapExpired);
-        }
-        user.require_auth();
-
-        let previous_refundable = storage::get_refundable(&e, &user);
-        let refundable = previous_refundable
-            .checked_sub(amount)
-            .filter(|remaining| *remaining >= 0)
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::RefundExceedsCredit));
-        let total_refunded = storage::get_total_refunded(&e)
-            .checked_add(amount)
-            .filter(|total| *total <= storage::get_total_swapped(&e))
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-        let net = net_swapped(&e)
-            .checked_sub(amount)
-            .filter(|remaining| *remaining >= 0)
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-
-        storage::set_lock(&e, true);
-        storage::set_refundable(&e, &user, refundable);
-        storage::set_total_refunded(&e, total_refunded);
-        transfer_to_contract(&e, &storage::get_blnt(&e), &user, amount);
-        transfer_from_contract(&e, &storage::get_legacy_blnd(&e), &user, amount);
-        storage::set_lock(&e, false);
-
-        events::refund_blnd(&e, user, amount, total_refunded, refundable, net);
-        total_refunded
-    }
-
-    pub fn burn_expired(e: Env) -> ExpiredBurn {
+    pub fn burn_expired(e: Env) -> i128 {
         storage::extend_instance(&e);
         require_unlocked(&e);
         if e.ledger().timestamp() < storage::get_swap_deadline(&e) {
@@ -381,9 +332,8 @@ impl BlntBackfillContract {
         }
 
         let blnt_amount = remaining_expired_blnt(&e);
-        let blnd_amount = remaining_expired_blnd(&e);
-        if blnt_amount == 0 && blnd_amount == 0 {
-            return ExpiredBurn { blnd: 0, blnt: 0 };
+        if blnt_amount == 0 {
+            return 0;
         }
         let outstanding_claims = storage::get_total_allocated(&e)
             .checked_sub(storage::get_total_claimed(&e))
@@ -394,41 +344,24 @@ impl BlntBackfillContract {
             .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
         let contract = e.current_contract_address();
         let blnt = TokenClient::new(&e, &storage::get_blnt(&e));
-        let legacy = TokenClient::new(&e, &storage::get_legacy_blnd(&e));
         let blnt_before = blnt.balance(&contract);
-        let blnd_before = legacy.balance(&contract);
-        if blnt_before < required_balance || blnd_before < blnd_amount {
+        if blnt_before < required_balance {
             panic_with_error!(&e, BackfillError::BalanceMismatch);
         }
         let total_blnt_burned = storage::get_expired_blnt_burned(&e)
             .checked_add(blnt_amount)
             .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
-        let total_blnd_burned = storage::get_expired_blnd_burned(&e)
-            .checked_add(blnd_amount)
-            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow));
 
         storage::set_lock(&e, true);
         storage::set_expired_blnt_burned(&e, total_blnt_burned);
-        storage::set_expired_blnd_burned(&e, total_blnd_burned);
-        if blnt_amount > 0 {
-            blnt.burn(&contract, &blnt_amount);
-        }
-        if blnd_amount > 0 {
-            legacy.burn(&contract, &blnd_amount);
-        }
-        if blnt_before.checked_sub(blnt.balance(&contract)) != Some(blnt_amount)
-            || blnd_before.checked_sub(legacy.balance(&contract)) != Some(blnd_amount)
-        {
+        blnt.burn(&contract, &blnt_amount);
+        if blnt_before.checked_sub(blnt.balance(&contract)) != Some(blnt_amount) {
             panic_with_error!(&e, BackfillError::BalanceMismatch);
         }
         storage::set_lock(&e, false);
 
-        let result = ExpiredBurn {
-            blnd: blnd_amount,
-            blnt: blnt_amount,
-        };
-        events::burn_expired(&e, result.blnd, result.blnt, net_swapped(&e));
-        result
+        events::burn_expired(&e, blnt_amount, total_blnt_burned);
+        blnt_amount
     }
 
     pub fn get_backfill_claimable(e: Env, claimant: Address) -> i128 {
@@ -526,23 +459,11 @@ impl BlntBackfillContract {
         storage::get_total_swapped(&e)
     }
 
-    pub fn get_total_refunded(e: Env) -> i128 {
+    pub fn get_total_blnd_burned(e: Env) -> i128 {
         storage::extend_instance(&e);
-        storage::get_total_refunded(&e)
-    }
-
-    pub fn get_net_swapped(e: Env) -> i128 {
-        storage::extend_instance(&e);
-        net_swapped(&e)
-    }
-
-    pub fn get_refundable(e: Env, user: Address) -> i128 {
-        storage::extend_instance(&e);
-        if e.ledger().timestamp() >= storage::get_swap_deadline(&e) {
-            0
-        } else {
-            storage::get_refundable(&e, &user)
-        }
+        storage::get_total_swapped(&e)
+            .checked_mul(BLND_PER_BLNT)
+            .unwrap_or_else(|| panic_with_error!(&e, BackfillError::Overflow))
     }
 
     pub fn get_remaining_swap_capacity(e: Env) -> i128 {
@@ -563,20 +484,15 @@ impl BlntBackfillContract {
         storage::extend_instance(&e);
         storage::get_expired_blnt_burned(&e)
     }
-
-    pub fn get_expired_blnd_burned(e: Env) -> i128 {
-        storage::extend_instance(&e);
-        storage::get_expired_blnd_burned(&e)
-    }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{BlntBackfillContract, BlntBackfillContractClient, ExpiredBurn};
+    use super::{BlntBackfillContract, BlntBackfillContractClient};
     use crate::{
-        BACKFILL_CAP, CLAIM_CAP, GRANT_CAP, GRANT_VESTING_DURATION_SECONDS, MAX_CLAIMANTS,
-        MAX_GRANTEES, SCALAR_7, SWAP_CAP, SWAP_DURATION_SECONDS, TOTAL_FUNDING,
-        VESTING_DURATION_SECONDS,
+        BACKFILL_CAP, BLND_PER_BLNT, CLAIM_CAP, GRANT_CAP, GRANT_VESTING_DURATION_SECONDS,
+        MAX_CLAIMANTS, MAX_GRANTEES, SCALAR_7, SWAP_BLND_CAP, SWAP_CAP, SWAP_DURATION_SECONDS,
+        TOTAL_FUNDING, VESTING_DURATION_SECONDS,
     };
     use soroban_sdk::{
         testutils::{Address as _, Events, Ledger},
@@ -624,7 +540,7 @@ mod tests {
             };
             let contract = e.register(BlntBackfillContract, (&legacy, &blnt, claims, grants));
             StellarAssetClient::new(&e, &blnt).mint(&contract, &TOTAL_FUNDING);
-            StellarAssetClient::new(&e, &legacy).mint(&user, &SWAP_CAP);
+            StellarAssetClient::new(&e, &legacy).mint(&user, &SWAP_BLND_CAP);
             Self {
                 e,
                 contract,
@@ -740,92 +656,33 @@ mod tests {
     }
 
     #[test]
-    fn swaps_one_to_one_into_refundable_escrow_without_minting_blnt() {
+    fn swaps_two_blnd_for_one_prefunded_blnt_and_burns_blnd_immediately() {
         let fixture = Fixture::create(0);
         let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
         let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
         let contract_before = blnt.balance(&fixture.contract);
-        let amount = 25 * SCALAR_7;
-
-        assert_eq!(
-            fixture.client().swap_blnd_for_blnt(&fixture.user, &amount),
-            amount
-        );
-        assert_eq!(legacy.balance(&fixture.contract), amount);
-        assert_eq!(legacy.balance(&fixture.user), SWAP_CAP - amount);
-        assert_eq!(blnt.balance(&fixture.user), amount);
-        assert_eq!(blnt.balance(&fixture.contract), contract_before - amount);
-        assert_eq!(fixture.client().get_total_swapped(), amount);
-        assert_eq!(fixture.client().get_total_refunded(), 0);
-        assert_eq!(fixture.client().get_net_swapped(), amount);
-        assert_eq!(fixture.client().get_refundable(&fixture.user), amount);
-        assert_eq!(
-            fixture.client().get_remaining_swap_capacity(),
-            SWAP_CAP - amount
-        );
-    }
-
-    #[test]
-    fn refunds_to_the_same_user_and_restores_conversion_capacity() {
-        let fixture = Fixture::create(0);
-        let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
-        let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
-        let swapped = 25 * SCALAR_7;
-        let refunded = 10 * SCALAR_7;
-
-        fixture.client().swap_blnd_for_blnt(&fixture.user, &swapped);
-        assert_eq!(
-            fixture
-                .client()
-                .refund_blnt_for_blnd(&fixture.user, &refunded),
-            refunded
-        );
-        assert_eq!(legacy.balance(&fixture.user), SWAP_CAP - swapped + refunded);
-        assert_eq!(legacy.balance(&fixture.contract), swapped - refunded);
-        assert_eq!(blnt.balance(&fixture.user), swapped - refunded);
-        assert_eq!(fixture.client().get_total_swapped(), swapped);
-        assert_eq!(fixture.client().get_total_refunded(), refunded);
-        assert_eq!(fixture.client().get_net_swapped(), swapped - refunded);
-        assert_eq!(
-            fixture.client().get_refundable(&fixture.user),
-            swapped - refunded
-        );
-        assert_eq!(
-            fixture.client().get_remaining_swap_capacity(),
-            SWAP_CAP - swapped + refunded
-        );
-        assert!(fixture
-            .client()
-            .try_refund_blnt_for_blnd(&fixture.user, &(swapped - refunded + 1))
-            .is_err());
+        let blnt_amount = 25 * SCALAR_7;
+        let blnd_amount = blnt_amount * BLND_PER_BLNT;
 
         assert_eq!(
             fixture
                 .client()
-                .swap_blnd_for_blnt(&fixture.user, &refunded),
-            swapped + refunded
+                .swap_blnd_for_blnt(&fixture.user, &blnt_amount),
+            blnt_amount
         );
-        assert_eq!(fixture.client().get_net_swapped(), swapped);
+        assert_eq!(legacy.balance(&fixture.contract), 0);
+        assert_eq!(legacy.balance(&fixture.user), SWAP_BLND_CAP - blnd_amount);
+        assert_eq!(blnt.balance(&fixture.user), blnt_amount);
+        assert_eq!(
+            blnt.balance(&fixture.contract),
+            contract_before - blnt_amount
+        );
+        assert_eq!(fixture.client().get_total_swapped(), blnt_amount);
+        assert_eq!(fixture.client().get_total_blnd_burned(), blnd_amount);
         assert_eq!(
             fixture.client().get_remaining_swap_capacity(),
-            SWAP_CAP - swapped
+            SWAP_CAP - blnt_amount
         );
-    }
-
-    #[test]
-    fn refund_credit_is_bound_to_the_user_that_swapped() {
-        let fixture = Fixture::create(0);
-        let other = Address::generate(&fixture.e);
-        let amount = SCALAR_7;
-
-        fixture.client().swap_blnd_for_blnt(&fixture.user, &amount);
-        assert!(fixture
-            .client()
-            .try_refund_blnt_for_blnd(&other, &amount)
-            .is_err());
-        assert_eq!(fixture.client().get_refundable(&fixture.user), amount);
-        assert_eq!(fixture.client().get_refundable(&other), 0);
-        assert_eq!(fixture.client().get_total_refunded(), 0);
     }
 
     #[test]
@@ -842,14 +699,12 @@ mod tests {
     }
 
     #[test]
-    fn conversion_expires_and_permissionless_burn_finalizes_both_assets() {
+    fn conversion_expires_and_permissionless_burn_removes_unused_blnt() {
         let fixture = Fixture::create_with_grant(BACKFILL_CAP, GRANT_CAP);
         let client = fixture.client();
         let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
         let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
         let amount = 25 * SCALAR_7;
-        let refund = 5 * SCALAR_7;
-        let net = amount - refund;
         let deadline = client.get_swap_deadline();
 
         assert_eq!(deadline, client.get_vesting_start() + SWAP_DURATION_SECONDS);
@@ -857,23 +712,17 @@ mod tests {
 
         fixture.e.ledger().set_timestamp(deadline - 1);
         client.swap_blnd_for_blnt(&fixture.user, &amount);
-        client.refund_blnt_for_blnd(&fixture.user, &refund);
-        assert_eq!(client.get_remaining_swap_capacity(), SWAP_CAP - net);
+        assert_eq!(client.get_remaining_swap_capacity(), SWAP_CAP - amount);
+        assert_eq!(client.get_total_blnd_burned(), amount * BLND_PER_BLNT);
 
         fixture.e.ledger().set_timestamp(deadline);
         assert!(client.try_swap_blnd_for_blnt(&fixture.user, &1).is_err());
-        assert!(client.try_refund_blnt_for_blnd(&fixture.user, &1).is_err());
-        assert_eq!(client.get_refundable(&fixture.user), 0);
         assert_eq!(client.get_remaining_swap_capacity(), 0);
 
-        let burned = ExpiredBurn {
-            blnd: net,
-            blnt: SWAP_CAP - net,
-        };
+        let burned = SWAP_CAP - amount;
         assert_eq!(client.burn_expired(), burned);
-        assert_eq!(client.get_expired_blnd_burned(), burned.blnd);
-        assert_eq!(client.get_expired_blnt_burned(), burned.blnt);
-        assert_eq!(client.burn_expired(), ExpiredBurn { blnd: 0, blnt: 0 });
+        assert_eq!(client.get_expired_blnt_burned(), burned);
+        assert_eq!(client.burn_expired(), 0);
         assert_eq!(legacy.balance(&fixture.contract), 0);
         assert_eq!(blnt.balance(&fixture.contract), CLAIM_CAP);
 
@@ -884,63 +733,17 @@ mod tests {
     }
 
     #[test]
-    fn fully_converted_reserve_burns_only_escrowed_blnd_at_expiry() {
+    fn fully_converted_reserve_has_no_expired_blnt_to_burn() {
         let fixture = Fixture::create(0);
         let client = fixture.client();
         let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
         client.swap_blnd_for_blnt(&fixture.user, &SWAP_CAP);
         fixture.e.ledger().set_timestamp(client.get_swap_deadline());
 
-        assert_eq!(
-            client.burn_expired(),
-            ExpiredBurn {
-                blnd: SWAP_CAP,
-                blnt: 0,
-            }
-        );
-        assert_eq!(client.get_expired_blnd_burned(), SWAP_CAP);
+        assert_eq!(client.burn_expired(), 0);
         assert_eq!(client.get_expired_blnt_burned(), 0);
         assert_eq!(legacy.balance(&fixture.contract), 0);
-    }
-
-    #[test]
-    fn failed_refund_payout_rolls_back_credit_and_blnt_transfer() {
-        let fixture = Fixture::create(0);
-        let client = fixture.client();
-        let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
-        let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
-        let amount = SCALAR_7;
-
-        client.swap_blnd_for_blnt(&fixture.user, &amount);
-        StellarAssetClient::new(&fixture.e, &fixture.legacy).burn(&fixture.contract, &amount);
-
-        assert!(client
-            .try_refund_blnt_for_blnd(&fixture.user, &amount)
-            .is_err());
-        assert_eq!(client.get_total_refunded(), 0);
-        assert_eq!(client.get_net_swapped(), amount);
-        assert_eq!(client.get_refundable(&fixture.user), amount);
-        assert_eq!(blnt.balance(&fixture.user), amount);
-        assert_eq!(legacy.balance(&fixture.user), SWAP_CAP - amount);
-    }
-
-    #[test]
-    fn fully_refunded_reserve_burns_only_unused_blnt_at_expiry() {
-        let fixture = Fixture::create(0);
-        let client = fixture.client();
-        client.swap_blnd_for_blnt(&fixture.user, &SWAP_CAP);
-        client.refund_blnt_for_blnd(&fixture.user, &SWAP_CAP);
-        fixture.e.ledger().set_timestamp(client.get_swap_deadline());
-
-        assert_eq!(
-            client.burn_expired(),
-            ExpiredBurn {
-                blnd: 0,
-                blnt: SWAP_CAP,
-            }
-        );
-        assert_eq!(client.get_expired_blnd_burned(), 0);
-        assert_eq!(client.get_expired_blnt_burned(), SWAP_CAP);
+        assert_eq!(client.get_total_blnd_burned(), SWAP_BLND_CAP);
     }
 
     #[test]
@@ -993,7 +796,6 @@ mod tests {
         assert!(client.try_claim_backfill(&claimant).is_err());
         assert!(client.try_claim_grant(&grantee).is_err());
         assert!(client.try_swap_blnd_for_blnt(&user, &SCALAR_7).is_err());
-        assert!(client.try_refund_blnt_for_blnd(&user, &SCALAR_7).is_err());
         assert_eq!(client.get_backfill_claimable(&claimant), SCALAR_7);
         assert_eq!(client.get_total_swapped(), 0);
     }
@@ -1021,7 +823,7 @@ mod tests {
             .try_swap_blnd_for_blnt(&fixture.user, &SCALAR_7)
             .is_err());
         assert_eq!(fixture.client().get_total_swapped(), 0);
-        assert_eq!(legacy.balance(&fixture.user), SWAP_CAP);
+        assert_eq!(legacy.balance(&fixture.user), SWAP_BLND_CAP);
         assert_eq!(legacy.balance(&fixture.contract), 0);
     }
 
@@ -1039,14 +841,6 @@ mod tests {
         assert!(fixture
             .client()
             .try_swap_blnd_for_blnt(&fixture.contract, &1)
-            .is_err());
-        assert!(fixture
-            .client()
-            .try_refund_blnt_for_blnd(&fixture.user, &0)
-            .is_err());
-        assert!(fixture
-            .client()
-            .try_refund_blnt_for_blnd(&fixture.user, &-1)
             .is_err());
     }
 
@@ -1195,16 +989,6 @@ mod tests {
             .all()
             .filter_by_contract(&fixture.contract);
         assert_eq!(swap_events.events().len(), 1);
-
-        fixture
-            .client()
-            .refund_blnt_for_blnd(&fixture.user, &(SCALAR_7 / 2));
-        let refund_events = fixture
-            .e
-            .events()
-            .all()
-            .filter_by_contract(&fixture.contract);
-        assert_eq!(refund_events.events().len(), 1);
 
         fixture.finish_grant_vesting();
         fixture.client().claim_backfill(&fixture.claimant);

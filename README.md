@@ -3,24 +3,23 @@
 This Soroban contract custodies BLNT v3's 150 million BLNT initial allocation
 and exposes three immutable distribution lanes:
 
-- backfill allocations for at most 434 recipients totaling at most 20 million
+- backfill allocations for at most 434 recipients totaling at most 74 million
   BLNT and vesting linearly over 180 days;
-- grant allocations for at most 100 recipients totaling at most 10 million
+- grant allocations for at most 100 recipients totaling at most 25 million
   BLNT and vesting linearly over 720 days; and
-- 1:1 legacy BLND-to-BLNT conversion totaling at most 120 million BLNT and
+- 2:1 legacy BLND-to-BLNT conversion totaling at most 51 million BLNT and
   expiring 270 days after construction.
 
-The conversion transfers an authorized user's legacy BLND into escrow and
-transfers the same raw seven-decimal amount of pre-funded BLNT back to that
-user. Before expiry, the same user may return BLNT and recover up to their
-unrefunded BLND. It never mints BLNT.
+For each raw unit of BLNT requested, the conversion transfers and immediately
+burns two raw units of an authorized user's legacy BLND, then transfers one raw
+unit of pre-funded BLNT to that same user. It never mints BLNT and conversions
+cannot be refunded.
 
 The contract has no administrator, upgrade, or sweep entry point. After
-conversion expiry, anyone may call `burn_expired()` to destroy both escrowed
-BLND for unrefunded conversions and the unused BLNT swap reserve without
-affecting backfill or grant claims.
+conversion expiry, anyone may call `burn_expired()` to destroy the unused BLNT
+conversion reserve without affecting backfill or grant claims.
 
-The production snapshot manifest assigns exactly 20 million BLNT across the
+The production snapshot manifest assigns exactly 74 million BLNT across the
 434 addresses (423 accounts and 11 contracts) with positive
 `flattened_total_cpal_raw` in
 `comet_cpal_flattened_ownership_before_41c898a1.csv`. The generated allocation

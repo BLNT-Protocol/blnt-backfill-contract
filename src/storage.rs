@@ -3,8 +3,6 @@ use soroban_sdk::{contracttype, unwrap::UnwrapOptimized, Address, Env, Map};
 const ONE_DAY_LEDGERS: u32 = 17_280;
 const TTL_THRESHOLD: u32 = 90 * ONE_DAY_LEDGERS;
 const TTL_BUMP: u32 = 180 * ONE_DAY_LEDGERS;
-const REFUND_TTL_THRESHOLD: u32 = 270 * ONE_DAY_LEDGERS;
-const REFUND_TTL_BUMP: u32 = 300 * ONE_DAY_LEDGERS;
 
 #[derive(Clone)]
 #[contracttype]
@@ -18,10 +16,8 @@ enum InstanceKey {
     BackfillClaimed,
     GrantClaimed,
     TotalSwapped,
-    TotalRefunded,
     SwapDeadline,
     ExpiredBlntBurned,
-    ExpiredBlndBurned,
     VestingStart,
     VestingEnd,
     GrantVestingEnd,
@@ -35,7 +31,6 @@ enum PersistentKey {
     BackfillProgress,
     GrantClaims,
     GrantProgress,
-    Refundable(Address),
 }
 
 pub fn extend_instance(e: &Env) {
@@ -155,19 +150,6 @@ pub fn set_total_swapped(e: &Env, amount: i128) {
         .set(&InstanceKey::TotalSwapped, &amount);
 }
 
-pub fn get_total_refunded(e: &Env) -> i128 {
-    e.storage()
-        .instance()
-        .get(&InstanceKey::TotalRefunded)
-        .unwrap_or(0)
-}
-
-pub fn set_total_refunded(e: &Env, amount: i128) {
-    e.storage()
-        .instance()
-        .set(&InstanceKey::TotalRefunded, &amount);
-}
-
 pub fn get_swap_deadline(e: &Env) -> u64 {
     e.storage()
         .instance()
@@ -192,19 +174,6 @@ pub fn set_expired_blnt_burned(e: &Env, amount: i128) {
     e.storage()
         .instance()
         .set(&InstanceKey::ExpiredBlntBurned, &amount);
-}
-
-pub fn get_expired_blnd_burned(e: &Env) -> i128 {
-    e.storage()
-        .instance()
-        .get(&InstanceKey::ExpiredBlndBurned)
-        .unwrap_or(0)
-}
-
-pub fn set_expired_blnd_burned(e: &Env, amount: i128) {
-    e.storage()
-        .instance()
-        .set(&InstanceKey::ExpiredBlndBurned, &amount);
 }
 
 pub fn get_vesting_start(e: &Env) -> u64 {
@@ -323,27 +292,4 @@ pub fn get_grant_progress(e: &Env) -> Map<Address, i128> {
         .persistent()
         .extend_ttl(&key, TTL_THRESHOLD, TTL_BUMP);
     progress
-}
-
-pub fn get_refundable(e: &Env, user: &Address) -> i128 {
-    let key = PersistentKey::Refundable(user.clone());
-    let amount = e.storage().persistent().get(&key).unwrap_or(0);
-    if amount > 0 {
-        e.storage()
-            .persistent()
-            .extend_ttl(&key, REFUND_TTL_THRESHOLD, REFUND_TTL_BUMP);
-    }
-    amount
-}
-
-pub fn set_refundable(e: &Env, user: &Address, amount: i128) {
-    let key = PersistentKey::Refundable(user.clone());
-    if amount == 0 {
-        e.storage().persistent().remove(&key);
-    } else {
-        e.storage().persistent().set(&key, &amount);
-        e.storage()
-            .persistent()
-            .extend_ttl(&key, REFUND_TTL_THRESHOLD, REFUND_TTL_BUMP);
-    }
 }

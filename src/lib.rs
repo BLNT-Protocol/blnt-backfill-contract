@@ -8,15 +8,17 @@ mod errors;
 mod events;
 mod storage;
 
-pub use contract::{BlntBackfillContract, BlntBackfillContractClient, ExpiredBurn};
+pub use contract::{BlntBackfillContract, BlntBackfillContractClient};
 pub use errors::BackfillError;
 
 pub const SCALAR_7: i128 = 10_000_000;
 pub const TOTAL_FUNDING: i128 = 150_000_000 * SCALAR_7;
-pub const BACKFILL_CAP: i128 = 20_000_000 * SCALAR_7;
-pub const GRANT_CAP: i128 = 10_000_000 * SCALAR_7;
+pub const BACKFILL_CAP: i128 = 74_000_000 * SCALAR_7;
+pub const GRANT_CAP: i128 = 25_000_000 * SCALAR_7;
 pub const CLAIM_CAP: i128 = BACKFILL_CAP + GRANT_CAP;
-pub const SWAP_CAP: i128 = 120_000_000 * SCALAR_7;
+pub const SWAP_CAP: i128 = 51_000_000 * SCALAR_7;
+pub const BLND_PER_BLNT: i128 = 2;
+pub const SWAP_BLND_CAP: i128 = SWAP_CAP * BLND_PER_BLNT;
 pub const MAX_CLAIMANTS: u32 = 434;
 pub const MAX_GRANTEES: u32 = 100;
 pub const VESTING_DURATION_SECONDS: u64 = 180 * 24 * 60 * 60;

@@ -24,6 +24,4 @@ pub enum BackfillError {
     NothingGrantClaimable = 1217,
     SwapExpired = 1218,
     SwapNotExpired = 1219,
-    InvalidRefundAmount = 1220,
-    RefundExceedsCredit = 1221,
 }

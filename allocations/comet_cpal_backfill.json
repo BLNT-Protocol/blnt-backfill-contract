@@ -4,22 +4,22 @@
   "source_sha256": "30fbbb6c62c8812a94cfb02f1c9d528235a28dcddfb45fa7f5535e39fd9a4cd3",
   "weight_field": "flattened_total_cpal_raw",
   "allocation_method": "proportional_floor_then_largest_remainder_address_tiebreak",
-  "allocation_total_raw": "200000000000000",
+  "allocation_total_raw": "740000000000000",
   "source_weight_total_raw": "146100619813817",
   "claimant_count": 434,
   "claimant_type_counts": {
     "account": 423,
     "contract": 11
   },
-  "floor_total_raw": "199999999999791",
-  "largest_remainder_units": "209",
+  "floor_total_raw": "739999999999783",
+  "largest_remainder_units": "217",
   "allocations": [
     {
       "source_row": 2,
       "owner_address": "GCA34HBKNLWN3AOXWBRW5Y3HSGHCWF3UDBRJ5YHGU6HWGJZEPO2NSXI3",
       "owner_type": "account",
       "source_weight_raw": "17948394382594",
-      "allocation_raw": "24569908608829",
+      "allocation_raw": "90908661852668",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -27,7 +27,7 @@
       "owner_address": "GDTZSZTGBXPBV4GC7AUYNWUWCAT56CNYSKR7IOIZYNAOPIWCWWHMTIPS",
       "owner_type": "account",
       "source_weight_raw": "11308341118748",
-      "allocation_raw": "15480209643407",
+      "allocation_raw": "57276775680606",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -35,15 +35,15 @@
       "owner_address": "CBZUCS36UVRY4ZAHJIKUOGFZWOOK6SPZOIZIA25IOP47P5W6BMVUAEM5",
       "owner_type": "contract",
       "source_weight_raw": "8196171115201",
-      "allocation_raw": "11219899170374",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "41513626930385",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 5,
       "owner_address": "GATVKWD4ZEZFG5JLZQIIZ3GSTZ6DDHGOMVXCIGAHXEFEX76NDDMOVBJJ",
       "owner_type": "account",
       "source_weight_raw": "6818755053970",
-      "allocation_raw": "9334327345989",
+      "allocation_raw": "34537011180158",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -51,15 +51,15 @@
       "owner_address": "GCQQRVD75YXVFWTURGHNQJY2G3QVNUYYAUGNRAHVRGTVXL47JP5MH6SU",
       "owner_type": "account",
       "source_weight_raw": "6676193619882",
-      "allocation_raw": "9139172206647",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "33814937164596",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 7,
       "owner_address": "GCYVR6JS6DLRAFF2HEC6LN7J6H6JS2VMERCTGV64RESTZAJMOHB5RHU7",
       "owner_type": "account",
       "source_weight_raw": "5520075498051",
-      "allocation_raw": "7556539465863",
+      "allocation_raw": "27959196023694",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -67,79 +67,79 @@
       "owner_address": "GDCY2PONYVU46RDOWURDYTT7K46EWI2LDZO7NPK5MSB7WSRXAI5IOB4C",
       "owner_type": "account",
       "source_weight_raw": "5396172819179",
-      "allocation_raw": "7386926661989",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "27331628649359",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 9,
       "owner_address": "GBUNDGF4GERH44WAOSJFBDZG5AFFHSZBAZVTFNN4SOE63BGDDDYQAV2G",
       "owner_type": "account",
       "source_weight_raw": "5017798714694",
-      "allocation_raw": "6868962939498",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "25415162876143",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 10,
       "owner_address": "GAGNU4JUDML3BYEAH5MOKWDNYSIMWNKP2WZX5XM4WZZ4H7Y4RPGYBLOX",
       "owner_type": "account",
       "source_weight_raw": "4356029891165",
-      "allocation_raw": "5963054635519",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "22063302151421",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 11,
       "owner_address": "GD5ZJB3TDU6JIBIEWQNCDN2KEOBI5XX2G5RZUBM4SL7KWCCIO3FDIFTF",
       "owner_type": "account",
       "source_weight_raw": "3556979576472",
-      "allocation_raw": "4869219009481",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "18016110335080",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 12,
       "owner_address": "CAO3AGAMZVRMHITL36EJ2VZQWKYRPWMQAPDQD5YEOF3GIF7T44U4JAL3",
       "owner_type": "contract",
       "source_weight_raw": "3540158177352",
-      "allocation_raw": "4846191866761",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "17930909907014",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 13,
       "owner_address": "GB5F2BYPFRSCMQPPR226EDCMZDVAVYNN5JIEDLPIN2AV3QMYKUFNXHNB",
       "owner_type": "account",
       "source_weight_raw": "2850454295750",
-      "allocation_raw": "3902042714648",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "14437558044196",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 14,
       "owner_address": "CDJDJJYJU5DDX267RYB3RWYS6FFJXAXQABV2YNXJ3RGFEIR3X7B43UPQ",
       "owner_type": "contract",
       "source_weight_raw": "2636075084774",
-      "allocation_raw": "3608574813896",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "13351726811417",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 15,
       "owner_address": "GCWAUSZKOQYTRTNVILVWSZI53ZGHWZT62LXFHGXZ5PKKYA2RLABJSK76",
       "owner_type": "account",
       "source_weight_raw": "2509364001982",
-      "allocation_raw": "3435117530890",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "12709934864295",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 16,
       "owner_address": "GAZDDN2QK5EQZY2BCO4GLE36IHJJCQ54EQ5HP5P3NI2K6WOHGGHWH5QJ",
       "owner_type": "account",
       "source_weight_raw": "2351249319826",
-      "allocation_raw": "3218671245642",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "11909083608875",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 17,
       "owner_address": "GA7Y6K6RXCQPZHZJ2RYXJTWHD236WFWOSVCADMXRABHF5K4TFEOGDM7N",
       "owner_type": "account",
       "source_weight_raw": "2165414457662",
-      "allocation_raw": "2964278263051",
+      "allocation_raw": "10967829573289",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -147,31 +147,31 @@
       "owner_address": "GCILPNV26SBEGMUWKCKM7TQOJXOHU23JMFWBAEGEFGOATPERAHLYHUS2",
       "owner_type": "account",
       "source_weight_raw": "2032818734223",
-      "allocation_raw": "2782765380207",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "10296231906764",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 19,
       "owner_address": "GCFJLCJ4HEB5OQRDSIEWQKAL7OBONG4SEWNEVW34SJQGCQ7ALFGQ22FV",
       "owner_type": "account",
       "source_weight_raw": "1987897794807",
-      "allocation_raw": "2721272226415",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "10068707237737",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 20,
       "owner_address": "GAEBP4VL2XZTJ46IBYTZ5TTWDYAEEXMPNB45W6GGEUSIYWDFGWM3IHTQ",
       "owner_type": "account",
       "source_weight_raw": "1976370073125",
-      "allocation_raw": "2705491702422",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "10010319298962",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 21,
       "owner_address": "GC2LIJHKPVSTUILOTPGAEBEGIS4NCMRQEOP3Z45CFYT7NTJCOJDTTP5X",
       "owner_type": "account",
       "source_weight_raw": "1952187508038",
-      "allocation_raw": "2672387715433",
+      "allocation_raw": "9887834547102",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -179,15 +179,15 @@
       "owner_address": "GC2CNV3ZP2ARORYJMPFYO56LJVVMN2QLLVCICQD24B3QMDZ5FQZVJOM7",
       "owner_type": "account",
       "source_weight_raw": "1867923825632",
-      "allocation_raw": "2557037510193",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "9461038787715",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 23,
       "owner_address": "GDMCUWYGHGOM2AIWVFJVW6PW3Y77CL5BSIF67BKHOMDEZMCXHFQW7VTK",
       "owner_type": "account",
       "source_weight_raw": "1849023561571",
-      "allocation_raw": "2531164568538",
+      "allocation_raw": "9365308903591",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -195,7 +195,7 @@
       "owner_address": "GCDSXXUQALVLEOJZWHPQQM2LKVFBDJGMUJXW46C2BGO5QCSI25LYC3YG",
       "owner_type": "account",
       "source_weight_raw": "1814812996544",
-      "allocation_raw": "2484333056022",
+      "allocation_raw": "9192032307282",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -203,15 +203,15 @@
       "owner_address": "GAFJVX6JYGN76D6IX6FBYJDJMWBGFIV2NZROVCJN4PZP3HDGRWSZXAKV",
       "owner_type": "account",
       "source_weight_raw": "1813957326726",
-      "allocation_raw": "2483161712849",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "9187698337542",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 26,
       "owner_address": "GA5HXKKBJUDUBJBGLWASUN2RHW6OM6WKESDREEQFCT3Q2PS57K44IF6U",
       "owner_type": "account",
       "source_weight_raw": "1769171574078",
-      "allocation_raw": "2421853618872",
+      "allocation_raw": "8960858389828",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -219,7 +219,7 @@
       "owner_address": "GDIQFXBZAS4TA5Z7JSCOLGSDFMK4UF4SPYER5IVPNRPUYFQ6U4GKVZ7P",
       "owner_type": "account",
       "source_weight_raw": "1745396167273",
-      "allocation_raw": "2389306998830",
+      "allocation_raw": "8840435895672",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -227,7 +227,7 @@
       "owner_address": "GDSANA2XZQJLPEWXKAF5XYOFYNJXCDQNFUJMW3EVGASIAXALG65YIHXC",
       "owner_type": "account",
       "source_weight_raw": "1582693514328",
-      "allocation_raw": "2166580150508",
+      "allocation_raw": "8016346556881",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -235,15 +235,15 @@
       "owner_address": "CCJGQ7FUZ7KTRRBMW3KJ2IUNKN2TTJ6HKEKUZVORQBALMJNTUT6XVYVH",
       "owner_type": "contract",
       "source_weight_raw": "1499991252928",
-      "allocation_raw": "2053367405066",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "7597459398743",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 30,
       "owner_address": "GBUAECU5BYGLAJWQYOPYV3ZMFNUHD6XLARQBELQAZBAXBHPSKEOGZFZD",
       "owner_type": "account",
       "source_weight_raw": "1464137559055",
-      "allocation_raw": "2004286581290",
+      "allocation_raw": "7415860350773",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -251,39 +251,39 @@
       "owner_address": "GAYRDQ2S74LVNJVVCYNCE45K5SMLUHSOGQF6LH3JUH3IVEUBINYPQQJ4",
       "owner_type": "account",
       "source_weight_raw": "1418088036137",
-      "allocation_raw": "1941248487439",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "7182619403522",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 32,
       "owner_address": "GBTTT6GJABS26S7R6LCO6ASSUNZCST5IT7C54JDEJ2RSV2BUHU4H6VS5",
       "owner_type": "account",
       "source_weight_raw": "1356591152344",
-      "allocation_raw": "1857064198732",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "6871137535309",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 33,
       "owner_address": "GA4L76V5Z6YHB7YW6NDQ5GOZZTJNSG6RHTWDFPGEP3MGZD47VWGXLOOP",
       "owner_type": "account",
       "source_weight_raw": "1354139126987",
-      "allocation_raw": "1853707573195",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "6858718020823",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 34,
       "owner_address": "GBPPGSHXAVDCN4OU45QIBIFIMA4VWKI3RY4X3Z7424KXKYIQBPCJR7CI",
       "owner_type": "account",
       "source_weight_raw": "1252135593124",
-      "allocation_raw": "1714072937842",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "6342069870015",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 35,
       "owner_address": "GCMM7MEPM7HK7XYBWOVYJSQAEG2TAQ6H6HYZBNG4EZE3IXX4XO6H57DO",
       "owner_type": "account",
       "source_weight_raw": "1197606985663",
-      "allocation_raw": "1639427659088",
+      "allocation_raw": "6065882338624",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -291,31 +291,31 @@
       "owner_address": "GDXBTISCOXC2SOIV24MGTXFQLZ2LOE3ZKYWTHGYDYCJRXF3T47BMFILO",
       "owner_type": "account",
       "source_weight_raw": "1147250716025",
-      "allocation_raw": "1570493975299",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5810827708605",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 37,
       "owner_address": "GCRU3HYKAAN4PF4DHMSRBX7AHNLZSR3WSOANTZAYZRGJXUNM6ZEHBCXM",
       "owner_type": "account",
       "source_weight_raw": "1138135171847",
-      "allocation_raw": "1558015528336",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5764657454842",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 38,
       "owner_address": "GDDIQ77QRV2LAK3I2K6SVB7VGTDOT4WRTUTXOX2TAAS2WVUFDTHILJTD",
       "owner_type": "account",
       "source_weight_raw": "1047909269793",
-      "allocation_raw": "1434503523843",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "5307663038220",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 39,
       "owner_address": "CD7UCK6QPQVXGHI36HEVNAJXRO6GPFWSVBJDXK37ENL3DZ2NKEX5WM4S",
       "owner_type": "contract",
       "source_weight_raw": "1000680000001",
-      "allocation_raw": "1369850451389",
+      "allocation_raw": "5068446670140",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -323,7 +323,7 @@
       "owner_address": "GCPIKUGS2RNSH6HAKUSIDBAVHC62QMDFUNXUTET4Q3YDDCUO5B3F7D45",
       "owner_type": "account",
       "source_weight_raw": "979560052498",
-      "allocation_raw": "1340938941596",
+      "allocation_raw": "4961474083904",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -331,7 +331,7 @@
       "owner_address": "GDLI5PY2ONAYPWCRBM3GRLIXQ66P2V57HJXN77WSEZSLSKOUOHEMCOPK",
       "owner_type": "account",
       "source_weight_raw": "973930105376",
-      "allocation_raw": "1333231996712",
+      "allocation_raw": "4932958387834",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -339,23 +339,23 @@
       "owner_address": "GAVR4ZXRXGNRCPGEIKEG6CRSMNTNDCVDJELXFMU5TQ6YONPOJIP7O6MU",
       "owner_type": "account",
       "source_weight_raw": "957250594732",
-      "allocation_raw": "1310399087905",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "4848476625249",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 43,
       "owner_address": "GBPFUT76CUQTILFAOSTQ2PRFHIVQDG4PJESPM6DSFBZF56X5E5ZRYDAD",
       "owner_type": "account",
       "source_weight_raw": "924029328826",
-      "allocation_raw": "1264921846332",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "4680210831430",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 44,
       "owner_address": "GDG7PTG6J62HPE74BVWNSQWTPSZKBXN6RRUKJRDEEXPSC2OTXXVLIANW",
       "owner_type": "account",
       "source_weight_raw": "918814379136",
-      "allocation_raw": "1257782999561",
+      "allocation_raw": "4653797098377",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -363,15 +363,15 @@
       "owner_address": "GAXOCT452OQUY6KFQOIP4RCHOPZGLLRGRFEDAZMK7A2SSY7REWF7QX2C",
       "owner_type": "account",
       "source_weight_raw": "763017382421",
-      "allocation_raw": "1044509439307",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3864684925438",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 46,
       "owner_address": "GCKXRM7YSVMBVGW6OUYC2TK25CEYTDCH4QOOXXOJOKVLQ2DBDFUAJJ2F",
       "owner_type": "account",
       "source_weight_raw": "711480018403",
-      "allocation_raw": "973958932289",
+      "allocation_raw": "3603648049469",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -379,23 +379,23 @@
       "owner_address": "GBZOB7C7TJMIIQ2GCJPIFIZORNN5PV25I3AQIMFNO2RRS5NVG3CFP5UF",
       "owner_type": "account",
       "source_weight_raw": "660745537164",
-      "allocation_raw": "904507507232",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3346677776757",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 48,
       "owner_address": "GDVSMBB42NDHSCP4MZAEX4G7QWUPR6ZE2KVW23ZY6HNK3SL5M2CYANSA",
       "owner_type": "account",
       "source_weight_raw": "628596142678",
-      "allocation_raw": "860497571440",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3183841014326",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 49,
       "owner_address": "GBIIUZH63Z262QXGKJIP3ZU5DS7L4L2TBTYGPXRIGQXZAF25A72YNULL",
       "owner_type": "account",
       "source_weight_raw": "564731769971",
-      "allocation_raw": "773072380789",
+      "allocation_raw": "2860367808919",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -403,7 +403,7 @@
       "owner_address": "GDEUXEYTXHTXS666SIO7MNCPTPTC2PQPIVZQCG55BPKMRHMXAW6OADA6",
       "owner_type": "account",
       "source_weight_raw": "537866893980",
-      "allocation_raw": "736296525868",
+      "allocation_raw": "2724297145710",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -411,39 +411,39 @@
       "owner_address": "GC4V7DAIR5QQ6OMQV2TNC22I54PNCKLXA6WW2VK4NFPR6H2XIGNF6MUZ",
       "owner_type": "account",
       "source_weight_raw": "495433092042",
-      "allocation_raw": "678208063283",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "2509369834148",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 52,
       "owner_address": "GDGWSRSHQ6HQ2OMJHZWCN26NW7RWCKJUYFQFEZTUNIDI2PCBWZS35COM",
       "owner_type": "account",
       "source_weight_raw": "492994118063",
-      "allocation_raw": "674869304033",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "2497016424924",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 53,
       "owner_address": "GCKOP53YBVKUNFWSSHMGMYBSCSJGPFAWRWTELERE6S3WVTW44MJ7ARQ3",
       "owner_type": "account",
       "source_weight_raw": "430192147988",
-      "allocation_raw": "588898457154",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "2178924291470",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 54,
       "owner_address": "GBSDNLUEPQEM7YUCJPYND3HI7DUFTKNWVUCHLO43K6YUOPGY2HM6GIWU",
       "owner_type": "account",
       "source_weight_raw": "428919106517",
-      "allocation_raw": "587155765750",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "2172476333277",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 55,
       "owner_address": "GAC7ZDMD54QZV5FCK3MVLQWX3ITMEDDJOZMPVQQRWLFA2CERYAMS2QCX",
       "owner_type": "account",
       "source_weight_raw": "428654734071",
-      "allocation_raw": "586793861131",
+      "allocation_raw": "2171137286185",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -451,7 +451,7 @@
       "owner_address": "GBXQRU73P63NSSEKRQRYQTSQ6SDUQY7LM6JEPD56WDQLSBT2FCDIQ6H7",
       "owner_type": "account",
       "source_weight_raw": "396575204479",
-      "allocation_raw": "542879564761",
+      "allocation_raw": "2008654389615",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -459,7 +459,7 @@
       "owner_address": "GCOTFUPCJTKRQBPQC5ZHWAPE4JWOFD5A5436QOO63KCF6YAJITEZD7SS",
       "owner_type": "account",
       "source_weight_raw": "354613118733",
-      "allocation_raw": "485436843711",
+      "allocation_raw": "1796116321730",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -467,15 +467,15 @@
       "owner_address": "GDDRDRB25ERBKFF3UGCWNYHVZLRP5KXUBEICJZ2RN3EN7RL77ZOWP5NX",
       "owner_type": "account",
       "source_weight_raw": "350580205654",
-      "allocation_raw": "479916110008",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1775689607029",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 59,
       "owner_address": "GDVPI24BHUIQ5QNIYFRIV4TZL6UUDIXQWXAZEZQUFIDULC6EVN6DKNDL",
       "owner_type": "account",
       "source_weight_raw": "320876893731",
-      "allocation_raw": "439254664545",
+      "allocation_raw": "1625242258818",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -483,15 +483,15 @@
       "owner_address": "GDSEX2EEH6TRBY5MNEKHI3KDLUUQYR7YOUP5TDCASWYZDZ747Q6KGUS6",
       "owner_type": "account",
       "source_weight_raw": "297750816358",
-      "allocation_raw": "407596924281",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1508108619838",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 61,
       "owner_address": "GBNQH57WH6MJHS2CTIZ2OWTAID7G6Q5GAUMSPHJF3443PWOINZJXZOOE",
       "owner_type": "account",
       "source_weight_raw": "289858697193",
-      "allocation_raw": "396793247780",
+      "allocation_raw": "1468135016786",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -499,7 +499,7 @@
       "owner_address": "GDEUQWHIBXZTP6GJRHOWTZ5VMTSLFKLHYNFSGAH6KUJYPKIG5ZQVB53V",
       "owner_type": "account",
       "source_weight_raw": "286885453966",
-      "allocation_raw": "392723116892",
+      "allocation_raw": "1453075532502",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -507,23 +507,23 @@
       "owner_address": "GDGW4YGH4IGTMDNJRZTXNKC72ESMIKTZN4TWUVJF5KURFRQJKD6KSTAR",
       "owner_type": "account",
       "source_weight_raw": "258334542691",
-      "allocation_raw": "353639215248",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1308465096417",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 64,
       "owner_address": "GCIMUKEGLOTE3QNEHYXH4FAN3WNXUGLKGHXXQUSD3ZWQHXDZUBI4XLTB",
       "owner_type": "account",
       "source_weight_raw": "255367135429",
-      "allocation_raw": "349577073327",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1293435171311",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 65,
       "owner_address": "GA2GD7P5MQU2FLF5NP26UJ3KAY5XX42OTJLCG455NUEKPRHLKLJCGJKU",
       "owner_type": "account",
       "source_weight_raw": "218912811275",
-      "allocation_raw": "299674034996",
+      "allocation_raw": "1108793929485",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -531,15 +531,15 @@
       "owner_address": "GC3ISVU5FSWWKB676TVQNMYWSVV7MBWMHWBPJGSMZC544QPFPYDGOBKB",
       "owner_type": "account",
       "source_weight_raw": "216624393892",
-      "allocation_raw": "296541375619",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1097203089791",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 67,
       "owner_address": "GDWJHMXNH6M7WBSUMSKNDGABLMIJGWE7MACUPFBTZCX33ZZCDC25UZPL",
       "owner_type": "account",
       "source_weight_raw": "215012289464",
-      "allocation_raw": "294334534293",
+      "allocation_raw": "1089037776884",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -547,15 +547,15 @@
       "owner_address": "GDR7P45P556MYOWHU23TSOKPERC4PCZ2DTG43UYXPP2ELPZDWE7SCZNJ",
       "owner_type": "account",
       "source_weight_raw": "207728172606",
-      "allocation_raw": "284363164059",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1052143707017",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 69,
       "owner_address": "GC35W3ZETTUY7YBODRKJIPUVYS574MMHDM4FHD7Q2M7LDU3FQV4UGGTW",
       "owner_type": "account",
       "source_weight_raw": "206090448218",
-      "allocation_raw": "282121251067",
+      "allocation_raw": "1043848628949",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -563,15 +563,15 @@
       "owner_address": "GACI727MHZHUWCFIX6NMFTBBN7TSWQS27H7KM4XPP6OOMF77LXG5AZZG",
       "owner_type": "account",
       "source_weight_raw": "204864649815",
-      "allocation_raw": "280443231625",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1037639957012",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 71,
       "owner_address": "GB2DU4ZPFADD74YOWSRB4PS4UKZ6Y3M47IH4OD232HBYVCSR2FS56T6D",
       "owner_type": "account",
       "source_weight_raw": "189738668374",
-      "allocation_raw": "259736979372",
+      "allocation_raw": "961026823676",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -579,7 +579,7 @@
       "owner_address": "GDOWQ4ZMCXDB55WGAP76KWTPOWMVCLAJHT23OMYRA7DP3KRT5XR5U4V5",
       "owner_type": "account",
       "source_weight_raw": "176767927177",
-      "allocation_raw": "241981077701",
+      "allocation_raw": "895329987495",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -587,15 +587,15 @@
       "owner_address": "GBXC7VPR7BOTZX2XDKKL2TFL4ME6CW24S64UIVUMJEQD63BDUPTB7QC4",
       "owner_type": "account",
       "source_weight_raw": "169117586367",
-      "allocation_raw": "231508376327",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "856580992408",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 74,
       "owner_address": "GBZSLZ44CYYFK7XL2JLNKM6H6QWPO3ECGJSTEMHIGCTNYO5ZPGAGB5YF",
       "owner_type": "account",
       "source_weight_raw": "156552666365",
-      "allocation_raw": "214308011238",
+      "allocation_raw": "792939641582",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -603,7 +603,7 @@
       "owner_address": "GAOW66RKXHHUYKRWAW27NBJBBAQ4LFD7SL6CFP7ZNVQVL6AXMOPVFTTI",
       "owner_type": "account",
       "source_weight_raw": "153285435483",
-      "allocation_raw": "209835434892",
+      "allocation_raw": "776391109100",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -611,7 +611,7 @@
       "owner_address": "GAKE3C7NIXFFOUWXX2ULXEN7I4OHHYLFE5QX3CARL4BFFYN3WWIQA6CA",
       "owner_type": "account",
       "source_weight_raw": "148825647783",
-      "allocation_raw": "203730344160",
+      "allocation_raw": "753802273391",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -619,31 +619,31 @@
       "owner_address": "GC4CGV74U5GH32D4XDROWYBH5QCF77ND4XNZCMSCB3F3D73U3JUOWGWJ",
       "owner_type": "account",
       "source_weight_raw": "141737022846",
-      "allocation_raw": "194026586645",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "717898370587",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 78,
       "owner_address": "GDZK4JBS567MWKLC7O3BIHDP4B2V2RPRBWDU2KML4CPVNIO3W3YXNOOT",
       "owner_type": "account",
       "source_weight_raw": "137099846881",
-      "allocation_raw": "187678665643",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "694411062877",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 79,
       "owner_address": "CANSYFVMIP7JVYEZQ463Y2I2VLEVNLDJJ4QNZTDBGLOOGKURPTW4A6FQ",
       "owner_type": "contract",
       "source_weight_raw": "128233505337",
-      "allocation_raw": "175541357046",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "649503021071",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 80,
       "owner_address": "GDUOWL73D25L27QQHT724UESPBLS5TKX37WSRT6BMFYW2K7IK55BHZ33",
       "owner_type": "account",
       "source_weight_raw": "126129986616",
-      "allocation_raw": "172661809069",
+      "allocation_raw": "638848693556",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -651,15 +651,15 @@
       "owner_address": "GC5UG5EGNWDZZTJWDECRDRYF45IZW7KHC5CGAVBMCWEFP2PX2XIUBKFZ",
       "owner_type": "account",
       "source_weight_raw": "121947076919",
-      "allocation_raw": "166935742058",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "617662245616",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 82,
       "owner_address": "GAAUMMCT5PVLB5SP7FJYDXKZYDFJLXLJ34EXFREMDWOZLKYVE2PNVZWO",
       "owner_type": "account",
       "source_weight_raw": "121522738351",
-      "allocation_raw": "166354856681",
+      "allocation_raw": "615512969721",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -667,7 +667,7 @@
       "owner_address": "GCTRNISWSF2OHWYXNRY76A3QNSU3WDPX2MWLIY7DK6J4BFTM7YLTC53K",
       "owner_type": "account",
       "source_weight_raw": "120319718640",
-      "allocation_raw": "164708019437",
+      "allocation_raw": "609419671916",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -675,7 +675,7 @@
       "owner_address": "GABUR2QAN4CERGIWJV2YUPGNJ6OHNURPUZIL6N7I3FBYUGPYYL74SYVY",
       "owner_type": "account",
       "source_weight_raw": "107449025301",
-      "allocation_raw": "147089075239",
+      "allocation_raw": "544229578383",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -683,7 +683,7 @@
       "owner_address": "GBNZXBH7SWFPU7WW2D3WGMWZHSH2L3G5XFQO3FTLU5ZIYINOOAI2EQVI",
       "owner_type": "account",
       "source_weight_raw": "106527149969",
-      "allocation_raw": "145827102041",
+      "allocation_raw": "539560277551",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -691,15 +691,15 @@
       "owner_address": "GDWRJJNZ2LKEMSGLVVV5CXNRDUMAOCWH7A6LLHE22S55SLKAWQ7IOOPA",
       "owner_type": "account",
       "source_weight_raw": "99152371995",
-      "allocation_raw": "135731624029",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "502207008908",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 87,
       "owner_address": "GDIDAYNCTXAB2WD7V33B4JQMG7FU4IN4OBJKDLCNTLUIJLWN6AVJX7VL",
       "owner_type": "account",
       "source_weight_raw": "98008685401",
-      "allocation_raw": "134166009050",
+      "allocation_raw": "496414233486",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -707,7 +707,7 @@
       "owner_address": "GAEFA3JFZP3ELPN7JB5S2VEPKB2ZUBVSYLLTARYEGBDIMXGE4CNJRZQL",
       "owner_type": "account",
       "source_weight_raw": "92098956179",
-      "allocation_raw": "126076064970",
+      "allocation_raw": "466481440389",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -715,15 +715,15 @@
       "owner_address": "GD3NUJ65TMGJ7CKTSABLJ5ZHZP4F4DXHMFDCDL4EJBCFDK4MD6F46K2X",
       "owner_type": "account",
       "source_weight_raw": "91610864025",
-      "allocation_raw": "125407906061",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "464009252424",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 90,
       "owner_address": "GAFE6HR3CH7ZVBHMC4CZJCBSGM4B24SBS32GYSYEL7SVNF3WFEJGT3MB",
       "owner_type": "account",
       "source_weight_raw": "90876482934",
-      "allocation_raw": "124402597401",
+      "allocation_raw": "460289610385",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -731,15 +731,15 @@
       "owner_address": "GBJY7AY5GIEINQXU5W2NBFEMGTFOTB2OTNCCMKSLVIDXS3DMHG56I6XN",
       "owner_type": "account",
       "source_weight_raw": "89180125458",
-      "allocation_raw": "122080420428",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "451697555582",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 92,
       "owner_address": "GB2CFKKR76ZTD5PRRDN2Y6NCHRWVLH4ZNRS3PWSY75SK4SFYGIJNYWVQ",
       "owner_type": "account",
       "source_weight_raw": "87266486818",
-      "allocation_raw": "119460803013",
+      "allocation_raw": "442004971147",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -747,23 +747,23 @@
       "owner_address": "GBKOURWF7XDXE4LOON3NPOGRICEGWZCUT2I6SOTLGJQFR3MUANXLOQRC",
       "owner_type": "account",
       "source_weight_raw": "87171701283",
-      "allocation_raw": "119331049237",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "441524882178",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 94,
       "owner_address": "GB4QXSDFNYCXPSAQUMEV2BFFK4BRAM3KJKE7SS4SJTZKLQIUFT67KB4R",
       "owner_type": "account",
       "source_weight_raw": "84135413735",
-      "allocation_raw": "115174615744",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "426146078252",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 95,
       "owner_address": "GASIB4EFSNE5DJIZJ5UTFJKR7RPNKKWXPXBQ2RRPWASOCGGKJSCUMHVB",
       "owner_type": "account",
       "source_weight_raw": "83319919811",
-      "allocation_raw": "114058270139",
+      "allocation_raw": "422015599514",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -771,7 +771,7 @@
       "owner_address": "GDLKPOO7W6SOWPEM6WMA6I5EIEHY4BPK3XAWGLOEKQIEHSTXQ2WX3SZ7",
       "owner_type": "account",
       "source_weight_raw": "81127284724",
-      "allocation_raw": "111056729023",
+      "allocation_raw": "410909897386",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -779,7 +779,7 @@
       "owner_address": "GDLOF7T2R4KG5MGJFVAGUZSHI56RPICDB6RT3YJH4K5S6URUTT4GLOYL",
       "owner_type": "account",
       "source_weight_raw": "79508788375",
-      "allocation_raw": "108841137671",
+      "allocation_raw": "402712209383",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -787,15 +787,15 @@
       "owner_address": "GD2KBXIKQPG2NKZOWPOWIGPC2YELQAEINW4CAMHEDGTKKL7BQG2K27SQ",
       "owner_type": "account",
       "source_weight_raw": "77744451201",
-      "allocation_raw": "106425901957",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "393775837242",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 99,
       "owner_address": "GDUPNDRCOUBLTU3XP4JNOM7SLAQWJHM43DBZPU3IQ2RPA2WNPJRSDAQM",
       "owner_type": "account",
       "source_weight_raw": "74476133712",
-      "allocation_raw": "101951838133",
+      "allocation_raw": "377221801092",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -803,7 +803,7 @@
       "owner_address": "GAEA5RKUQGTFLDABISBRBX2POCGGNWHNLKVRZWBXM775AT553ORW7CES",
       "owner_type": "account",
       "source_weight_raw": "73377212117",
-      "allocation_raw": "100447502838",
+      "allocation_raw": "371655760501",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -811,7 +811,7 @@
       "owner_address": "GAH4AXT76QELFMSAZSLK7227CVN573JUQ4DF2NDRQV7YEIY3L4URKRTC",
       "owner_type": "account",
       "source_weight_raw": "71666291465",
-      "allocation_raw": "98105390047",
+      "allocation_raw": "362989943175",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -819,23 +819,23 @@
       "owner_address": "GBKX5IU5DRZNVUKA5GTNUPYKOCAPE5SIGATVEV4GFH5U6PRDV3KD7OAU",
       "owner_type": "account",
       "source_weight_raw": "69093006269",
-      "allocation_raw": "94582769542",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "349956247306",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 103,
       "owner_address": "GA4XQJFTIVONNM2MXU5ICJU2HSRVNK6O45EJO7SJF43OXW4TDWQOQZ4W",
       "owner_type": "account",
       "source_weight_raw": "68071375479",
-      "allocation_raw": "93184239144",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "344781684832",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 104,
       "owner_address": "GDU4ICJ4W23A4TPQZ6ORIAL2O7Y6ZG6BWWT4PNCJZEU3JZCFR37HTB4H",
       "owner_type": "account",
       "source_weight_raw": "67436141195",
-      "allocation_raw": "92314654491",
+      "allocation_raw": "341564221616",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -843,7 +843,7 @@
       "owner_address": "GDW7OGVBIKEKP2PM6ITXHGPNAOWFUNWDOD2PPHCMZGBOKDVVP5SKQYH4",
       "owner_type": "account",
       "source_weight_raw": "66569232693",
-      "allocation_raw": "91127926463",
+      "allocation_raw": "337173327913",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -851,15 +851,15 @@
       "owner_address": "GAFTKWPXSLKPIJMVGPV6V563ER3PA4QOW4I7UY235FVY7ALC2VEM4TAC",
       "owner_type": "account",
       "source_weight_raw": "64408204857",
-      "allocation_raw": "88169653132",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "326227716590",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 107,
       "owner_address": "GCU6SLEQWJL7JRNVSR66HLESQRNZZW6TMFAE6W46GG3QH3CRI7X3VRNX",
       "owner_type": "account",
       "source_weight_raw": "59213866494",
-      "allocation_raw": "81059021611",
+      "allocation_raw": "299918379959",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -867,7 +867,7 @@
       "owner_address": "GBOMDHO2SCHUGZD5ZNMOYB5JYCXGH7Y4AJOGJQK4KR5LBZ64RBDGKFDP",
       "owner_type": "account",
       "source_weight_raw": "57405606414",
-      "allocation_raw": "78583658970",
+      "allocation_raw": "290759538190",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -875,7 +875,7 @@
       "owner_address": "GDO7VAOZL4D2JHIMLXHHIEJM74DH672SPVB2AR3JOMZYDSD5ADIITONY",
       "owner_type": "account",
       "source_weight_raw": "57335121322",
-      "allocation_raw": "78487170547",
+      "allocation_raw": "290402531025",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -883,7 +883,7 @@
       "owner_address": "GDLADKDLRXC476LBLR7EHSFRANMLYKGQVPPX3LLMXIGBFQAF3QDY2KYG",
       "owner_type": "account",
       "source_weight_raw": "57271773735",
-      "allocation_raw": "78400452795",
+      "allocation_raw": "290081675341",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -891,23 +891,23 @@
       "owner_address": "GABWDIZNURBP3DQYI7IUXU2GQSSZWY5R6FYDXX5NQ64QEUAUYFEGM57O",
       "owner_type": "account",
       "source_weight_raw": "47410113523",
-      "allocation_raw": "64900632979",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "240132342024",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 112,
       "owner_address": "GB7DNGF5QPJL57IHIKF4AQJUAR3LH3XLWBG4G26YFSDEFIRBV7ENNEPL",
       "owner_type": "account",
       "source_weight_raw": "45775666410",
-      "allocation_raw": "62663206314",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "231853863362",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 113,
       "owner_address": "GDXGTS2DLV7N6PT3FFLCQT7SHDKI7TK3PX73P2JFHMU46E3OF2UKKQ44",
       "owner_type": "account",
       "source_weight_raw": "45642969962",
-      "allocation_raw": "62481555547",
+      "allocation_raw": "231181755525",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -915,7 +915,7 @@
       "owner_address": "GBZLNHWNLYXPTCQU7NPCFVDCFDEKCNN4W2DAG6IST3U6YRAO3Y5XUCI3",
       "owner_type": "account",
       "source_weight_raw": "43979435709",
-      "allocation_raw": "60204310926",
+      "allocation_raw": "222755950427",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -923,7 +923,7 @@
       "owner_address": "GDFFMOXN6RMEXQGTXM2KLJMDEIJAYQXH3RPY4RSQI2FPMJURKAKCFXRU",
       "owner_type": "account",
       "source_weight_raw": "43908360102",
-      "allocation_raw": "60107014136",
+      "allocation_raw": "222395952303",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -931,7 +931,7 @@
       "owner_address": "GAJ7BQBEMFJ5P72BRKH32HMBDJFTBTGN55ML6YLO4LR53SE53JJUVM4U",
       "owner_type": "account",
       "source_weight_raw": "42692899044",
-      "allocation_raw": "58443145687",
+      "allocation_raw": "216239639043",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -939,7 +939,7 @@
       "owner_address": "GDWKIITS2K3RDVXPWCN4SZBZV5COEJ5KQ7N3ZK72YXOVEIYDRGSOJ3FJ",
       "owner_type": "account",
       "source_weight_raw": "42385892355",
-      "allocation_raw": "58022878218",
+      "allocation_raw": "214684649406",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -947,7 +947,7 @@
       "owner_address": "GBZ67PL7X7DOVRFE6LXXLX4ELE4JCCQRGIH7ZJB7VKULIAC6FWDLSJF7",
       "owner_type": "account",
       "source_weight_raw": "42145210565",
-      "allocation_raw": "57693404201",
+      "allocation_raw": "213465595545",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -955,23 +955,23 @@
       "owner_address": "GCASHQQINAHSV6P57D4NPIHDCUF5PO2FAG4NHZ67HS2FDKYABWRCPHKQ",
       "owner_type": "account",
       "source_weight_raw": "39996753728",
-      "allocation_raw": "54752339557",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "202583656363",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 120,
       "owner_address": "GAIN2HU2ITUZPLGNWSH7JXXROL7MYIWDYXCUQDMQVJXFBEBPETSZYHNF",
       "owner_type": "account",
       "source_weight_raw": "39859960731",
-      "allocation_raw": "54565080945",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "201890799495",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 121,
       "owner_address": "GB6G4XAUWPR2GRKZNVU2UFVNSUYJU4YFKYT5MJA234PS5TSCDN4TWLVY",
       "owner_type": "account",
       "source_weight_raw": "39799662675",
-      "allocation_raw": "54482537755",
+      "allocation_raw": "201585389693",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -979,7 +979,7 @@
       "owner_address": "GBBBTXMJCCD34BNLDIVTL72VUYORCDTVCUZBDRGJMFK3Z77HY65UGNFI",
       "owner_type": "account",
       "source_weight_raw": "38790251407",
-      "allocation_raw": "53100734900",
+      "allocation_raw": "196472719129",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -987,7 +987,7 @@
       "owner_address": "GDXRCMW4I5LWAB3DAOJKJNLIT36HCXSAMFNMDVU3BHMD4K4JHZXC75T7",
       "owner_type": "account",
       "source_weight_raw": "37774849689",
-      "allocation_raw": "51710731600",
+      "allocation_raw": "191329706920",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -995,31 +995,31 @@
       "owner_address": "GDJSH2NU2WF6J4P5DL4522DUCABWSTZOKFQ7BHBCFYQ3QKC6FRYWP6OL",
       "owner_type": "account",
       "source_weight_raw": "37239152962",
-      "allocation_raw": "50977405858",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "188616401676",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 125,
       "owner_address": "GDEBK36QZ4K73XQFJEMEZDVEAZOOXE6VXAYVBMI63XRO6QDOOTAYXZXU",
       "owner_type": "account",
       "source_weight_raw": "37109006256",
-      "allocation_raw": "50799245483",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "187957208289",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 126,
       "owner_address": "GA3LI6A422JW3OWRFU6FKD26N3EDAG2OKQ76LX3NAM7XFARTNQE2Y2J6",
       "owner_type": "account",
       "source_weight_raw": "34180714733",
-      "allocation_raw": "46790649864",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "173125404496",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 127,
       "owner_address": "GDQQBII7E3LJJALSQ2YMOVKV3SJ57XO4YWBDWIPRWEV3HN4P36V642VN",
       "owner_type": "account",
       "source_weight_raw": "33810185822",
-      "allocation_raw": "46283425580",
+      "allocation_raw": "171248674647",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1027,7 +1027,7 @@
       "owner_address": "GDH7YKGBMCUQW65HQBDWMGBT6EJ6TAV3GZILBA4W2IIIXK34L5MGXSBA",
       "owner_type": "account",
       "source_weight_raw": "33719238660",
-      "allocation_raw": "46158926229",
+      "allocation_raw": "170788027047",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1035,15 +1035,15 @@
       "owner_address": "GBCCLRP6NANKNJ5X5FGKUNECCBLZ5G7E2AEJHDBRZP4WPZWHV6B7HQVJ",
       "owner_type": "account",
       "source_weight_raw": "33586417493",
-      "allocation_raw": "45977104732",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "170115287509",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 130,
       "owner_address": "GBPUFOPDVPGM56MIO4KYSNV2N4XLYBZAXL6QMD75JWG7GC5L6ANFSYBL",
       "owner_type": "account",
       "source_weight_raw": "30824308547",
-      "allocation_raw": "42195999697",
+      "allocation_raw": "156125198879",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1051,7 +1051,7 @@
       "owner_address": "GAYJJLHV2QQ4W4UKLQI4AKNBVMMJDK24IKYVE253FYNDN4YZMRV42HS5",
       "owner_type": "account",
       "source_weight_raw": "30740026723",
-      "allocation_raw": "42080624657",
+      "allocation_raw": "155698311232",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1059,7 +1059,7 @@
       "owner_address": "GAXY566E3ZQBXOGFEX7VTZZO2ZUBZMZKYDJYGYR2WBT7VWHX3ZERKGYN",
       "owner_type": "account",
       "source_weight_raw": "30730141076",
-      "allocation_raw": "42067092002",
+      "allocation_raw": "155648240406",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1067,15 +1067,15 @@
       "owner_address": "GDZJGEJ3GUMDFYMBIE54G4MWCNCSSIWIDAWUKFKZPQ6BMDOM72V3WRB5",
       "owner_type": "account",
       "source_weight_raw": "27235066039",
-      "allocation_raw": "37282615329",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "137945676716",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 134,
       "owner_address": "GDFV3BOYPH4WL52WZNYY5S3G7FTJZIZY7U2LSHQGUZNDHYGD6XJB7E2M",
       "owner_type": "account",
       "source_weight_raw": "26384287503",
-      "allocation_raw": "36117967927",
+      "allocation_raw": "133636481331",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1083,7 +1083,7 @@
       "owner_address": "GAUNEBFNFBUAOM2T6CLV3AAXD2LLRRF7CFXBWHY3JZ5SJ3IQ6G3UUILX",
       "owner_type": "account",
       "source_weight_raw": "25023392824",
-      "allocation_raw": "34255012547",
+      "allocation_raw": "126743546423",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1091,15 +1091,15 @@
       "owner_address": "GDVO2AARC25LGTMOLVKCNDY3F2KHQ6D6Y7VGWYYY3S3P36XTV2WKGTMV",
       "owner_type": "account",
       "source_weight_raw": "24486240628",
-      "allocation_raw": "33519694385",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "124022869224",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 137,
       "owner_address": "GAAXA5VR2W3R6RW57TLH73LYKCSZAFOOPBMCPUT7TBJSVXC34ULVNXNV",
       "owner_type": "account",
       "source_weight_raw": "24456386938",
-      "allocation_raw": "33478827084",
+      "allocation_raw": "123871660211",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1107,79 +1107,79 @@
       "owner_address": "GAEVKTD2CL3MPPQBUSYJERWWRVPGFGBLXNFQXDVOD2YEILOP6OPJXDNV",
       "owner_type": "account",
       "source_weight_raw": "23916214211",
-      "allocation_raw": "32739374058",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "121135684015",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 139,
       "owner_address": "GBHT5GRGCZOV3XHVEOQGZDF25FWLKZTNYFCQIBRYPBNEA7SR3ZMG2AMW",
       "owner_type": "account",
       "source_weight_raw": "23732513673",
-      "allocation_raw": "32487902794",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "120205240336",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 140,
       "owner_address": "GAUNQMIH6WOF7CRZWBTHIU4EZFOQEJSJE4PGXY673EFRCJKEQEXNNRPK",
       "owner_type": "account",
       "source_weight_raw": "23085575655",
-      "allocation_raw": "31602296670",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "116928497678",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 141,
       "owner_address": "GBMYD7BFSJEPRRQX4VJTUORRQONV4BETTRK3IL6UZROSP3QJJNBEYOA7",
       "owner_type": "account",
       "source_weight_raw": "21518109265",
-      "allocation_raw": "29456561228",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "108989276544",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 142,
       "owner_address": "GAQ25ZOJ3RPBTZLRVEHHXV7EGUQCDCS5Y7GXUDWJZZXLC6N5I3U3EGK2",
       "owner_type": "account",
       "source_weight_raw": "21491854543",
-      "allocation_raw": "29420620625",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "108856296312",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 143,
       "owner_address": "GDDVWZQIFSSZYXVYSHPJS4OCMCTAV524JXRQZRRK6GHQIPRII532H2Q4",
       "owner_type": "account",
       "source_weight_raw": "21094713490",
-      "allocation_raw": "28876966459",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "106844775898",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 144,
       "owner_address": "GD66S6GSKYTXZ5BT4RIYTBEBOE7WBPNIJB62SLYCAJNKDUS6F67SCEUI",
       "owner_type": "account",
       "source_weight_raw": "20946056510",
-      "allocation_raw": "28673467007",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "106091827928",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 145,
       "owner_address": "GCJ5SLDGO4MUP6ATCD6C42V74S5N2YLNPX77C7YY7G72EOVYIIHAXDN3",
       "owner_type": "account",
       "source_weight_raw": "20869473857",
-      "allocation_raw": "28568631514",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "105703936601",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 146,
       "owner_address": "GD55EXGLJLE43QGBKBW66XDAGMOFR4O7WATITQH3JEF2VJ4IP55W4UF3",
       "owner_type": "account",
       "source_weight_raw": "20587230540",
-      "allocation_raw": "28182263109",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "104274373504",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 147,
       "owner_address": "GBE4FY6RLT4KYM35MR47ZXATCG67ONZ7VKESEMHFPF2QF3VVHV2QM6L2",
       "owner_type": "account",
       "source_weight_raw": "20383282493",
-      "allocation_raw": "27903074633",
+      "allocation_raw": "103241376142",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1187,71 +1187,71 @@
       "owner_address": "GAK5VU3VPVI5GXKUV5AKCXJEOWOXPCGLXTSTZ53JGRCK3KN5ISFXTCOQ",
       "owner_type": "account",
       "source_weight_raw": "20087879842",
-      "allocation_raw": "27498692158",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "101745160986",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 149,
       "owner_address": "GCMMBHV4NBHZYQIQP5E2XLS63JGIDBUKMIPVAGRD3UM67ULCXHSG74A4",
       "owner_type": "account",
       "source_weight_raw": "19293377367",
-      "allocation_raw": "26411082159",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "97721003989",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 150,
       "owner_address": "GDEO5NUDIUGNDS5FDB2DUNZSAB4OD6JXMJM4NVJPIRDKOXU6O76WRC3H",
       "owner_type": "account",
       "source_weight_raw": "19229695202",
-      "allocation_raw": "26323906396",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "97398453666",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 151,
       "owner_address": "GCELQZQAR6QSCKDGVVZOBHABF2DYDDQDEBJ3FME43EIP3NQSIKOR3ZWQ",
       "owner_type": "account",
       "source_weight_raw": "18634169812",
-      "allocation_raw": "25508680026",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "94382116095",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 152,
       "owner_address": "GCR4YGEKCUBQLOCQ4AXOGKZL3XQRKSY52ATG26L6PEJH3OZOFYNC6UZB",
       "owner_type": "account",
       "source_weight_raw": "18395974641",
-      "allocation_raw": "25182609991",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "93175656966",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 153,
       "owner_address": "GD4OIBG6QDXOKEVA7E6FWAMXIMIUES7FTKD5TLVBFQXSEAVLCHXT453F",
       "owner_type": "account",
       "source_weight_raw": "18066815377",
-      "allocation_raw": "24732017427",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "91508464482",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 154,
       "owner_address": "GBWN3I4L6KABFSSJB6WHRXT5CQGW3PY5RG3QCGKGQVGSR7QEJMOQJBEV",
       "owner_type": "account",
       "source_weight_raw": "17650166527",
-      "allocation_raw": "24161658656",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "89398137028",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 155,
       "owner_address": "GCZNSVG3RKE7YF3DWK45MWK6ADIXDE3SKAUWOEJOY2WZSZY6H5VPT24K",
       "owner_type": "account",
       "source_weight_raw": "17535707039",
-      "allocation_raw": "24004972821",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "88818399439",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 156,
       "owner_address": "GA6L2HMDXVTV7C2ONSCITALK2XUMFVLM5CVGAYZ6WOTUU47F24FURFPJ",
       "owner_type": "account",
       "source_weight_raw": "17152085721",
-      "allocation_raw": "23479826085",
+      "allocation_raw": "86875356516",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1259,7 +1259,7 @@
       "owner_address": "GANMIQKRY5IBWVW2LRSQENMM2QMYBZCA7JYDRKMLQFS5PRV34ZDWQBRO",
       "owner_type": "account",
       "source_weight_raw": "16133991598",
-      "allocation_raw": "22086137100",
+      "allocation_raw": "81718707270",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1267,23 +1267,23 @@
       "owner_address": "GCDNQRAMHQF3PFM6YFKCFNDKSQH7RUVH43ENC2S4P6FSFY7KB5VQJURF",
       "owner_type": "account",
       "source_weight_raw": "15033638337",
-      "allocation_raw": "20579841969",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "76145415287",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 159,
       "owner_address": "GBM5OQN7TITF7PIZEPE7M7IHMX5YIHIRBH4M4MNLBY7CAROH2RTR233A",
       "owner_type": "account",
       "source_weight_raw": "14974922519",
-      "allocation_raw": "20499464736",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "75848019524",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 160,
       "owner_address": "GDWERO74NNU4DMLRK4R7DNLGC54QZZW5XYAU3ID44OORT6DYGRXQJCYO",
       "owner_type": "account",
       "source_weight_raw": "14388959495",
-      "allocation_raw": "19697328476",
+      "allocation_raw": "72880115361",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1291,7 +1291,7 @@
       "owner_address": "GDLY224BPMQKXD37H2UE4ODCYVLNA7T5SJAPRFRHHMYDY6RAGYGKW3HF",
       "owner_type": "account",
       "source_weight_raw": "13923355730",
-      "allocation_raw": "19059954363",
+      "allocation_raw": "70521831142",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1299,15 +1299,15 @@
       "owner_address": "GCFUKAAGICVWV4ZHFSJEC5OYVBUJSAJCTLZF7MO3HKCB3GTTWW57IGOY",
       "owner_type": "account",
       "source_weight_raw": "13288457137",
-      "allocation_raw": "18190829243",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "67306068201",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 163,
       "owner_address": "GA7UMBA276ZRNYY6GAII4NVBI7Y6ZPGUL4JGDBH7BAEULUO7OAL7SQEY",
       "owner_type": "account",
       "source_weight_raw": "12959994793",
-      "allocation_raw": "17741190708",
+      "allocation_raw": "65642405618",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1315,15 +1315,15 @@
       "owner_address": "GC626ZRISBXL2GFD3QGLNHWCK7TTY2ZNBYSDEEUKGGZUQLSXGVLFIIKH",
       "owner_type": "account",
       "source_weight_raw": "12239248279",
-      "allocation_raw": "16754546688",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "61991822745",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 165,
       "owner_address": "GA7GJDTBJ7Y6TC6T22UUXFCPHQUMGP57YQ5X3NDKWEPUFBKQGPGGTVOF",
       "owner_type": "account",
       "source_weight_raw": "12101393724",
-      "allocation_raw": "16565834888",
+      "allocation_raw": "61293589084",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1331,15 +1331,15 @@
       "owner_address": "GAD2NZH7LOFMGEMXAMZBHKNQNJRMGUMZPA27HNETT66KVS7DZMH2C4PW",
       "owner_type": "account",
       "source_weight_raw": "11993161192",
-      "allocation_raw": "16417673255",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "60745391042",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 167,
       "owner_address": "GCXJPN7OAV53YWVOB7K57FB7VDRCJR4ZZWPAM4KNVDXTWXVTSHF7UK2C",
       "owner_type": "account",
       "source_weight_raw": "11579306025",
-      "allocation_raw": "15851138811",
+      "allocation_raw": "58649213600",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1347,15 +1347,15 @@
       "owner_address": "GCKBNEKIMERQUCISQBDAALFZ7U3FXALUZDJMQNSL3PK4HAYBIW5MHOOT",
       "owner_type": "account",
       "source_weight_raw": "11252472360",
-      "allocation_raw": "15403729805",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "56993800280",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 169,
       "owner_address": "GBPJ2YBLYTXH2VLSEHFAYAOVEFGA62PTLPYKIMTJXV4KPU4WN2ICCOR4",
       "owner_type": "account",
       "source_weight_raw": "10584647260",
-      "allocation_raw": "14489530946",
+      "allocation_raw": "53611264500",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1363,7 +1363,7 @@
       "owner_address": "GCI5XB4IUD42BPV7IMPELNQ6QK7ZRRI4VORLU4CLQQAQYWTHT26XUSRM",
       "owner_type": "account",
       "source_weight_raw": "10560613499",
-      "allocation_raw": "14456630660",
+      "allocation_raw": "53489533441",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1371,31 +1371,31 @@
       "owner_address": "GD7N5NXCQGI7KTXQUT2S6N7RO4SH42ZKTMJMQTBA5QRLVADIHBABFEZ3",
       "owner_type": "account",
       "source_weight_raw": "9880615853",
-      "allocation_raw": "13525768564",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "50045343685",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 172,
       "owner_address": "GBZO5Q5XWPMGM2CSWYSZT6WHLQNOYKES5TL47ILKBSEI3US2R3YVGQNY",
       "owner_type": "account",
       "source_weight_raw": "9394508517",
-      "allocation_raw": "12860326710",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "47583208829",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 173,
       "owner_address": "GD2OKD73SK7OHBSJNOMJ3TFZ6HVSXSEQCZGA5NCWGWDOO6QCB277PQ2Q",
       "owner_type": "account",
       "source_weight_raw": "8985281811",
-      "allocation_raw": "12300128257",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "45510474553",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 174,
       "owner_address": "GDRMYULJE6RYC3WKRKVKFXYBTXMKDOXUXBXQITX7CB7DWZQAQWMGMTCE",
       "owner_type": "account",
       "source_weight_raw": "8763264351",
-      "allocation_raw": "11996204208",
+      "allocation_raw": "44385955570",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1403,7 +1403,7 @@
       "owner_address": "GAYBKMYJORD53T5ZKG2AARH7HV2SY5RJGXMJBXZCX5GGGXT6YDIX6JD4",
       "owner_type": "account",
       "source_weight_raw": "8672205154",
-      "allocation_raw": "11871551490",
+      "allocation_raw": "43924740512",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1411,15 +1411,15 @@
       "owner_address": "GDXQ7PQUGQMF2BQUOO4HN5KLCKDCOEFB6WQVBR3AS5Z4RFRRVAIBO2SW",
       "owner_type": "account",
       "source_weight_raw": "8618902554",
-      "allocation_raw": "11798584517",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "43654762711",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 177,
       "owner_address": "GDQ2FWSVHOPFN25RYZ3QMA577HLSZZ5XOPXFJT4624CPDMPPPS43DZRK",
       "owner_type": "account",
       "source_weight_raw": "8596655823",
-      "allocation_raw": "11768130531",
+      "allocation_raw": "43542082964",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1427,7 +1427,7 @@
       "owner_address": "GDUNI72QSE7X4L3E2JB737UABNDBEBSD3NBDWLIX52FCGJ4PIZZQ6FKW",
       "owner_type": "account",
       "source_weight_raw": "8487524591",
-      "allocation_raw": "11618738650",
+      "allocation_raw": "42989333005",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1435,7 +1435,7 @@
       "owner_address": "GDOPU76JQIWCEO7K2MWHC6QKI3JTR6DX6KZUQF2KR53MWAEFKL5ZUDFV",
       "owner_type": "account",
       "source_weight_raw": "8222644369",
-      "allocation_raw": "11256138926",
+      "allocation_raw": "41647714026",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1443,7 +1443,7 @@
       "owner_address": "GB7CKQ6RDEZAG7A2MZU7AQL6FHMKVUSFYZ3FECFHZBYKKJF6HI6JA33S",
       "owner_type": "account",
       "source_weight_raw": "8181604773",
-      "allocation_raw": "11199959019",
+      "allocation_raw": "41439848371",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1451,15 +1451,15 @@
       "owner_address": "GD6QWNATHU2ZMRPO5KJJ46FWCQ2OXGOMP22GTEUHUO2CIJJM6TQK46FW",
       "owner_type": "account",
       "source_weight_raw": "8171447364",
-      "allocation_raw": "11186054343",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "41388401070",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 182,
       "owner_address": "GD74ZN47X5TTKNBWSLY7W34TH5DHO6HPEBVB37FZZ3KBNOD7RKGAQFMK",
       "owner_type": "account",
       "source_weight_raw": "8119132493",
-      "allocation_raw": "11114439492",
+      "allocation_raw": "41123426119",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1467,15 +1467,15 @@
       "owner_address": "GCLEXQSBHGXMAQ2VO332GZ74XP7FHFY54AQ63YLKSGJAYZECZKCHB4AT",
       "owner_type": "account",
       "source_weight_raw": "7932492123",
-      "allocation_raw": "10858943834",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "40178092184",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 184,
       "owner_address": "GASAXWRQCKI5RRLBMFMUOV342DY4TKJM6DE6HZMLGOPKMZLKK43MMDXP",
       "owner_type": "account",
       "source_weight_raw": "7869959784",
-      "allocation_raw": "10773342090",
+      "allocation_raw": "39861365733",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1483,7 +1483,7 @@
       "owner_address": "GCGTA4E6CV6HQWHW6X4BBE526ZK2QRRCRBVFUQZ2N6BYH5C4JMO7VOB7",
       "owner_type": "account",
       "source_weight_raw": "7863464666",
-      "allocation_raw": "10764450796",
+      "allocation_raw": "39828467944",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1491,7 +1491,7 @@
       "owner_address": "GD6XSMQJ47EHHJOWXQOND5YDVZC37JWZJHYHBKE6QJFSLLJ5KQXM5QS5",
       "owner_type": "account",
       "source_weight_raw": "7690607700",
-      "allocation_raw": "10527823509",
+      "allocation_raw": "38952946984",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1499,15 +1499,15 @@
       "owner_address": "GCAUTOR5KRMXWNYWRRKNFVVHQYTGR6DARBKWL24RKDR7JCVSI6VLJUI3",
       "owner_type": "account",
       "source_weight_raw": "7673208333",
-      "allocation_raw": "10504005175",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "38864819148",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 188,
       "owner_address": "GCROWNS72X3DJ65PLKFT3ATWFCKBR4WLSOGAR6NGKN3NV3I67FINBEAR",
       "owner_type": "account",
       "source_weight_raw": "7482033647",
-      "allocation_raw": "10242302403",
+      "allocation_raw": "37896518891",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1515,7 +1515,7 @@
       "owner_address": "GATFD6DPZ7SQGWEUBKXO5WCKCRWKCI5NE6H3KYY3NWYBZB74SVPGWEGN",
       "owner_type": "account",
       "source_weight_raw": "7341546878",
-      "allocation_raw": "10049987313",
+      "allocation_raw": "37184953059",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1523,15 +1523,15 @@
       "owner_address": "GDNREBWS4RV6TJIG67D7GENUYXXALGIECEODEOY5HRYMEWBGJGQTXUHW",
       "owner_type": "account",
       "source_weight_raw": "7032971058",
-      "allocation_raw": "9627571830",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "35622015769",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 191,
       "owner_address": "GAYO3E3XPRY2E45CI6WVC2TKV32E5SDQQWVKNKPQJVNCGXUW3ZVFXFQ3",
       "owner_type": "account",
       "source_weight_raw": "6951970950",
-      "allocation_raw": "9516689195",
+      "allocation_raw": "35211750022",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1539,7 +1539,7 @@
       "owner_address": "GBCRDN4B6KY456PNKGPTB7OJXEHOBMMZ6EQ23TIRBMIXZUUJODL5RDYM",
       "owner_type": "account",
       "source_weight_raw": "6833886691",
-      "allocation_raw": "9355041340",
+      "allocation_raw": "34613652959",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1547,23 +1547,23 @@
       "owner_address": "GD4FPIU7SHTOPO2KFDNWUPFW2C6Z2JGDTFDLEDNT5JON2HBK6Q7HN3DV",
       "owner_type": "account",
       "source_weight_raw": "6608972582",
-      "allocation_raw": "9047152011",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "33474462442",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 194,
       "owner_address": "GC5HTG6WYTMW4LOJF7IM7TEGIKP6ZY2K7L4HGNQDF7GSJRA5CS5QB2A5",
       "owner_type": "account",
       "source_weight_raw": "6236684150",
-      "allocation_raw": "8537519085",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "31588820615",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 195,
       "owner_address": "GCUXQ2D6IQMTLDUFBCDJ5LY2ALY3AJFOQPPJ4BL2B2SIRDGFG3KH7V3U",
       "owner_type": "account",
       "source_weight_raw": "5618213808",
-      "allocation_raw": "7690882921",
+      "allocation_raw": "28456266806",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1571,7 +1571,7 @@
       "owner_address": "GD25WGXPNX74NJHXOD4YMEEW3WWA6GR67TNYGPME3HPIEN3QLMRLFQV7",
       "owner_type": "account",
       "source_weight_raw": "5602559686",
-      "allocation_raw": "7669453686",
+      "allocation_raw": "28376978639",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1579,23 +1579,23 @@
       "owner_address": "GCQMY25BMVCTFD55BJ2NADQS4RFZOYDHS37DD6FLRH2PYXSTP32MAFZD",
       "owner_type": "account",
       "source_weight_raw": "5515111740",
-      "allocation_raw": "7549744480",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "27934054577",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 198,
       "owner_address": "GBP5SEQK5BJZNUMJD5CZ7NTP3BCX7NXFPJEEYPQF55GSNJXJA2DMRFJP",
       "owner_type": "account",
       "source_weight_raw": "5047116614",
-      "allocation_raw": "6909096786",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "25563658109",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 199,
       "owner_address": "GAXMNHRN3LGE72DECAZIHKWDX6ITPO6IMUB7XJRUGDP4AHGBHWPD75YL",
       "owner_type": "account",
       "source_weight_raw": "4671777438",
-      "allocation_raw": "6395287637",
+      "allocation_raw": "23662564256",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1603,23 +1603,23 @@
       "owner_address": "GABX66IJGCEZC77VHHVSRUVN2NMFT256K2HNIGQD5DTZMJVEYE5K5GC4",
       "owner_type": "account",
       "source_weight_raw": "4382913957",
-      "allocation_raw": "5999856760",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "22199470011",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 201,
       "owner_address": "GBOYKBTFCAVPWRKCHPRWRCDTTFLEWHYWI56X5F56J4F6RWJ6KLR4M5ZG",
       "owner_type": "account",
       "source_weight_raw": "4354064374",
-      "allocation_raw": "5960364001",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "22053346802",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 202,
       "owner_address": "GDCXLIKTW5AFX4TBQSELDVXESKGODYVZVXDXVP2HWZH3QFUD6DCVVCY5",
       "owner_type": "account",
       "source_weight_raw": "4335388171",
-      "allocation_raw": "5934797781",
+      "allocation_raw": "21958751788",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1627,7 +1627,7 @@
       "owner_address": "GDFUZMY462HQXNGZXE6Y53LGUF4CMML2AU37C2RTFPT4XUFM25ZIFK7B",
       "owner_type": "account",
       "source_weight_raw": "4218915753",
-      "allocation_raw": "5775356406",
+      "allocation_raw": "21368818703",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1635,7 +1635,7 @@
       "owner_address": "GBEXED74JAQ6LBTDFOKIITCEZLUU5T2W7J6MWJVR6QL5QMTMFCC5Z7ZJ",
       "owner_type": "account",
       "source_weight_raw": "4179850014",
-      "allocation_raw": "5721878551",
+      "allocation_raw": "21170950639",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1643,7 +1643,7 @@
       "owner_address": "GDVXSVJ6O45JEWVSTPL5H3BSCLZSF6Z72NFMXHYFKWA2C7IELXFQKMYN",
       "owner_type": "account",
       "source_weight_raw": "4088677800",
-      "allocation_raw": "5597071122",
+      "allocation_raw": "20709163150",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1651,7 +1651,7 @@
       "owner_address": "GA4LVBBHFJ2KYR56LDIGTGI3KGFUSM5CJ266RAPOMSOGAVIVYHOFQF5B",
       "owner_type": "account",
       "source_weight_raw": "4079613385",
-      "allocation_raw": "5584662666",
+      "allocation_raw": "20663251865",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1659,7 +1659,7 @@
       "owner_address": "GAB7QWJFSZD32G3MTWEJC7MHLRYHVRDQAKRWAAPKZI7NJTZCW2NVNHA6",
       "owner_type": "account",
       "source_weight_raw": "4029388155",
-      "allocation_raw": "5515908365",
+      "allocation_raw": "20408860951",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1667,7 +1667,7 @@
       "owner_address": "GAN2FWNA2YUMUFLWBF3QKV34UZ4MK7VQ5NE2LNRUBQ3D3NNMYBP6ZIXR",
       "owner_type": "account",
       "source_weight_raw": "4027325514",
-      "allocation_raw": "5513084776",
+      "allocation_raw": "20398413670",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1675,7 +1675,7 @@
       "owner_address": "GDMOYTT33DVR5W43DSHAFMKE2A57K75JRDZZKXTWUODQYRXIOMVUGPDK",
       "owner_type": "account",
       "source_weight_raw": "4002018564",
-      "allocation_raw": "5478441596",
+      "allocation_raw": "20270233905",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1683,7 +1683,7 @@
       "owner_address": "GDQVYP5XGSF7F7YSGFGBACGT4EEDN4TXOMYNQISS4GT66X3PJGJOW53Z",
       "owner_type": "account",
       "source_weight_raw": "3841548101",
-      "allocation_raw": "5258770436",
+      "allocation_raw": "19457450614",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1691,7 +1691,7 @@
       "owner_address": "GABR5FJYD4AITJWFV2YOTEQKJPKSGMC37ESKRU6FEGNNRYV6YAPXZPWK",
       "owner_type": "account",
       "source_weight_raw": "3811209106",
-      "allocation_raw": "5217238792",
+      "allocation_raw": "19303783530",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1699,7 +1699,7 @@
       "owner_address": "GAD7ZGQ5FT7MWLEJHGKQ36HDQMRHCFJIBA5ICWYT2ERW2TCWG2MIZUUD",
       "owner_type": "account",
       "source_weight_raw": "3751095778",
-      "allocation_raw": "5134948480",
+      "allocation_raw": "18999309375",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1707,7 +1707,7 @@
       "owner_address": "GAU3MOAHNR3B26X535SHXPYU7575BWCDVUGIOX5VAMTT664HZ3JK4IVZ",
       "owner_type": "account",
       "source_weight_raw": "3642691724",
-      "allocation_raw": "4986552047",
+      "allocation_raw": "18450242574",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1715,7 +1715,7 @@
       "owner_address": "GCRCLPLZCYPQHOKRQOOMZV3JMO75WG2IU4P3W46N6OXAGOUYJH7B2SDL",
       "owner_type": "account",
       "source_weight_raw": "3496584511",
-      "allocation_raw": "4786543021",
+      "allocation_raw": "17710209179",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1723,7 +1723,7 @@
       "owner_address": "GDX3PXYEDCG6BI3FUYUQAKUJ2W5QHS2FYN2CSOUMPWS4JTGFVUB7SSXU",
       "owner_type": "account",
       "source_weight_raw": "3461227427",
-      "allocation_raw": "4738142017",
+      "allocation_raw": "17531125462",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1731,23 +1731,23 @@
       "owner_address": "GCGMT4G6KSNXME2ZUQU4RCKEKAPH3LVXWJ3HK23J5YK37LIOOONTROBN",
       "owner_type": "account",
       "source_weight_raw": "3409325261",
-      "allocation_raw": "4667092125",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "17268240863",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 217,
       "owner_address": "GDW4ZDNWSLMKWKSHBTHKCURKMNFEWKNE2KYJ3XSNDMCC4UTNLJKRA5ZJ",
       "owner_type": "account",
       "source_weight_raw": "3401247020",
-      "allocation_raw": "4656033663",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "17227324552",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 218,
       "owner_address": "GBKCQZ3LGRZWTOGC3XBX3RSV6KGW6ILK4HNN3ZP4YCFFU7P73VQ4UA6I",
       "owner_type": "account",
       "source_weight_raw": "3377395512",
-      "allocation_raw": "4623382866",
+      "allocation_raw": "17106516605",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1755,7 +1755,7 @@
       "owner_address": "GDPCWNUKVGB6PY256ENVOC3X7RKTWSETXHIM55E7PXCGT4J3ZMUK5WVG",
       "owner_type": "account",
       "source_weight_raw": "3296075440",
-      "allocation_raw": "4512062227",
+      "allocation_raw": "16694630240",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1763,7 +1763,7 @@
       "owner_address": "GDKNDOQL23432Z7HMTFELXPFXAAUDWDJZXOTR73TSWY4XUGN2YMQHVM3",
       "owner_type": "account",
       "source_weight_raw": "3147685808",
-      "allocation_raw": "4308928753",
+      "allocation_raw": "15943036387",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1771,7 +1771,7 @@
       "owner_address": "GDVQWV665JVBFBMXLAUYLH4XK766MATVAUDQAV7L32POWGT2CFGT4F5R",
       "owner_type": "account",
       "source_weight_raw": "3074126239",
-      "allocation_raw": "4208231619",
+      "allocation_raw": "15570456989",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1779,7 +1779,7 @@
       "owner_address": "GDRUHABTMTXDDEICK6ZVEQZARU7RDE27B6LM6SGRXG7CRB5JDAZJ7KWJ",
       "owner_type": "account",
       "source_weight_raw": "2977215062",
-      "allocation_raw": "4075568010",
+      "allocation_raw": "15079601638",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1787,15 +1787,15 @@
       "owner_address": "GCLSPJRCWAEK4O7MEUY7HYH67ASGFWVZMBM7GXLLC3GKERJ5PLFYOYPX",
       "owner_type": "account",
       "source_weight_raw": "2870246898",
-      "allocation_raw": "3929137196",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "14537807623",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 224,
       "owner_address": "GAF3CZTL6CFUPO2T37QL6WO5UANPOL5GQ3UN46SZNCNOWIYZRXG6YOFS",
       "owner_type": "account",
       "source_weight_raw": "2813658494",
-      "allocation_raw": "3851672221",
+      "allocation_raw": "14251187218",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1803,7 +1803,7 @@
       "owner_address": "GC4XQZBJS6OABA7VSK2PYFU7PVWZS22TTEDA4XUQCALXBBNYKZSBTZPY",
       "owner_type": "account",
       "source_weight_raw": "2803958545",
-      "allocation_raw": "3838393771",
+      "allocation_raw": "14202056952",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1811,15 +1811,15 @@
       "owner_address": "GDUD75R5KJ5BNDBEEWUNFRZJ3EDOHLBJP4F6MEEB2PGHAVMQF3TKJPBJ",
       "owner_type": "account",
       "source_weight_raw": "2701054970",
-      "allocation_raw": "3697527052",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "13680850090",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 227,
       "owner_address": "GD46UAKTBQYCGG7FW6BKYOWFGHWAWJU6TKMDHYM3RIATZZ7OE4KJECGH",
       "owner_type": "account",
       "source_weight_raw": "2624947661",
-      "allocation_raw": "3593342266",
+      "allocation_raw": "13295366383",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1827,23 +1827,23 @@
       "owner_address": "GC5SU2SJ4VFGJE7RZZHVLOYRE4JJRBK5SULZHKYSHMUOP3UIGB3653L4",
       "owner_type": "account",
       "source_weight_raw": "2597509800",
-      "allocation_raw": "3555782040",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "13156393549",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 229,
       "owner_address": "GC72GBUP2RYKF7UPAAFTCTYZ37Z7W6IRYE6MPKWSDXWCVGFIVO6RV7FN",
       "owner_type": "account",
       "source_weight_raw": "2534389630",
-      "allocation_raw": "3469375603",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "12836689732",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 230,
       "owner_address": "CBUTN4KJSULJAUZYTYIGSMYAOO7PBJSAQ5OP6UTGYHOXA6UQYBAEOBB3",
       "owner_type": "contract",
       "source_weight_raw": "2532073540",
-      "allocation_raw": "3466205062",
+      "allocation_raw": "12824958730",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1851,7 +1851,7 @@
       "owner_address": "GDID3OX5UATDL3FTQ7BWSDIHSWMXXZRLFVKXCZ2K4CJNVFYTGH6EWSVC",
       "owner_type": "account",
       "source_weight_raw": "2488409451",
-      "allocation_raw": "3406432436",
+      "allocation_raw": "12603800012",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1859,7 +1859,7 @@
       "owner_address": "GB7NZNREBS6H6PYKVOF7FJDQMSKRSGWIE6IWULLJUZVAX73MTUL6NFF4",
       "owner_type": "account",
       "source_weight_raw": "2254905424",
-      "allocation_raw": "3086784200",
+      "allocation_raw": "11421101539",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1867,7 +1867,7 @@
       "owner_address": "GCZWQYXSW4AD62DEF5PBEZAKMSUKM6FCJ2YPLXGE4IBQJXENG6KSLIUC",
       "owner_type": "account",
       "source_weight_raw": "2246246579",
-      "allocation_raw": "3074930937",
+      "allocation_raw": "11377244467",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1875,7 +1875,7 @@
       "owner_address": "GBEF2L62K3K4AXIAHE6RKNXMX3S67D3J7TPXKY3YZQPLBDEHBWYJ6F62",
       "owner_type": "account",
       "source_weight_raw": "2240623770",
-      "allocation_raw": "3067233764",
+      "allocation_raw": "11348764926",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1883,7 +1883,7 @@
       "owner_address": "GCSM6QASLFOSOPBOQLOQ3YBOJOZQBHVLXCP3PWCUNB2X342IX2HQ622F",
       "owner_type": "account",
       "source_weight_raw": "2226010964",
-      "allocation_raw": "3047230007",
+      "allocation_raw": "11274751027",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1891,7 +1891,7 @@
       "owner_address": "GCXZG27ZTUKA7RF37OVIAI73777QYYSV6SKYQCE6HLVFANWXVKTEI7KE",
       "owner_type": "account",
       "source_weight_raw": "2067522434",
-      "allocation_raw": "2830271955",
+      "allocation_raw": "10472006232",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1899,7 +1899,7 @@
       "owner_address": "GC6GZHQ2R2BYQWT6HMK7CZKZS6AWN7OXW5ZVEAQOHTXIUKJ2BVYIQTE4",
       "owner_type": "account",
       "source_weight_raw": "2035909404",
-      "allocation_raw": "2786996259",
+      "allocation_raw": "10311886157",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1907,7 +1907,7 @@
       "owner_address": "GAKL6IWNAFDFETXPIHBNOUVD5LSZFFPFHPCN3XLATIKGFJOMIF5R7JYV",
       "owner_type": "account",
       "source_weight_raw": "2025576804",
-      "allocation_raw": "2772851760",
+      "allocation_raw": "10259551512",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1915,15 +1915,15 @@
       "owner_address": "GCY6N3Y3E7FQ65IGRBFSPXELJXMIFYZQCWJTSCFBJDBKSHJOLL7SBG6D",
       "owner_type": "account",
       "source_weight_raw": "1990993404",
-      "allocation_raw": "2725509866",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "10084386506",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 240,
       "owner_address": "GA3UP2PHZQSZLGP5QEGJBXVWCU4PU2CFY7NDP4JG7VZWM7GC7TGTIMCB",
       "owner_type": "account",
       "source_weight_raw": "1961651732",
-      "allocation_raw": "2685343477",
+      "allocation_raw": "9935770865",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1931,15 +1931,15 @@
       "owner_address": "GCC3DIKMODNJMHSWEMPDZNF3BO55GK4SSWPRSOQCQHRE5R53FCQYTMBY",
       "owner_type": "account",
       "source_weight_raw": "1875413044",
-      "allocation_raw": "2567289648",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "9498971697",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 242,
       "owner_address": "GATB4LSZQXX62SLUMYDPGIOWWSYM2QCTHI5SG4SI6JQTX6ODCENKNNP6",
       "owner_type": "account",
       "source_weight_raw": "1848959405",
-      "allocation_raw": "2531076743",
+      "allocation_raw": "9364983950",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1947,31 +1947,31 @@
       "owner_address": "GC3TIQL2X6LB72RIDZYNKDVCADUZ6BZMGUWPWGCUJJZEQFXIM2IVNQSY",
       "owner_type": "account",
       "source_weight_raw": "1819430925",
-      "allocation_raw": "2490654629",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "9215422126",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 244,
       "owner_address": "GB3SHL4HC77VBLN7KJM4EMWJG7N2JJV45PKSFJSS5EFX6HIB2E3OVEFG",
       "owner_type": "account",
       "source_weight_raw": "1782697417",
-      "allocation_raw": "2440369410",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "9029366818",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 245,
       "owner_address": "GDW2RYFP7NBMWNTE2CCS5TUI3HN3N3PVP46XLJCSXTDKZSWKBTFT35FH",
       "owner_type": "account",
       "source_weight_raw": "1767685919",
-      "allocation_raw": "2419819877",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "8953333543",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 246,
       "owner_address": "GC7WRELSV3MNZLHMNWVC4ADRTTVNEA46FARFQDU6QFJZLHRRV55HS6IV",
       "owner_type": "account",
       "source_weight_raw": "1763906772",
-      "allocation_raw": "2414646528",
+      "allocation_raw": "8934192154",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1979,7 +1979,7 @@
       "owner_address": "GBFUSXHPGWH5C45HRY263MFY5Z63JOQXG4SPKQMURFVTMXYV7Z2QTVB7",
       "owner_type": "account",
       "source_weight_raw": "1684735302",
-      "allocation_raw": "2306267152",
+      "allocation_raw": "8533188463",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -1987,7 +1987,7 @@
       "owner_address": "GC2YM7ZWTKJ7STL272N2VESSRCEANUERDNTYNWDPMQHGTZLY2MC2UIXE",
       "owner_type": "account",
       "source_weight_raw": "1646260111",
-      "allocation_raw": "2253597710",
+      "allocation_raw": "8338311526",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -1995,7 +1995,7 @@
       "owner_address": "GCUZMS67FDE7LEFFM5OP3TXEFXXBJQ7447WW3BUQIVMQHVTNEUXDXKHC",
       "owner_type": "account",
       "source_weight_raw": "1643798530",
-      "allocation_raw": "2250228003",
+      "allocation_raw": "8325843612",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2003,31 +2003,31 @@
       "owner_address": "GDP2ZIFJTDZT2R2C4CFSTJJQE2U26FFTAXRXYWPWKW5USEB6ILJBUCOT",
       "owner_type": "account",
       "source_weight_raw": "1637245392",
-      "allocation_raw": "2241257284",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "8292651952",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 251,
       "owner_address": "GB5PQUYVTZM4CXRAGQXUJWTWPZ7VL3LCMUMI7PZEJK3QNIH3V46JA5TG",
       "owner_type": "account",
       "source_weight_raw": "1607045258",
-      "allocation_raw": "2199915729",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "8139688199",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 252,
       "owner_address": "GAORM3N3RH2LVHI47LGFG4WFGI4ZO4KWMGDSYWFPLSWUQC2QOKPUO4ML",
       "owner_type": "account",
       "source_weight_raw": "1597151253",
-      "allocation_raw": "2186371632",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "8089575039",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 253,
       "owner_address": "GBNYPW5RZ6ODXJHCOF7CO5AJCJWG4HR2FW7EDW47UA6TNQDKZJMOTJ3R",
       "owner_type": "account",
       "source_weight_raw": "1594519786",
-      "allocation_raw": "2182769365",
+      "allocation_raw": "8076246652",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2035,31 +2035,31 @@
       "owner_address": "GDYXHEQ6SPE4LLXZRFCTS6ME4YVU4Z7E4JO2WQ2EA62DHCLI3RJF2PZV",
       "owner_type": "account",
       "source_weight_raw": "1565871057",
-      "allocation_raw": "2143551559",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "7931140769",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 255,
       "owner_address": "GAV7LTQUR6N5MZAJSWSPTK2EPBDTPYLPS3WX7X2YSRJQPVG4W7TZ3JB4",
       "owner_type": "account",
       "source_weight_raw": "1509963381",
-      "allocation_raw": "2067018447",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "7647968252",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 256,
       "owner_address": "GAI6QKZE22FGTOGUO4PQLUPPKJKGZ5P3LQWU7FRZL27ANKDTBG5IALCB",
       "owner_type": "account",
       "source_weight_raw": "1443411856",
-      "allocation_raw": "1975914760",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "7310884614",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 257,
       "owner_address": "GDCRH4L5DJMIQGXT6TFD52LG7NV434HTAT6TSY5L2NIIFRQMKH3YKFEN",
       "owner_type": "account",
       "source_weight_raw": "1440482558",
-      "allocation_raw": "1971904787",
+      "allocation_raw": "7296047712",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2067,7 +2067,7 @@
       "owner_address": "GB737IWLMWJ4OXAY7J3BXUKRRYGMWZDGPD2XQXJS2PKC7TZYLTGUEDIM",
       "owner_type": "account",
       "source_weight_raw": "1438489033",
-      "allocation_raw": "1969175812",
+      "allocation_raw": "7285950503",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2075,31 +2075,31 @@
       "owner_address": "GBTH2HETHP6JG4LLITOHPDZKFXQXNTAULXYVSMXKZYO3774X2JVIZT52",
       "owner_type": "account",
       "source_weight_raw": "1422680354",
-      "allocation_raw": "1947535001",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "7205879505",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 260,
       "owner_address": "GDUI7TYFVMDIZN7ZTQXOHW7BGV4HCQXGU4DVNUB63ABDUMPXROOVM7LO",
       "owner_type": "account",
       "source_weight_raw": "1354558732",
-      "allocation_raw": "1854281979",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "6860843321",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 261,
       "owner_address": "GA2YLWYKP2TXIVD662LZOH3H4ASJZG74ZINX76EG5LOLRST4H7SCQ3NY",
       "owner_type": "account",
       "source_weight_raw": "1327706303",
-      "allocation_raw": "1817523163",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "6724835702",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 262,
       "owner_address": "GAX6DP3PXYV4OCTWP4JES4YXVHDN5CF5ZLPYW35SIE2HUE5SXC7CISYO",
       "owner_type": "account",
       "source_weight_raw": "1288285197",
-      "allocation_raw": "1763558839",
+      "allocation_raw": "6525167703",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2107,7 +2107,7 @@
       "owner_address": "GBTC6T3LZ5YXZTKHROU52XVU5XMLFGOREG3E3M3S2M4QIEINRAKOEHOL",
       "owner_type": "account",
       "source_weight_raw": "1215025142",
-      "allocation_raw": "1663271714",
+      "allocation_raw": "6154105343",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2115,7 +2115,7 @@
       "owner_address": "GAKK7F5LOCROUNEJUVI4IJWU2SPYAPME2UPEY2TD7SGYBQN4ZVWJJANB",
       "owner_type": "account",
       "source_weight_raw": "1189567869",
-      "allocation_raw": "1628422755",
+      "allocation_raw": "6025164193",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2123,23 +2123,23 @@
       "owner_address": "GCITCZ32ZNAYUVQZBNBG7RLV4YA7LKFNTFG6SN6HGM47L5BYFXG7AEXY",
       "owner_type": "account",
       "source_weight_raw": "1168216738",
-      "allocation_raw": "1599194773",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "5917020662",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 266,
       "owner_address": "GAO2RRDOOQJSESRS4LLJFDRFOJYOWP5OYJHVMOW4VABG5QSO4DXANTSZ",
       "owner_type": "account",
       "source_weight_raw": "1162760605",
-      "allocation_raw": "1591725766",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "5889385335",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 267,
       "owner_address": "GDEU7LRIODDJOCPCMX6H3F2MKWYXBR3AW3TOCB5YBCGWDEKEBDU4EZWZ",
       "owner_type": "account",
       "source_weight_raw": "1146188815",
-      "allocation_raw": "1569040318",
+      "allocation_raw": "5805449177",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2147,23 +2147,23 @@
       "owner_address": "GDETRURDEE53BKQ2CVFJOVLCCUQW6NGWRCIJ5F7SZQ3OUSYUAWZ5GWEX",
       "owner_type": "account",
       "source_weight_raw": "1115012828",
-      "allocation_raw": "1526362899",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5647542726",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 269,
       "owner_address": "GCBYMMOSIINFRGFEJKEUGNCUNAOUQYZ6DOQXA47P76UGCUQSXVNWWM3L",
       "owner_type": "account",
       "source_weight_raw": "1113692860",
-      "allocation_raw": "1524555969",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5640857085",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 270,
       "owner_address": "GC5Z4GX6IBUZXKUYOSWNZRNJTQJEIJZTAYG2DANBCGHR5FDO5RIQFHMG",
       "owner_type": "account",
       "source_weight_raw": "1111824795",
-      "allocation_raw": "1521998738",
+      "allocation_raw": "5631395331",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2171,15 +2171,15 @@
       "owner_address": "GBMZFNU5SVBFSOETKTBZZT5URHWVCW6UQ6SC2SOYCGAQGVIZPHX3RI4U",
       "owner_type": "account",
       "source_weight_raw": "1108215879",
-      "allocation_raw": "1517058422",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "5613116163",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 272,
       "owner_address": "GDP3CNT73Q64UIPEMI6WDXFDEA67DF5CSZ6Y55TCNCXZSNMO4WKTA5ET",
       "owner_type": "account",
       "source_weight_raw": "1082384909",
-      "allocation_raw": "1481697902",
+      "allocation_raw": "5482282236",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2187,7 +2187,7 @@
       "owner_address": "GDGQU6OLYT7SO43OAKPTQWBDM5HJP3YTEX335R3GUHCX7F4DUJ322D7R",
       "owner_type": "account",
       "source_weight_raw": "1074793205",
-      "allocation_raw": "1471305469",
+      "allocation_raw": "5443830236",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2195,7 +2195,7 @@
       "owner_address": "GBH45AEJD5P355MK27R3BAPTTJUN6MRDZEDCHJZ4MVJGI2KQFZMA5QYJ",
       "owner_type": "account",
       "source_weight_raw": "1049300649",
-      "allocation_raw": "1436408210",
+      "allocation_raw": "5314710377",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2203,7 +2203,7 @@
       "owner_address": "GBLQLUATIATW47454PRIX6QHY6YFNKLX5XGJBPGVSUHRVQLOV3GNJIYO",
       "owner_type": "account",
       "source_weight_raw": "1026995097",
-      "allocation_raw": "1405873703",
+      "allocation_raw": "5201732701",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2211,15 +2211,15 @@
       "owner_address": "GDBICJJRACMJ5XL3YK7WQBGDQG7RKNUA3DJJJQLTLKMD25C5WP2H3J2S",
       "owner_type": "account",
       "source_weight_raw": "1025407894",
-      "allocation_raw": "1403700950",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5193693514",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 277,
       "owner_address": "GAL2GBMU2OETKJPBXU4AULN37KROUCJ55PUI2GLRNZ3HMENWXJ56QFMP",
       "owner_type": "account",
       "source_weight_raw": "1000000000",
-      "allocation_raw": "1368919586",
+      "allocation_raw": "5065002468",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2227,7 +2227,7 @@
       "owner_address": "GCTPZQS7WHYT45B36ZKNFMBI7X2I7GKXU4WCKZUJYHYS3FX7RHHA5HNF",
       "owner_type": "account",
       "source_weight_raw": "974201313",
-      "allocation_raw": "1333603258",
+      "allocation_raw": "4934332055",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2235,31 +2235,31 @@
       "owner_address": "GCB2NJ22PJVDRQ4WNGYD2TC2LITRULHGLG5TG6NWBIPQO64JE7OS465W",
       "owner_type": "account",
       "source_weight_raw": "936698319",
-      "allocation_raw": "1282264675",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "4744379298",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 280,
       "owner_address": "GBJ7ANOCGDS5QEZNWRL6VETZDYSUV3PZTI5Q7TBE6AVZLGBE3QWLETQO",
       "owner_type": "account",
       "source_weight_raw": "930866915",
-      "allocation_raw": "1274281952",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "4714843222",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 281,
       "owner_address": "GAB7355NRRUAB5TGEAKIHS2RP7SZ32JJLF337MF24GFPPPSKEXABURYP",
       "owner_type": "account",
       "source_weight_raw": "925778431",
-      "allocation_raw": "1267316227",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "4689070038",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 282,
       "owner_address": "GB5FU5TOXJ7PXERVYSNJM6YEVI5N3OJBIEPPV6VYOCUI32VAAHTEDMMQ",
       "owner_type": "account",
       "source_weight_raw": "923829511",
-      "allocation_raw": "1264648312",
+      "allocation_raw": "4679198754",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2267,23 +2267,23 @@
       "owner_address": "GAB7SXP6ABTIUTGD54PKVGLAAPDO4A7TXMAGP3HPZVKCAYTSJNNAOEEI",
       "owner_type": "account",
       "source_weight_raw": "918358452",
-      "allocation_raw": "1257158872",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "4651487826",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 284,
       "owner_address": "GCM5O5PPEWBKADRFG2SFHNWLC2E7Q2XOZZZD2M3OZLIKHE3EJ3AMA64Q",
       "owner_type": "account",
       "source_weight_raw": "904091328",
-      "allocation_raw": "1237628327",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "4579224808",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 285,
       "owner_address": "GCTO4SIC4S2SZZC2R5LWCQDXBZBN45N2YWVHIR4IEPVOHLDQZDZHRPMF",
       "owner_type": "account",
       "source_weight_raw": "887800939",
-      "allocation_raw": "1215328094",
+      "allocation_raw": "4496713948",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2291,7 +2291,7 @@
       "owner_address": "GBWHCMLO4L5MU2HBWLABOH6PPCYQEXEIA4N4IFTCPOGATPSSIMZZG4BD",
       "owner_type": "account",
       "source_weight_raw": "885543787",
-      "allocation_raw": "1212238234",
+      "allocation_raw": "4485281467",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2299,7 +2299,7 @@
       "owner_address": "GAAOYJTUS2YJ3OZYV4EJE5ASX2LTLMYJOM7WZ7IRNNBFIPY5EHC4P5MC",
       "owner_type": "account",
       "source_weight_raw": "809438382",
-      "allocation_raw": "1108056055",
+      "allocation_raw": "4099807403",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2307,15 +2307,15 @@
       "owner_address": "GA2CR3O7326VP54ALYRHNWWSOQXJYU24Q2BZEGUHJRSDHCCVUSEM24EJ",
       "owner_type": "account",
       "source_weight_raw": "804817213",
-      "allocation_raw": "1101730046",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "4076401171",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 289,
       "owner_address": "GAEN2F3J3JTYNPUMEJWW7YHFP3O375NSJ6EXBSHTCBS5HXZAUCPPYIG2",
       "owner_type": "account",
       "source_weight_raw": "796879432",
-      "allocation_raw": "1090863862",
+      "allocation_raw": "4036196290",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2323,31 +2323,31 @@
       "owner_address": "CA4DRXJSNICCAFVEN2LP3TO5FX7QL4ZYQ3YUTSCLXCUVUXLTQ4VPZBIS",
       "owner_type": "contract",
       "source_weight_raw": "765833522",
-      "allocation_raw": "1048364508",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3878948679",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 291,
       "owner_address": "GDTQD7CLYU3DI56V2PQRIUO3ZWCL5QKPGJGFHBIPYVABBMM2SD6CVXVX",
       "owner_type": "account",
       "source_weight_raw": "741393938",
-      "allocation_raw": "1014908683",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3755162126",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 292,
       "owner_address": "GDREVXS4I2M4RRNQDUMI5A5GAFTIEQFSB2Y34SNI6K3O6WA6HUXYVMW7",
       "owner_type": "account",
       "source_weight_raw": "728559548",
-      "allocation_raw": "997339435",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3690155909",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 293,
       "owner_address": "GDUQZKRYOSQEY6CPZ4YB2JLNY5HG7HDKWPF2I2OWWWGVO3Z24PZJODYU",
       "owner_type": "account",
       "source_weight_raw": "695699210",
-      "allocation_raw": "952356275",
+      "allocation_raw": "3523718216",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2355,7 +2355,7 @@
       "owner_address": "GDNACI5NRTKGOURFFDJDCVWSUH4PBAIDYXNBFZFXKPTOHPGHCRNPH5TF",
       "owner_type": "account",
       "source_weight_raw": "692547157",
-      "allocation_raw": "948041368",
+      "allocation_raw": "3507753060",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2363,23 +2363,23 @@
       "owner_address": "GAB6HYBE6DZ2ZIDAXVQSJKUQJBEIAYHXTBLUTDQJLKI6S6WJWJ7TMGF5",
       "owner_type": "account",
       "source_weight_raw": "665570798",
-      "allocation_raw": "911112901",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3371117735",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 296,
       "owner_address": "GC2MYUXTFAINLGN3OSBLMKXIU4NH5GVSFYOVHSZMMZHQSILM7GFND633",
       "owner_type": "account",
       "source_weight_raw": "655087085",
-      "allocation_raw": "896761541",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3318017703",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 297,
       "owner_address": "GBIWJGAOSFC4KUPHXM573TKTWHMI7VW7D4GCHYZYH243Q6HVBV7ORBIT",
       "owner_type": "account",
       "source_weight_raw": "644116792",
-      "allocation_raw": "881744092",
+      "allocation_raw": "3262453141",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2387,23 +2387,23 @@
       "owner_address": "GCJ2VBYRO4BO3BHCGN7EMSTKBLQXMUTS67PFHUJBZOCCQGLOQN5XFKOG",
       "owner_type": "account",
       "source_weight_raw": "640336727",
-      "allocation_raw": "876569487",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3243307103",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 299,
       "owner_address": "GCN6YFU6BHTXX3FQJRLRQSQEKIILFK5LYIWOKBRL5T3ZAUXKSSQTEWG4",
       "owner_type": "account",
       "source_weight_raw": "620081808",
-      "allocation_raw": "848842132",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3140715888",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 300,
       "owner_address": "GAB7GE4TLBAMTKZLJVFCXMN5QMAPQERYJODI4TXUBA52MAV3DYJALBYH",
       "owner_type": "account",
       "source_weight_raw": "590979779",
-      "allocation_raw": "809003794",
+      "allocation_raw": "2993314039",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2411,7 +2411,7 @@
       "owner_address": "GB5RVWUKPWZJXFLHWVXOHZCVEK7SCKNGSJI22KBVMSPD2JXZB3PDPLMV",
       "owner_type": "account",
       "source_weight_raw": "516388120",
-      "allocation_raw": "706893811",
+      "allocation_raw": "2615507102",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2419,7 +2419,7 @@
       "owner_address": "GA2QOH2JFQJ3RLZGBPU2URAZ4RS4B2IX4SCZ47NBJGAKD6HQWHQDA4EK",
       "owner_type": "account",
       "source_weight_raw": "509594466",
-      "allocation_raw": "697593845",
+      "allocation_raw": "2581097228",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2427,7 +2427,7 @@
       "owner_address": "GDE2FP2TUF4CWIK7IT3LJOLLOHS47QAT4XJAXH6WCZG2GKWTSG4YBBQQ",
       "owner_type": "account",
       "source_weight_raw": "503115472",
-      "allocation_raw": "688724624",
+      "allocation_raw": "2548281108",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2435,7 +2435,7 @@
       "owner_address": "GAIL3QR4PFQBIGOA2WNTIXFM3N3G72F37UUV66YPKKCLMH3YETOSFHEF",
       "owner_type": "account",
       "source_weight_raw": "491265798",
-      "allocation_raw": "672503373",
+      "allocation_raw": "2488262480",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2443,31 +2443,31 @@
       "owner_address": "GDMY4247UFHZMP7SFQXZ5CBHOJMDVZQE3ENJM7JF7ZR4DQ2TWIPKZU3E",
       "owner_type": "account",
       "source_weight_raw": "410877152",
-      "allocation_raw": "562457781",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "2081093789",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 306,
       "owner_address": "GDVEAFWLJYQPNNMHQ27FNW5GYHJOSXUSFQDNZU62AGTE2Q5F4V5QSGNW",
       "owner_type": "account",
       "source_weight_raw": "387139751",
-      "allocation_raw": "529963188",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1960863794",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 307,
       "owner_address": "GD77UUOP4FS2W45T5N6T6CSPXZ2TCJR4FZTAT4ONKXQSEB53RQNTAK7L",
       "owner_type": "account",
       "source_weight_raw": "378426031",
-      "allocation_raw": "518034806",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1916728781",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 308,
       "owner_address": "GC2MO4TGDG5OVLVFTIKIXCYOYL6POXGX2WTFIZERE4NSJCKRI4LKFMTU",
       "owner_type": "account",
       "source_weight_raw": "367830708",
-      "allocation_raw": "503530661",
+      "allocation_raw": "1863063444",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2475,23 +2475,23 @@
       "owner_address": "GAMDHCU2ELAY6JHQEDNU4WIBOF276QJUT5UQJRFXGV4LMTYGDK762UNY",
       "owner_type": "account",
       "source_weight_raw": "366868297",
-      "allocation_raw": "502213197",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1858188830",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 310,
       "owner_address": "GC6GXKD7GGEOO65F2D2DEUS7RZ4O6ZLCVIIRK2DOWXDHVX2DB6GGD3YT",
       "owner_type": "account",
       "source_weight_raw": "366799865",
-      "allocation_raw": "502119519",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1857842222",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 311,
       "owner_address": "GBVKY7STOBL4QQUMHLNN7UYILRC56KI6KO6SLK56B4CT5EFDZRECF7N4",
       "owner_type": "account",
       "source_weight_raw": "359979418",
-      "allocation_raw": "492782876",
+      "allocation_raw": "1823296641",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2499,7 +2499,7 @@
       "owner_address": "GDAWX4KV5EQLP5W44HE5AA5QN5QRBJOVQIAI5OXOH5FW2ENT5PXN33DE",
       "owner_type": "account",
       "source_weight_raw": "357176329",
-      "allocation_raw": "488945672",
+      "allocation_raw": "1809098988",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2507,23 +2507,23 @@
       "owner_address": "GC5SD2MCVCWPB4AF26ZJIR367XOIVV3JIMY2EZPHKEJGEUEX5XSMXWZA",
       "owner_type": "account",
       "source_weight_raw": "353765312",
-      "allocation_raw": "484276264",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1791822179",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 314,
       "owner_address": "GCAX4BW7CWKNVFDUSI2L4WWY6AUCCWCE54PRWGXGJ7VRLBS5X7MBMDDY",
       "owner_type": "account",
       "source_weight_raw": "330354034",
-      "allocation_raw": "452228107",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1673243998",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 315,
       "owner_address": "GBNK7X6QDURCS2GX5QBXEU6HXPYGOYKQ6ZCKCMNP4ZQIKRS72LAZ73NG",
       "owner_type": "account",
       "source_weight_raw": "306900640",
-      "allocation_raw": "420122297",
+      "allocation_raw": "1554452499",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2531,7 +2531,7 @@
       "owner_address": "GBFZWIDB5KHOOTFAECPNWKTHMUBWFAGNZR5REAABFGINIMDYPAUL4J5A",
       "owner_type": "account",
       "source_weight_raw": "306141018",
-      "allocation_raw": "419082436",
+      "allocation_raw": "1550605012",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2539,79 +2539,79 @@
       "owner_address": "GBMAGI4SSIPO2NYCQHHJBSLZ52G3UDN6WKV5VZAJ35POA2NG3YDPHVPV",
       "owner_type": "account",
       "source_weight_raw": "298610588",
-      "allocation_raw": "408773883",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1512463365",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 318,
       "owner_address": "GBAW37WLN2JC7H3GGHSQNPKHTISMI67QF3XZIEJZQDKCPJB6JZJ2TRXL",
       "owner_type": "account",
       "source_weight_raw": "298591776",
-      "allocation_raw": "408748130",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1512368083",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 319,
       "owner_address": "GARMUNCNK5NCHAD64NV2VLJQ3GJN2TJFRJ6ZN7LKD4O2C5DSPCB577QL",
       "owner_type": "account",
       "source_weight_raw": "291192857",
-      "allocation_raw": "398619605",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1474892540",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 320,
       "owner_address": "GAL3ZPH55E3YLEBZYVIMRGMA2ZUQHO3BD3UT47YKJHEE2KVIED24STHX",
       "owner_type": "account",
       "source_weight_raw": "288537281",
-      "allocation_raw": "394984335",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1461442041",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 321,
       "owner_address": "GBLGNDADF3GTNTAKRESO5LKQDLPCOQ7OVU7DY26JAXYFWBXEYVKY2NFB",
       "owner_type": "account",
       "source_weight_raw": "274659806",
-      "allocation_raw": "375987188",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1391152595",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 322,
       "owner_address": "GBKGOMGNT7RVOFBZVKAZA2WSDOWGCY3Q2D46B3PKYZP3PDFO72RSUQKV",
       "owner_type": "account",
       "source_weight_raw": "257734014",
-      "allocation_raw": "352817140",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1305423417",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 323,
       "owner_address": "GCPN3LQOCEA6J7JV24E4FFL4BJTCWMZQQTABL2KWVJWCNEGONVWTUBAK",
       "owner_type": "account",
       "source_weight_raw": "253982326",
-      "allocation_raw": "347681381",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1286421108",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 324,
       "owner_address": "GARC3K7FGW255GY5WG4AU2B7VFA46KC6TZTRGDZ4P23235SV5DHSTXEE",
       "owner_type": "account",
       "source_weight_raw": "250077287",
-      "allocation_raw": "342335696",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1266642076",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 325,
       "owner_address": "GBHIPC7OBNOUK2PUDWRCYIGWGURRU6QKZL7VE2JXGHFIHVSGO3P2677E",
       "owner_type": "account",
       "source_weight_raw": "230846193",
-      "allocation_raw": "316009875",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1169236537",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 326,
       "owner_address": "GBVNOTDHHV7IO7HLEYVYMU257QFHVXXCGN7GIDE55ZBP5C4TBOIXVCD3",
       "owner_type": "account",
       "source_weight_raw": "220599891",
-      "allocation_raw": "301983511",
+      "allocation_raw": "1117338992",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2619,39 +2619,39 @@
       "owner_address": "GC5GPYX65P76HSV2XZ5KCXSS5KTZWF6OP2UFLOIM3GVVQIWSBU6IIL6G",
       "owner_type": "account",
       "source_weight_raw": "209059222",
-      "allocation_raw": "286185264",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1058885475",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 328,
       "owner_address": "CAYQOYGV7US2CTOCG54LEMG76OJIDMEI3HL6HOXWCKGEA7WHZRCVCW46",
       "owner_type": "contract",
       "source_weight_raw": "206184113",
-      "allocation_raw": "282249471",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "1044323041",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 329,
       "owner_address": "GDZ5HDZP5LHHTF7QNNIZV55SCVKRSZS6UXGBRISF4CY5QUX7FMQ3ABNU",
       "owner_type": "account",
       "source_weight_raw": "193596504",
-      "allocation_raw": "265018046",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "980566771",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 330,
       "owner_address": "GCUH77U4SI4A7F3UYPVSYEW64XNOXZ7V7YKNKTNCXBCOJPTL6HTUU4R6",
       "owner_type": "account",
       "source_weight_raw": "181552563",
-      "allocation_raw": "248530859",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "919564180",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 331,
       "owner_address": "GDG5V6LVXEMDITWFFYSSSUVLTEGIDHCAO6VL36JBD7ENKC7GQXKRBRBA",
       "owner_type": "account",
       "source_weight_raw": "181429041",
-      "allocation_raw": "248361768",
+      "allocation_raw": "918938541",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2659,7 +2659,7 @@
       "owner_address": "GB7CDJLKB7EO76UBQN6BVGMLVKRIF3NKMP6AXITRI52RAMAKMOAKXIKR",
       "owner_type": "account",
       "source_weight_raw": "164489186",
-      "allocation_raw": "225172468",
+      "allocation_raw": "833138133",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2667,47 +2667,47 @@
       "owner_address": "GAIRK3MP4IO6LZ4PIEKXAKYFGDI46ALSC5OL7AAURYSWCWKNTGOWHLHA",
       "owner_type": "account",
       "source_weight_raw": "163132485",
-      "allocation_raw": "223315254",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "826266439",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 334,
       "owner_address": "GCMWO3XGISQJVGXACC4QN6I6G6MWAM4KV6G4NWCKOG3FO6ETMLSNQEXZ",
       "owner_type": "account",
       "source_weight_raw": "162846016",
-      "allocation_raw": "222923101",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "824815473",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 335,
       "owner_address": "GCDCYPJO2JTE4SJMKUTKZD4YGBWDOMKGKMWAXN4WLRHFAU6KV4NIEK5R",
       "owner_type": "account",
       "source_weight_raw": "162617501",
-      "allocation_raw": "222610282",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "823658044",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 336,
       "owner_address": "GAPNT32774YFGFMSKQG3XYO5GSPEG33TSRQUNR42QQ52R2MEWSBZJK5S",
       "owner_type": "account",
       "source_weight_raw": "141075973",
-      "allocation_raw": "193121663",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "714550151",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 337,
       "owner_address": "GDOPYPHE2G7CSHXC4BQGMWQPHPS7KNGCKEQY2MJSWMFKGBXJ6I2A3OVP",
       "owner_type": "account",
       "source_weight_raw": "139706805",
-      "allocation_raw": "191247382",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "707615312",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 338,
       "owner_address": "GD7NB2UZNV6CX5NHIONUMI65JFZBQO57QR7O44KY6G7QOMMQMMRRWVKY",
       "owner_type": "account",
       "source_weight_raw": "132550588",
-      "allocation_raw": "181451096",
+      "allocation_raw": "671369055",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2715,23 +2715,23 @@
       "owner_address": "GACMBVFG56MWHDW7FRWA6MYIVKQ77SUT3C4J24MI5UBBKVU2RAD2DFE2",
       "owner_type": "account",
       "source_weight_raw": "127922876",
-      "allocation_raw": "175116130",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "647929683",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 340,
       "owner_address": "GBQPDBTU6Z6COF3AYFJNH3PWGN2I6T2LT6BN2W362IBVICJCCACIFEJ6",
       "owner_type": "account",
       "source_weight_raw": "127799874",
-      "allocation_raw": "174947751",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "647306677",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 341,
       "owner_address": "GA4XJAJ3P7NQTLYRMG2SOF7UPEVRNAVFRQ2PIXPGR7YG54MMS2RTELLW",
       "owner_type": "account",
       "source_weight_raw": "106330543",
-      "allocation_raw": "145557963",
+      "allocation_raw": "538564463",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2739,15 +2739,15 @@
       "owner_address": "GCKEHPAZCAIERF775J6O4U3HUWIT2FVFODQECWIXEZQJ2QQX63AHTZ2Q",
       "owner_type": "account",
       "source_weight_raw": "105464282",
-      "allocation_raw": "144372121",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "534176849",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 343,
       "owner_address": "GBZFLQIAXSHWIDBWPHOMAPLKBSFK35X67ME62A4IRYKATG32PMV7SAJE",
       "owner_type": "account",
       "source_weight_raw": "100342334",
-      "allocation_raw": "137360586",
+      "allocation_raw": "508234169",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2755,15 +2755,15 @@
       "owner_address": "GAUNKDDDNBYWEXFGB5UOSRIDNEBON6ROZOCW6WFY7FOR3PJGGNQFO6PJ",
       "owner_type": "account",
       "source_weight_raw": "94460345",
-      "allocation_raw": "129308616",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "478441881",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 345,
       "owner_address": "GDZZR6UBK5TWJ5AXFX74N442RLEAEERYUSP7JHMXAHUAMGEGZSC3ZAVT",
       "owner_type": "account",
       "source_weight_raw": "85366975",
-      "allocation_raw": "116860524",
+      "allocation_raw": "432383939",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2771,15 +2771,15 @@
       "owner_address": "GDNK74PMBZ2KML2E3OILXBRANUATP33Z3EPLSZBUXP6MET7OVOBL34SB",
       "owner_type": "account",
       "source_weight_raw": "84242895",
-      "allocation_raw": "115321749",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "426690471",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 347,
       "owner_address": "GBO3GNS272BFQIOB4FF3SWWOFXFG7AX63LO2XAVLACVDUQKV4WCINT5V",
       "owner_type": "account",
       "source_weight_raw": "83508741",
-      "allocation_raw": "114316751",
+      "allocation_raw": "422971979",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2787,7 +2787,7 @@
       "owner_address": "GDXQE2Z6FEO2XSLAT4EDU5NWDZTEGETBIPYDJJ4CHH6KSY2H7732BZF2",
       "owner_type": "account",
       "source_weight_raw": "82659915",
-      "allocation_raw": "113154777",
+      "allocation_raw": "418672674",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2795,7 +2795,7 @@
       "owner_address": "GC5GFG6TBKBCTREVD3IVOJINGU4XTOQLAHLC3WXKRGDTQKE523TA464L",
       "owner_type": "account",
       "source_weight_raw": "80333477",
-      "allocation_raw": "109970070",
+      "allocation_raw": "406889259",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2803,15 +2803,15 @@
       "owner_address": "GCVEU5APZO3N4FR6GPDZDXDYZS74OVXDSPI42DQ2G35CF7MG5ZWTSCIO",
       "owner_type": "account",
       "source_weight_raw": "75962274",
-      "allocation_raw": "103986245",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "384749105",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 351,
       "owner_address": "GDIQAR3SGCJZ5OF76B4AN5AJY7V2ZJJZC6OHSTTNQY77L3FTSKBTGU7Y",
       "owner_type": "account",
       "source_weight_raw": "74696656",
-      "allocation_raw": "102253715",
+      "allocation_raw": "378338747",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2819,15 +2819,15 @@
       "owner_address": "GDZUYUDTAHZBE24RAOZOGQ52YHVPP6676USWSYC5ITFJ5WFGJQH3J3WP",
       "owner_type": "account",
       "source_weight_raw": "67755436",
-      "allocation_raw": "92751743",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "343181451",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 353,
       "owner_address": "GCNLDOJWI2TV27SPVFJMUVMVOH5SUGEIYMFEQLGRCSTHHQQJS4XI67UM",
       "owner_type": "account",
       "source_weight_raw": "67020471",
-      "allocation_raw": "91745635",
+      "allocation_raw": "339458851",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2835,7 +2835,7 @@
       "owner_address": "GD5KSHS7AGCE7QHDSCNX253N2UMNKEP5KFUDYUIY3FIZI67JM4DSJ2HD",
       "owner_type": "account",
       "source_weight_raw": "64763946",
-      "allocation_raw": "88656634",
+      "allocation_raw": "328029546",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2843,7 +2843,7 @@
       "owner_address": "GDHUFCJ7ZRFNB2S6WUCKJXEREA54YVO7XN5AR655XYXUTY3QWMJMMULJ",
       "owner_type": "account",
       "source_weight_raw": "64729503",
-      "allocation_raw": "88609484",
+      "allocation_raw": "327855092",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2851,7 +2851,7 @@
       "owner_address": "GDXLRWGGA6C6OYWUOD2US2AR7QBQKDHSQUKHICDII3DH2FDIOEXFERAQ",
       "owner_type": "account",
       "source_weight_raw": "63823429",
-      "allocation_raw": "87369142",
+      "allocation_raw": "323265825",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2859,7 +2859,7 @@
       "owner_address": "GB4J33ZNH63VYRZUOAJCJIEV5LDEFOD2V3ZM62ZKK5IRCA3BBIDEREFH",
       "owner_type": "account",
       "source_weight_raw": "52373894",
-      "allocation_raw": "71695649",
+      "allocation_raw": "265273902",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2867,7 +2867,7 @@
       "owner_address": "GAJO3OT3EOEHYNJM2R74UFO4NV4IPVFVTYCYEVNTUZOMTXON7A75YORE",
       "owner_type": "account",
       "source_weight_raw": "50188923",
-      "allocation_raw": "68704600",
+      "allocation_raw": "254207019",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2875,7 +2875,7 @@
       "owner_address": "GDTIW2XS2T3UHGGVCBEEMJSQUB2IRGLBF6PO5T7A3NSF3WOMHAVD7FNM",
       "owner_type": "account",
       "source_weight_raw": "50000000",
-      "allocation_raw": "68445979",
+      "allocation_raw": "253250123",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2883,7 +2883,7 @@
       "owner_address": "GCU7SJW42RVRSDZ63KM5KGDBXRLSL74KXVG6PS2VPJBTUYR6EY2CJHGQ",
       "owner_type": "account",
       "source_weight_raw": "44103683",
-      "allocation_raw": "60374395",
+      "allocation_raw": "223385263",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2891,15 +2891,15 @@
       "owner_address": "GDSSLBC66CZI7DZLAUNYVCADBYYSKHJDE3APJCI4SRDM3TYS2LHQFNYF",
       "owner_type": "account",
       "source_weight_raw": "39093268",
-      "allocation_raw": "53515540",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "198007499",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 362,
       "owner_address": "GDDT5F35W42ELATI4S3H6R4BATKSY3HFTLPN2WULTHZ3XUZIWSGU2J2G",
       "owner_type": "account",
       "source_weight_raw": "38954518",
-      "allocation_raw": "53325603",
+      "allocation_raw": "197304730",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2907,39 +2907,39 @@
       "owner_address": "GAYKKYTEHCRRLXLYQXDPTLWG2UEPUNR6WVHJTUGTWZ7MNMJ3U35SFDXU",
       "owner_type": "account",
       "source_weight_raw": "36527313",
-      "allocation_raw": "50002954",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "185010931",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 364,
       "owner_address": "GALQD6OACZMX3HVVWGMKPCA6ITVFVTXDANSKU67KSGWOYWXCAWWCCLVW",
       "owner_type": "account",
       "source_weight_raw": "32974459",
-      "allocation_raw": "45139383",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "167015716",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 365,
       "owner_address": "GBO7FPUTO6GSNS6C5A7CK374XMK7JL2GTUXNRU4MNJ72LWBOIB6WGTW2",
       "owner_type": "account",
       "source_weight_raw": "29620942",
-      "allocation_raw": "40548688",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "150030144",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 366,
       "owner_address": "GB3AVQH3J3YBBWQSSNGFUWHYB3SS5JNEMDV3SGOEEDSRGP6C2XSFHO4B",
       "owner_type": "account",
       "source_weight_raw": "28424820",
-      "allocation_raw": "38911293",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "143971783",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 367,
       "owner_address": "GAZN4BIQPNPPS2PW2NKAWW6K37RLRV47BWTLJACRZXQJ4DVBA3IFQMRY",
       "owner_type": "account",
       "source_weight_raw": "27827837",
-      "allocation_raw": "38094071",
+      "allocation_raw": "140948063",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2947,15 +2947,15 @@
       "owner_address": "GA2QPTLERXGGQOI23NVTWMZ6FDVXTCNXHBWAHSANZ6X2YMXFLZKPD5Y4",
       "owner_type": "account",
       "source_weight_raw": "25648162",
-      "allocation_raw": "35110271",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "129908004",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 369,
       "owner_address": "GCHLFJVEUGN45I27NXWXOMV7B4ZXGPJMUUEUBA7O43IG6KEEDHAGPN4T",
       "owner_type": "account",
       "source_weight_raw": "24121622",
-      "allocation_raw": "33020561",
+      "allocation_raw": "122176075",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -2963,31 +2963,31 @@
       "owner_address": "GCL3CVQZFUW3TFVTWS7VYO5XXIAUCRF36KOCIHHL75IX4J3YREZCEUNY",
       "owner_type": "account",
       "source_weight_raw": "23220677",
-      "allocation_raw": "31787240",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "117612786",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 371,
       "owner_address": "GBKC7PDKWKZ3ETQ2L76IF6HOWTI5ITFD2PEYHOYG3M4YHJ6PSW3N2CPT",
       "owner_type": "account",
       "source_weight_raw": "18842663",
-      "allocation_raw": "25794090",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "95438135",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 372,
       "owner_address": "GDHVGOZF6WT7CDM5EREDZ7R5CBTQRFQMFSJPMAOWMANIVXXDF3ENNIMR",
       "owner_type": "account",
       "source_weight_raw": "17859118",
-      "allocation_raw": "24447696",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "90456477",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 373,
       "owner_address": "GCLORRKHQDUHD6V7CBWLLMCHCSPHFMCKUXQGTIKYWLIOPJUKWUGU6Z3V",
       "owner_type": "account",
       "source_weight_raw": "17228641",
-      "allocation_raw": "23584624",
+      "allocation_raw": "87263109",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -2995,7 +2995,7 @@
       "owner_address": "GDWVSSISOKIMKCQKUBRY6QXGLMII2YKWFTZIH4HQRK6LMEOZUAYZGJW4",
       "owner_type": "account",
       "source_weight_raw": "16838772",
-      "allocation_raw": "23050925",
+      "allocation_raw": "85288422",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3003,23 +3003,23 @@
       "owner_address": "GAETN3MSNJDPK62CJ6JVOUNOD63RJN3HWHVLZLJMQXN7RJEMZPJ3SZ6X",
       "owner_type": "account",
       "source_weight_raw": "16715799",
-      "allocation_raw": "22882585",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "84665563",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 376,
       "owner_address": "GBPV6BQZXPXM2TNSS7QDASSDUU6PVJFCHCIE2E5L7H4EKKIBNAOIZF3H",
       "owner_type": "account",
       "source_weight_raw": "15839971",
-      "allocation_raw": "21683647",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "80229492",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 377,
       "owner_address": "GDMTKGOWC3Y43P2EU75AULPOKCQGZEIGB6OR6YPHK7NTDHPHQ2I7HEKW",
       "owner_type": "account",
       "source_weight_raw": "15630382",
-      "allocation_raw": "21396736",
+      "allocation_raw": "79167923",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3027,7 +3027,7 @@
       "owner_address": "GCJ45ZYIXVRXI6OYHOD2OX766CNCTC5QTLREXIHRV6KOGIDKL33FLZQF",
       "owner_type": "account",
       "source_weight_raw": "15288721",
-      "allocation_raw": "20929030",
+      "allocation_raw": "77437410",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3035,7 +3035,7 @@
       "owner_address": "GAIEN22P6OOMJJQKHJKVMLHGJXSOCDZDUTMMABOWDDXU2X2Y5DCKZTXF",
       "owner_type": "account",
       "source_weight_raw": "14630475",
-      "allocation_raw": "20027944",
+      "allocation_raw": "74103392",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3043,7 +3043,7 @@
       "owner_address": "GB4C6XKHXZLFBQKL7IVUJMPQZ4BVIJNYS4QCFWGAH2WFDORINDCFHR2U",
       "owner_type": "account",
       "source_weight_raw": "13035199",
-      "allocation_raw": "17844139",
+      "allocation_raw": "66023315",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3051,7 +3051,7 @@
       "owner_address": "GBTYAFHGNZSTE4VBWZYAGB3SRGJEPTI5I4Y22KZ4JTVAN56LESB6JZOF",
       "owner_type": "account",
       "source_weight_raw": "13032289",
-      "allocation_raw": "17840156",
+      "allocation_raw": "66008576",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3059,23 +3059,23 @@
       "owner_address": "GB7WJXIRR5MSEXVVZ265DJB4QJ45Q2QRTMIXJFXV7DN3IV5BY7XEQHTL",
       "owner_type": "account",
       "source_weight_raw": "12678353",
-      "allocation_raw": "17355646",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "64215889",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 383,
       "owner_address": "GCLV4QX3OYGMUQSEFDJZ46KM5HB77VJXXVLRXSFVBYA6F6FFZBROH5PE",
       "owner_type": "account",
       "source_weight_raw": "10479013",
-      "allocation_raw": "14344926",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "53076227",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 384,
       "owner_address": "GDTD2EX3Q5VMZWXPRAUFBKJYHNLAHP2L4DSEGLH7TJD4RVXYT6VIGXOG",
       "owner_type": "account",
       "source_weight_raw": "10000000",
-      "allocation_raw": "13689196",
+      "allocation_raw": "50650025",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3083,7 +3083,7 @@
       "owner_address": "GAJ6T6AU55OB4BB5XQ4ZC7TUD2SLMDVZRD3LTNY4MN6WI53XERSUWXQJ",
       "owner_type": "account",
       "source_weight_raw": "8791329",
-      "allocation_raw": "12034622",
+      "allocation_raw": "44528103",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3091,15 +3091,15 @@
       "owner_address": "GC5CQXTIRFSLTAXNYXOWTCUKQOCPSAAKJZPJYKDS4NP6PI3RHWRIGIPW",
       "owner_type": "account",
       "source_weight_raw": "8509959",
-      "allocation_raw": "11649450",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "43102963",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 387,
       "owner_address": "GBYLTESD5FBXDQDCJ5IRQ4E5KXNFRZEROLI3WP6REHUVWSK75QW26KRU",
       "owner_type": "account",
       "source_weight_raw": "8301402",
-      "allocation_raw": "11363952",
+      "allocation_raw": "42046622",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3107,15 +3107,15 @@
       "owner_address": "GDWLVITTYYSTFDGWY2LQH6SHQTEB4O3IRLCDAEE5CGFLUM4E5C3SLVDI",
       "owner_type": "account",
       "source_weight_raw": "7842353",
-      "allocation_raw": "10735551",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "39721537",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 389,
       "owner_address": "GB35DW2RBB7Q5Y3T3O2MMHLW22P2CIWK3OBJACR7JEOFJCKTGJDV4CQI",
       "owner_type": "account",
       "source_weight_raw": "7340478",
-      "allocation_raw": "10048524",
+      "allocation_raw": "37179539",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3123,7 +3123,7 @@
       "owner_address": "GB4E3WP7E7XCTXUZYQINRURM2JF4DWBMSOK5UECMWFUNLI3XSYMXQYP4",
       "owner_type": "account",
       "source_weight_raw": "6451015",
-      "allocation_raw": "8830921",
+      "allocation_raw": "32674407",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3131,7 +3131,7 @@
       "owner_address": "GAMGCOLBE547IOABXNYIAE3ZJQBLXHYRF4Z6EM4LXBIEDF67X5YSABMK",
       "owner_type": "account",
       "source_weight_raw": "5923668",
-      "allocation_raw": "8109025",
+      "allocation_raw": "30003393",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3139,7 +3139,7 @@
       "owner_address": "GB6Y24VSBEQUSOLJ6RAM4PCH2GXLM7MGZWUNNLC7ILRLYKQK3BPJTUTI",
       "owner_type": "account",
       "source_weight_raw": "5100065",
-      "allocation_raw": "6981579",
+      "allocation_raw": "25831842",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3147,7 +3147,7 @@
       "owner_address": "GAPLXXBHMVBKUNOOOMR2OFHGSWNN5MYFJRMZOECOT6IKY5RV3UGWFVG7",
       "owner_type": "account",
       "source_weight_raw": "4829814",
-      "allocation_raw": "6611627",
+      "allocation_raw": "24463020",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3155,7 +3155,7 @@
       "owner_address": "GASND6BBFGDGWDLP2DJCFDAKL7GHHZAYQ6PENFHSHMLEMFKAVLZCDQXJ",
       "owner_type": "account",
       "source_weight_raw": "3475208",
-      "allocation_raw": "4757280",
+      "allocation_raw": "17601937",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3163,7 +3163,7 @@
       "owner_address": "GDQI7LOGDRQRM5OXEIEY7TDHUYEHGQ7RX3KOJU3FNUP6HBDHUGWA3I6R",
       "owner_type": "account",
       "source_weight_raw": "3151157",
-      "allocation_raw": "4313681",
+      "allocation_raw": "15960618",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3171,7 +3171,7 @@
       "owner_address": "GBEKLFZMC3TEVLRYGYIRLAYWTXBCX43UXXII3JD33FPLQWHRGHEDK6IZ",
       "owner_type": "account",
       "source_weight_raw": "2260038",
-      "allocation_raw": "3093810",
+      "allocation_raw": "11447098",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3179,7 +3179,7 @@
       "owner_address": "GAKIIH266BRQY7C2JFZH25HC46O7ULTZOEZNH2NBNWSTFSDZ6BWQQJE2",
       "owner_type": "account",
       "source_weight_raw": "2205107",
-      "allocation_raw": "3018614",
+      "allocation_raw": "11168872",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3187,7 +3187,7 @@
       "owner_address": "GAWL2CH2JH5APO5GJZ5OH6SILW4XUFW7Z72FZDAAUOLK5QZTS363QDDC",
       "owner_type": "account",
       "source_weight_raw": "1988986",
-      "allocation_raw": "2722762",
+      "allocation_raw": "10074219",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3195,7 +3195,7 @@
       "owner_address": "GDKRZEZ2DKIM4YQBGIY5KO4Z6F6GJH7C4HW2BQZURR2LZXWNEGGXKALI",
       "owner_type": "account",
       "source_weight_raw": "1807891",
-      "allocation_raw": "2474857",
+      "allocation_raw": "9156972",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3203,15 +3203,15 @@
       "owner_address": "GDWCQZO3RUW5KI7AEWUKYFW36ZZQ2AOXUR7SO72CDJJKBBAEE44GS2PD",
       "owner_type": "account",
       "source_weight_raw": "1720521",
-      "allocation_raw": "2355255",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "8714443",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 401,
       "owner_address": "GDA3KH2ACOLTR3PUNSFUGM446EY2CKWLZZOI453KCKYTUEKQTY5ETYN2",
       "owner_type": "account",
       "source_weight_raw": "1704550",
-      "allocation_raw": "2333392",
+      "allocation_raw": "8633550",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3219,23 +3219,23 @@
       "owner_address": "GCBS6RORL7MM3WFOGVRSAP5TVVWTYMS2L5UMQWXPVED3HB6ZGHF7AUPM",
       "owner_type": "account",
       "source_weight_raw": "1394907",
-      "allocation_raw": "1909516",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "7065207",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 403,
       "owner_address": "GCXAW4AMKEEKU6YFRY3OC7WYXJTG7HOWR6TEN3WRGTUGPIPYRM5NFNUD",
       "owner_type": "account",
       "source_weight_raw": "1121037",
-      "allocation_raw": "1534610",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "5678055",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 404,
       "owner_address": "GB4DNA2POXXWS6ICI7PX7Z3MPKTIKXBLOK6OVQA7ANTF4EY6RAND6HHX",
       "owner_type": "account",
       "source_weight_raw": "893581",
-      "allocation_raw": "1223241",
+      "allocation_raw": "4525990",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3243,23 +3243,23 @@
       "owner_address": "GDE2FMUG4YLSEBU2YXEQW7CSAYUWVPO6EI3JCTT4IKCHA2XZV6QJT253",
       "owner_type": "account",
       "source_weight_raw": "817241",
-      "allocation_raw": "1118737",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "4139328",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 406,
       "owner_address": "GD6KB4YPGKONGKSPRVEOUDLSCIAD42XHCB4QWLR5AGNF2ET5T2OUZZQT",
       "owner_type": "account",
       "source_weight_raw": "753868",
-      "allocation_raw": "1031985",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3818343",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 407,
       "owner_address": "GCL5B4D6HXX7D2XEJTNSEFHN7RH7O5CBL3ZGJYJ4NJRFUSD5QF55DITS",
       "owner_type": "account",
       "source_weight_raw": "672907",
-      "allocation_raw": "921156",
+      "allocation_raw": "3408276",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3267,15 +3267,15 @@
       "owner_address": "GD52CPH2SKWSQ37Y6RUXMQMCJGQMSNB3CUYSI43NS6NAEGXIQQYLMDYJ",
       "owner_type": "account",
       "source_weight_raw": "669326",
-      "allocation_raw": "916253",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3390138",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 409,
       "owner_address": "GDGDDMVM5Y7WS5RK5BEOTQPUQ2K73MXCOGSF4FKJEPWSDUT4YY3GEJNS",
       "owner_type": "account",
       "source_weight_raw": "667570",
-      "allocation_raw": "913850",
+      "allocation_raw": "3381244",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3283,39 +3283,39 @@
       "owner_address": "GD4EN5NB25YLXKTCUV7XPIPDL6RUQEC7L7T7JMB2QMGPFSKAHNMFWGC6",
       "owner_type": "account",
       "source_weight_raw": "649197",
-      "allocation_raw": "888699",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3288184",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 411,
       "owner_address": "CCYUN6GE33GF5GB23XLAAY6OENPBHEMIPFNQLD7S5YYTAGJLJLZENX4E",
       "owner_type": "contract",
       "source_weight_raw": "614555",
-      "allocation_raw": "841276",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3112723",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 412,
       "owner_address": "GA3GK6POT4ULRSLH3OHNHVOGVGFEUMAWHYEQDM6WNS5NAZ327OGL7II2",
       "owner_type": "account",
       "source_weight_raw": "594469",
-      "allocation_raw": "813780",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "3010987",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 413,
       "owner_address": "GCRJ56CVFFASF3L5QLPCKE4XNRGC7RE3U2HSDHAFRTZHAY2MQKWU2UQ6",
       "owner_type": "account",
       "source_weight_raw": "496834",
-      "allocation_raw": "680126",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "2516465",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 414,
       "owner_address": "GAGCFJNK7ETAKASG3WPPYEDHAKGUWA5NJSW7RHPX3RIJPZSPIN2XGLI3",
       "owner_type": "account",
       "source_weight_raw": "369394",
-      "allocation_raw": "505671",
+      "allocation_raw": "1870982",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3323,7 +3323,7 @@
       "owner_address": "GDYHVKFQ4FEE76XX2XZCJAS7Y5QTA7MJCQCX5TSPFWVV3L7R6GBCU7TH",
       "owner_type": "account",
       "source_weight_raw": "355505",
-      "allocation_raw": "486658",
+      "allocation_raw": "1800634",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3331,7 +3331,7 @@
       "owner_address": "GDUHSEICX6MRQWRQWW4QQX766FVWTUCOGTLZ5QAH6SL2IVX6NLEIHRKU",
       "owner_type": "account",
       "source_weight_raw": "343425",
-      "allocation_raw": "470121",
+      "allocation_raw": "1739448",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3339,15 +3339,15 @@
       "owner_address": "GAJRGT5XHEVATPA2NUQ5JVTBZES32O3LZ5LFLWANOOQI5ENRXIMNKQE4",
       "owner_type": "account",
       "source_weight_raw": "341156",
-      "allocation_raw": "467015",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "1727956",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 418,
       "owner_address": "GBSSGIYB7STQA53PNB4HTFRZJRGREEF47OB6UF44EPDUZNCAZMUCGTLK",
       "owner_type": "account",
       "source_weight_raw": "271864",
-      "allocation_raw": "372160",
+      "allocation_raw": "1376992",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3355,15 +3355,15 @@
       "owner_address": "GCXJ4V7UXFOUS3BQZVWK6HML5TFFJSMPNZQVBTH565BTBV4K24U4BG6N",
       "owner_type": "account",
       "source_weight_raw": "196740",
-      "allocation_raw": "269321",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "996489",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 420,
       "owner_address": "GACTXQR2PHJ72GNDIYR4W3Z2X54LCW3E5QKGLW6PTILDYBOUTSN44LB3",
       "owner_type": "account",
       "source_weight_raw": "171882",
-      "allocation_raw": "235293",
+      "allocation_raw": "870583",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3371,7 +3371,7 @@
       "owner_address": "GADRVVR23UCI6GROPWZ3H6K6QGLC7YH5PEYQ3FJHAUZGJMCASMUXQSXX",
       "owner_type": "account",
       "source_weight_raw": "117992",
-      "allocation_raw": "161522",
+      "allocation_raw": "597630",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3379,7 +3379,7 @@
       "owner_address": "GBYG3RGKMZMHDNIDTHS6HL6OK73LMT6HTRAFKQV6EV2NFWNCLLWNEVQ2",
       "owner_type": "account",
       "source_weight_raw": "106179",
-      "allocation_raw": "145351",
+      "allocation_raw": "537797",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3387,15 +3387,15 @@
       "owner_address": "GACAI36BCRAIFTXW7NTH7BQD3UQ7SLFCENNJGICPETTRE7VPOQ6GUWPM",
       "owner_type": "account",
       "source_weight_raw": "84769",
-      "allocation_raw": "116042",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "429355",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 424,
       "owner_address": "GBQFUJA7AV254KFQF4JS4VIG4ZK4F74ODYULYA7IYZMLVAY7BAKUU5WS",
       "owner_type": "account",
       "source_weight_raw": "79495",
-      "allocation_raw": "108822",
+      "allocation_raw": "402642",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3403,7 +3403,7 @@
       "owner_address": "GCPGXLK6JEATIMVHTSWC7FBDUG74A7ODI36WV46SMMBVPV35S4AHVVTG",
       "owner_type": "account",
       "source_weight_raw": "72392",
-      "allocation_raw": "99099",
+      "allocation_raw": "366666",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3411,39 +3411,39 @@
       "owner_address": "GCZCKTFEJPCEVLFB3DKZTQVNIBFXL3X3BA4JNBE773TE5LTL3NCD3ICD",
       "owner_type": "account",
       "source_weight_raw": "55355",
-      "allocation_raw": "75777",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "280373",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 427,
       "owner_address": "GCGWLP2YIOBV2RISNXBAXPD4E7QNQB2IOEHUFWICAQA2RLBTIKTUJXXD",
       "owner_type": "account",
       "source_weight_raw": "32718",
-      "allocation_raw": "44788",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "165717",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 428,
       "owner_address": "GBNVSNJSZMERFCJ3QMYF5HVHW4A75IEH4LUAZE7QNXUADR2L7SL65WVA",
       "owner_type": "account",
       "source_weight_raw": "32128",
-      "allocation_raw": "43981",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "162728",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 429,
       "owner_address": "GAEQDQALDK73AIXLXSHUOIPBO6SL5RZYBEVU4UCAYPWHTCTZKOU2EOQ5",
       "owner_type": "account",
       "source_weight_raw": "26716",
-      "allocation_raw": "36572",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "135317",
+      "rounding_adjustment_raw": "1"
     },
     {
       "source_row": 430,
       "owner_address": "GDMKNQWLH5H476ZFR46AZTL3YAQ3DW657ZAGV5N7QBPBX726YWFBOOTY",
       "owner_type": "account",
       "source_weight_raw": "24092",
-      "allocation_raw": "32980",
+      "allocation_raw": "122026",
       "rounding_adjustment_raw": "0"
     },
     {
@@ -3451,15 +3451,15 @@
       "owner_address": "GCPZI7YUQ4WY4IAJDSOXG4XN37KDOZ35GLVF6NGUU7IIGWKHI7Y3HYUX",
       "owner_type": "account",
       "source_weight_raw": "19974",
-      "allocation_raw": "27343",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "101168",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 432,
       "owner_address": "GCMZPA75DOJOHVJRHYJ6V2FINMAHERVDL2725IBNMNXMGQETPFLZHYAC",
       "owner_type": "account",
       "source_weight_raw": "15691",
-      "allocation_raw": "21480",
+      "allocation_raw": "79475",
       "rounding_adjustment_raw": "1"
     },
     {
@@ -3467,24 +3467,24 @@
       "owner_address": "GDAKRH4QWTW5HB5JZI2XV4UJOHBRXKIW5UXORALVLMQ4L33JZ5K7LZNP",
       "owner_type": "account",
       "source_weight_raw": "848",
-      "allocation_raw": "1161",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "4295",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 434,
       "owner_address": "CAQQR5SWBXKIGZKPBZDH3KM5GQ5GUTPKB7JAFCINLZBC5WXPJKRG3IM7",
       "owner_type": "contract",
       "source_weight_raw": "772",
-      "allocation_raw": "1057",
-      "rounding_adjustment_raw": "1"
+      "allocation_raw": "3910",
+      "rounding_adjustment_raw": "0"
     },
     {
       "source_row": 435,
       "owner_address": "GCYI2FG76NF7SYMMYK6EVWCHKIQQ4JRLBRZ42FDJ7KPWVYBQHVGJV6VL",
       "owner_type": "account",
       "source_weight_raw": "9",
-      "allocation_raw": "12",
-      "rounding_adjustment_raw": "0"
+      "allocation_raw": "46",
+      "rounding_adjustment_raw": "1"
     }
   ]
 }

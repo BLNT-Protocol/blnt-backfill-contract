@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { basename, resolve } from 'node:path';
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const ALLOCATION_RAW = 20_000_000n * 10_000_000n;
+const ALLOCATION_RAW = 74_000_000n * 10_000_000n;
 const EXPECTED_CLAIMANTS = 434;
 const ADDRESS_PATTERN = /^[CG][A-Z2-7]{55}$/;
 

@@ -11,8 +11,8 @@ criteria.
 - reject more than 434 backfill claimants or 100 grant recipients;
 - reject duplicate addresses within either list, the contract itself as a
   recipient, and non-positive amounts;
-- reject a backfill total above 20 million BLNT, a grant total above 10 million
-  BLNT, or a combined total above 30 million BLNT;
+- reject a backfill total above 74 million BLNT, a grant total above 25 million
+  BLNT, or a combined total above 99 million BLNT;
 - store both allocation maps and their separate and combined totals
   immutably;
 - bind a vesting start to the construction ledger timestamp and a vesting end
@@ -42,7 +42,7 @@ call MUST reject an absent or fully consumed allocation, a zero currently
 claimable amount, and the contract itself as user. Failed transfers or balance
 mismatches MUST roll back both user and aggregate progress.
 
-The production snapshot allocation MUST assign exactly 20 million BLNT in
+The production snapshot allocation MUST assign exactly 74 million BLNT in
 proportion to each of the 423 account and 11 contract addresses with a positive
 `flattened_total_cpal_raw` value from
 `comet_cpal_flattened_ownership_before_41c898a1.csv`. It MUST floor each
@@ -51,7 +51,7 @@ fractional remainders, breaking equal remainders by ascending address. Rows
 with zero weight MUST receive no claim. The generated manifest MUST record the
 source hash, weight total, claimant count, and exact aggregate allocation.
 
-The aggregate immutable backfill and grant lists MUST NOT exceed 30 million
+The aggregate immutable backfill and grant lists MUST NOT exceed 99 million
 BLNT. Vesting starts at construction and claims do not expire after their
 respective vesting ends.
 
@@ -68,55 +68,45 @@ read, consume, or accelerate a backfill allocation held by the same address.
 The zero-amount, recipient, rollback, rounding, final-allocation, and no-expiry
 requirements for backfill claims apply equally to grant claims.
 
-The immutable grant list MUST NOT exceed 100 recipients or 10 million BLNT.
+The immutable grant list MUST NOT exceed 100 recipients or 25 million BLNT.
 
 ## BLND-to-BLNT conversion
 
-`swap_blnd_for_blnt(user, amount)` MUST:
+`swap_blnd_for_blnt(user, blnt_amount)` MUST:
 
-1. require `user` authorization and a positive amount;
+1. require `user` authorization and a positive `blnt_amount`;
 2. reject at or after the immutable conversion deadline;
-3. reject any call that would make net outstanding conversions exceed 120
-   million tokens;
-4. transfer exactly `amount` legacy BLND from `user` to the contract;
-5. verify the exact receipt and retain it in refundable escrow;
-6. transfer exactly the same raw seven-decimal amount of pre-funded BLNT from
-   the contract back to `user`;
-7. increase that user's refundable credit by `amount`; and
-8. increment the cumulative gross successful conversion total.
+3. reject any call that would make cumulative BLNT output exceed 51 million
+   BLNT;
+4. calculate `blnd_amount = 2 * blnt_amount` using checked arithmetic;
+5. transfer exactly `blnd_amount` legacy BLND from `user` to the contract and
+   verify exact receipt;
+6. immediately burn exactly `blnd_amount` legacy BLND from the contract and
+   verify the exact debit;
+7. transfer exactly `blnt_amount` pre-funded BLNT from the contract to `user`;
+   and
+8. increment the cumulative successful BLNT output total by `blnt_amount`.
 
-`refund_blnt_for_blnd(user, amount)` MUST require `user` authorization, a
-positive amount, and refundable credit of at least `amount`. Before the same
-deadline it MUST transfer exactly `amount` BLNT from `user` to the contract,
-return exactly `amount` escrowed legacy BLND to `user`, reduce the user's credit
-by `amount`, and increment the cumulative refund total. A refund MUST restore
-the same amount of conversion capacity. It MUST NOT spend or redirect another
-user's credit.
+Successful swaps and their BLND burns MUST be monotonic and final. The contract
+MUST NOT escrow successfully swapped BLND or expose a refund path. Conversion
+remains open before the deadline and expires exactly 270 days after
+construction. Transfer, burn, balance, authorization, reentrancy, cap,
+deadline, and overflow failures MUST roll back atomically.
 
-Gross swaps MUST be monotonic. Total refunds MUST be monotonic and MUST NOT
-exceed gross swaps. Net outstanding conversions MUST equal gross swaps less
-refunds, the aggregate remaining refund credit, and tracked legacy BLND escrow.
-Conversion and refunds remain open before the deadline and expire exactly 270
-days after construction. Transfer, balance, authorization, reentrancy, cap,
-credit, deadline, and overflow failures MUST roll back atomically.
-
-After the conversion deadline, permissionless `burn_expired()` MUST burn both
-the legacy BLND escrow equal to net outstanding conversions and the unused
-BLNT conversion reserve equal to 120 million BLNT less net outstanding
-conversions. It MUST reject before the deadline, MUST preserve enough BLNT to
-cover every unclaimed backfill and grant allocation, and MUST verify both exact
-token debits. The first successful call MUST record and emit each burned
-amount. Calls after both sides are finalized MUST return `{ blnd: 0, blnt: 0 }`
-so permissionless callers may race safely.
+After the conversion deadline, permissionless `burn_expired()` MUST burn the
+unused BLNT conversion reserve equal to 51 million BLNT less cumulative BLNT
+output. It MUST reject before the deadline, MUST preserve enough BLNT to cover
+every unclaimed backfill and grant allocation, and MUST verify the exact token
+debit. The first successful call MUST record and emit the burned amount. Later
+calls MUST return zero so permissionless callers may race safely.
 
 ## Authority and lifecycle
 
 The contract MUST NOT expose an administrator, privileged upgrade, recovery,
-sweep, mint, or allocation-mutation entry point. Refunds MUST be bounded by
-same-user swap credit and available only before the immutable deadline. Unused
-conversion capacity and unrefunded legacy BLND escrow are destroyed only
-through `burn_expired`; backfill and grant claims do not expire and their
-outstanding reserves MUST remain intact.
+sweep, mint, refund, or allocation-mutation entry point. Each successful
+conversion MUST destroy its legacy BLND immediately. Unused BLNT conversion
+capacity is destroyed only through `burn_expired`; backfill and grant claims do
+not expire and their outstanding reserves MUST remain intact.
 
 Contract and persistent allocation/progress-map entries rely on normal Soroban
 state archival and restoration. Successful calls and views renew relevant
@@ -130,9 +120,8 @@ error details.
 - `__constructor(legacy_blnd_token, blnt_token, claim_list, grant_list)`
 - `claim_backfill(user) -> i128`
 - `claim_grant(user) -> i128`
-- `swap_blnd_for_blnt(user, amount) -> i128`
-- `refund_blnt_for_blnd(user, amount) -> i128`
-- `burn_expired() -> ExpiredBurn`
+- `swap_blnd_for_blnt(user, blnt_amount) -> i128`
+- `burn_expired() -> i128`
 - `get_backfill_claimable(claimant) -> i128`
 - `get_grant_claimable(grantee) -> i128`
 - `get_legacy_blnd_token() -> Address`
@@ -148,10 +137,7 @@ error details.
 - `get_grant_vesting_start() -> u64`
 - `get_grant_vesting_end() -> u64`
 - `get_total_swapped() -> i128`
-- `get_total_refunded() -> i128`
-- `get_net_swapped() -> i128`
-- `get_refundable(user) -> i128`
+- `get_total_blnd_burned() -> i128`
 - `get_remaining_swap_capacity() -> i128`
 - `get_swap_deadline() -> u64`
-- `get_expired_blnd_burned() -> i128`
 - `get_expired_blnt_burned() -> i128`
