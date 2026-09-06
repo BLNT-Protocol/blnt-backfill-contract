@@ -32,7 +32,7 @@ Example list shape:
 | Entry point | Required authorization | Return value | Behavior |
 | --- | --- | --- | --- |
 | `claim_backfill(user: Address) -> i128` | `user` | BLNT transferred by this call | Transfers all currently vested backfill allocation not previously claimed to the same authorized address. Vesting is linear for 180 days from construction. |
-| `claim_grant(user: Address) -> i128` | `user` | BLNT transferred by this call | Transfers all currently vested grant allocation not previously claimed to the same authorized address. Vesting is linear for 720 days from construction. Grant accounting is independent from backfill accounting. |
+| `claim_grant(user: Address) -> i128` | `user` | BLNT transferred by this call | Transfers all currently vested grant allocation not previously claimed to the same authorized address. Vesting is linear for 360 days from construction. Grant accounting is independent from backfill accounting. |
 | `swap_blnd_for_blnt(user: Address, blnt_amount: i128) -> i128` | `user` | Cumulative BLNT output | Before the immutable 270-day deadline, transfers and immediately burns `2 * blnt_amount` legacy BLND from `user`, then transfers `blnt_amount` pre-funded BLNT to the same user. Cumulative BLNT output cannot exceed 51 million BLNT. |
 | `burn_expired() -> i128` | None | Unused BLNT burned by this call | At or after the conversion deadline, burns the unused BLNT conversion reserve while preserving all outstanding backfill and grant claims. Returns zero once finalized. |
 
@@ -70,7 +70,7 @@ changes persist only if the invocation is signed, paid for, and submitted.
 | `get_vesting_start() -> u64` | Shared construction timestamp at which backfill and grant vesting begin. |
 | `get_vesting_end() -> u64` | Backfill vesting end, exactly 180 days after construction. |
 | `get_grant_vesting_start() -> u64` | Grant vesting start; equal to `get_vesting_start()`. |
-| `get_grant_vesting_end() -> u64` | Grant vesting end, exactly 720 days after construction. |
+| `get_grant_vesting_end() -> u64` | Grant vesting end, exactly 360 days after construction. |
 
 ### Token and conversion state
 

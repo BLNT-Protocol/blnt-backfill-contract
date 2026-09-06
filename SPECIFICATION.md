@@ -16,7 +16,7 @@ criteria.
 - store both allocation maps and their separate and combined totals
   immutably;
 - bind a vesting start to the construction ledger timestamp and a vesting end
-  exactly 180 days later for backfill and 720 days later for grants; and
+  exactly 180 days later for backfill and 360 days later for grants; and
 - bind the BLND-to-BLNT conversion deadline to exactly 270 days after the
   construction ledger timestamp.
 
@@ -57,9 +57,11 @@ respective vesting ends.
 
 ## Grant claims
 
-For an immutable grant allocation `G`, the cumulative vested calculation MUST
-use the address-claim formula above with a 720-day duration. Grant vesting MUST
-begin at the same construction timestamp as backfill vesting.
+For an immutable grant allocation `G`, shared construction timestamp `S`,
+360-day duration `D`, and current timestamp `T`, cumulative vested BLNT MUST be
+zero when `T <= S`, `floor(G * (T - S) / D)` when `S < T < S + D`, and exactly
+`G` when `T >= S + D`. Grant vesting MUST begin at the same construction
+timestamp as backfill vesting and MUST NOT include an immediate unlock.
 
 `claim_grant(user)` MUST require `user` authorization and transfer exactly the
 cumulative grant amount vested less that user's prior successful grant claims

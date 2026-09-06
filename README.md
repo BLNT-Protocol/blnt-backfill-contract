@@ -6,7 +6,7 @@ and exposes three immutable distribution lanes:
 - backfill allocations for at most 434 recipients totaling at most 74 million
   BLNT and vesting linearly over 180 days;
 - grant allocations for at most 100 recipients totaling at most 25 million
-  BLNT and vesting linearly over 720 days; and
+  BLNT and vesting linearly over 360 days; and
 - 2:1 legacy BLND-to-BLNT conversion totaling at most 51 million BLNT and
   expiring 270 days after construction.
 
@@ -30,7 +30,7 @@ second, and claims remain available indefinitely after vesting completes.
 
 An independent immutable grant list is supplied at construction.
 `claim_grant(user)` transfers its vested-but-unclaimed portion to that same
-authorized user using the same construction timestamp but a two-year (720-day)
+authorized user using the same construction timestamp but a 360-day
 schedule. Backfill and grant progress, caps, views, and events are separate,
 even when one address is present in both lists.
 

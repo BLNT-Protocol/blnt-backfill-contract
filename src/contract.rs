@@ -619,7 +619,7 @@ mod tests {
     }
 
     #[test]
-    fn grants_vest_linearly_over_two_years_without_backfill_bypass() {
+    fn grants_vest_linearly_over_360_days_without_backfill_bypass() {
         let allocation = i128::from(GRANT_VESTING_DURATION_SECONDS);
         let fixture = Fixture::create_with_grant(0, allocation);
         let client = fixture.client();
