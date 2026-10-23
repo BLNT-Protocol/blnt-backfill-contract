@@ -80,7 +80,7 @@ The immutable grant list MUST NOT exceed 100 recipients or 25 million BLNT.
 2. reject at or after the immutable conversion deadline;
 3. reject any call that would make cumulative BLNT output exceed 51 million
    BLNT;
-4. calculate `blnd_amount = 2 * blnt_amount` using checked arithmetic;
+4. calculate `blnd_amount = blnt_amount`;
 5. transfer exactly `blnd_amount` legacy BLND from `user` to the contract and
    verify exact receipt;
 6. immediately burn exactly `blnd_amount` legacy BLND from the contract and

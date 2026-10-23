@@ -33,7 +33,7 @@ Example list shape:
 | --- | --- | --- | --- |
 | `claim_backfill(user: Address) -> i128` | `user` | BLNT transferred by this call | Transfers all currently vested backfill allocation not previously claimed to the same authorized address. Vesting is linear for 180 days from construction. |
 | `claim_grant(user: Address) -> i128` | `user` | BLNT transferred by this call | Transfers all currently vested grant allocation not previously claimed to the same authorized address. Vesting is linear for 360 days from construction. Grant accounting is independent from backfill accounting. |
-| `swap_blnd_for_blnt(user: Address, blnt_amount: i128) -> i128` | `user` | Cumulative BLNT output | Before the immutable 270-day deadline, transfers and immediately burns `2 * blnt_amount` legacy BLND from `user`, then transfers `blnt_amount` pre-funded BLNT to the same user. Cumulative BLNT output cannot exceed 51 million BLNT. |
+| `swap_blnd_for_blnt(user: Address, blnt_amount: i128) -> i128` | `user` | Cumulative BLNT output | Before the immutable 270-day deadline, transfers and immediately burns `blnt_amount` legacy BLND from `user`, then transfers the same `blnt_amount` of pre-funded BLNT to the user. Cumulative BLNT output cannot exceed 51 million BLNT. |
 | `burn_expired() -> i128` | None | Unused BLNT burned by this call | At or after the conversion deadline, burns the unused BLNT conversion reserve while preserving all outstanding backfill and grant claims. Returns zero once finalized. |
 
 Backfill claims, grant claims, and swaps use one address as the
@@ -78,8 +78,8 @@ changes persist only if the invocation is signed, paid for, and submitted.
 | --- | --- |
 | `get_legacy_blnd_token() -> Address` | Immutable legacy BLND Stellar Asset Contract address. |
 | `get_blnt_token() -> Address` | Immutable BLNT Stellar Asset Contract address. |
-| `get_total_swapped() -> i128` | Cumulative BLNT output through successful 2:1 conversions. |
-| `get_total_blnd_burned() -> i128` | Cumulative legacy BLND burned through successful conversions; exactly twice `get_total_swapped()`. |
+| `get_total_swapped() -> i128` | Cumulative BLNT output through successful 1:1 conversions. |
+| `get_total_blnd_burned() -> i128` | Cumulative legacy BLND burned through successful conversions; exactly equal to `get_total_swapped()`. |
 | `get_remaining_swap_capacity() -> i128` | 51 million BLNT less cumulative BLNT output before expiry; zero at or after expiry. |
 | `get_swap_deadline() -> u64` | Immutable conversion deadline, exactly 270 days after construction. |
 | `get_expired_blnt_burned() -> i128` | Unused BLNT conversion reserve destroyed after conversion expiry. |

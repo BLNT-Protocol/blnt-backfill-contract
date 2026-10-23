@@ -7,11 +7,11 @@ and exposes three immutable distribution lanes:
   BLNT and vesting linearly over 180 days;
 - grant allocations for at most 100 recipients totaling at most 25 million
   BLNT and vesting linearly over 360 days; and
-- 2:1 legacy BLND-to-BLNT conversion totaling at most 51 million BLNT and
+- 1:1 legacy BLND-to-BLNT conversion totaling at most 51 million BLNT and
   expiring 270 days after construction.
 
 For each raw unit of BLNT requested, the conversion transfers and immediately
-burns two raw units of an authorized user's legacy BLND, then transfers one raw
+burns one raw unit of an authorized user's legacy BLND, then transfers one raw
 unit of pre-funded BLNT to that same user. It never mints BLNT and conversions
 cannot be refunded.
 

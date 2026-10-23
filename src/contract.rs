@@ -656,13 +656,15 @@ mod tests {
     }
 
     #[test]
-    fn swaps_two_blnd_for_one_prefunded_blnt_and_burns_blnd_immediately() {
+    fn swaps_one_blnd_for_one_prefunded_blnt_and_burns_blnd_immediately() {
         let fixture = Fixture::create(0);
         let legacy = TokenClient::new(&fixture.e, &fixture.legacy);
         let blnt = TokenClient::new(&fixture.e, &fixture.blnt);
         let contract_before = blnt.balance(&fixture.contract);
         let blnt_amount = 25 * SCALAR_7;
-        let blnd_amount = blnt_amount * BLND_PER_BLNT;
+        let blnd_amount = blnt_amount;
+
+        assert_eq!(BLND_PER_BLNT, 1);
 
         assert_eq!(
             fixture
